@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TERN Organisations and Persons Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<h1>TERN Organisations and Persons Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/tern/ontologies/org/</code></dd>
+        <dt>Version Information</dt>
+        <dd>Created with TopBraid Composer</dd>
+        <dt>Ontology Source</dt>
+        <dd><a href="tern-org.ttl">RDF (turtle)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>A small profile of schema.org and the W3C Org ontology containing several classes to describe people and organisations with some extensions.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:500px; background-color: black;">&nbsp;</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Agent">Agent</a></li>
+        <li><a href="#Organization">Organization</a></li>
+        <li><a href="#Person">Person</a></li>
+        <li><a href="#Thing">Thing</a></li>
+    </ul>
+    <div class="entity class" id="Organization">
+        <h3>Organization<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/Organization</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An organization such as a school, NGO, corporation, club, etc.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/tern/ontologies/org/agorID">tern-org:agorID</a><br/>
+                    <a href="http://schema.org/parentOrganization">schema:parentOrganization</a><br/>
+                    <a href="http://schema.org/subOrganization">schema:subOrganization</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://schema.org/subOrganization">schema:subOrganization</a><br/>
+                    <a href="http://schema.org/parentOrganization">schema:parentOrganization</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Person">
+        <h3>Person<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/Person</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A person (alive, dead, undead, or fictional).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Thing">
+        <h3>Thing<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/Thing</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The most generic type of item.
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://schema.org/description">schema:description</a><br/>
+                    <a href="http://schema.org/name">schema:name</a><br/>
+                    <a href="http://schema.org/identifier">schema:identifier</a><br/>
+                    <a href="http://schema.org/sameAs">schema:sameAs</a><br/>
+                    <a href="http://schema.org/alternateName">schema:alternateName</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Agent">
+        <h3>Agent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/prov#Agent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://schema.org/email">schema:email</a><br/>
+                    <a href="http://schema.org/address">schema:address</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="properties">
+    <h2>Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Identifier">Identifier</a></li>
+        <li><a href="#Type">Type</a></li>
+        <li><a href="#identifier">Identifier</a></li>
+        <li><a href="#type">Type</a></li>
+        <li><a href="#address">address</a></li>
+        <li><a href="#alternateName">alternateName</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#email">email</a></li>
+        <li><a href="#identifier1">identifier</a></li>
+        <li><a href="#name">name</a></li>
+        <li><a href="#parentOrganization">parentOrganization</a></li>
+        <li><a href="#sameAs">sameAs</a></li>
+        <li><a href="#subOrganization">subOrganization</a></li>
+        <li><a href="#taxID">taxID</a></li>
+        <li><a href="#telephone">telephone</a></li>
+        <li><a href="#url">url</a></li>
+        <li><a href="#AGORID">AGOR ID</a></li>
+    </ul>
+    <div class="entity property" id="Identifier">
+        <h3>Identifier<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/elements/1.1/identifier</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Type">
+        <h3>Type<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/elements/1.1/type</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The nature or genre of the resource.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="identifier">
+        <h3>Identifier<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/terms/identifier</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An unambiguous reference to the resource within a given context.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/dc/elements/1.1/identifier">dc:identifier</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="type">
+        <h3>Type<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/terms/type</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The nature or genre of the resource.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://purl.org/dc/elements/1.1/type">dc:type</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="address">
+        <h3>address<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/address</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Physical address of the item.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/GeoCoordinates">schema:GeoCoordinates</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/GeoShape">schema:GeoShape</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Place">schema:Place</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/PostalAddress">schema:PostalAddress</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="alternateName">
+        <h3>alternateName<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/alternateName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An alias for the item.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="description">
+        <h3>description<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/description</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A description of the item.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="email">
+        <h3>email<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/email</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Email address.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/ContactPoint">schema:ContactPoint</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="identifier1">
+        <h3>identifier<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/identifier</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The identifier property represents any kind of identifier for any kind of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/PropertyValue">schema:PropertyValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="name">
+        <h3>name<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/name</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The name of the item.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="parentOrganization">
+        <h3>parentOrganization<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/parentOrganization</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The larger organization that this organization is a <a class="localLink" href="http://schema.org/subOrganization">subOrganization</a> of, if any.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="sameAs">
+        <h3>sameAs<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/sameAs</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="subOrganization">
+        <h3>subOrganization<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/subOrganization</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="taxID">
+        <h3>taxID<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/taxID</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://schema.org/identifier">schema:identifier</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="telephone">
+        <h3>telephone<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/telephone</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The telephone number.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/ContactPoint">schema:ContactPoint</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Place">schema:Place</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="url">
+        <h3>url<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/url</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    URL of the item.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="AGORID">
+        <h3>AGOR ID<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/tern/ontologies/org/agorID</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Australian Government Organisations Register ID
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://schema.org/identifier">schema:identifier</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dct</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>schema</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>tern-org</dt>
+        <dd><code>https://w3id.org/tern/ontologies/org/</code></dd>
+        <dt>void</dt>
+        <dd><code>http://rdfs.org/ns/void#</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
+</body>
+</html>

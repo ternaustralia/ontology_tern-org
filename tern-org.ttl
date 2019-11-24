@@ -16,7 +16,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dc:identifier
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
   dct:hasVersion <http://dublincore.org/usage/terms/history/#identifier-006> ;
   dct:issued "1999-07-02"^^xsd:date ;
@@ -27,7 +27,7 @@ dc:identifier
   skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
 .
 dc:type
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   dc:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
   dc:hasVersion <http://dublincore.org/usage/terms/history/#type-006> ;
   dc:issued "1999-07-02"^^xsd:date ;
@@ -38,7 +38,7 @@ dc:type
   skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
 .
 dct:identifier
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
   dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
   dct:issued "2008-01-14"^^xsd:date ;
@@ -50,7 +50,7 @@ dct:identifier
   rdfs:subPropertyOf dc:identifier ;
 .
 dct:type
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   dct:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
   dct:hasVersion <http://dublincore.org/usage/terms/history/#typeT-001> ;
   dct:issued "2008-01-14"^^xsd:date ;
@@ -62,13 +62,13 @@ dct:type
   rdfs:subPropertyOf dc:type ;
 .
 schema:Organization
-  rdf:type owl:Class ;
+  a owl:Class ;
   rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
   rdfs:label "Organization" ;
   rdfs:subClassOf prov:Agent ;
 .
 schema:Person
-  rdf:type owl:Class ;
+  a owl:Class ;
   dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
   rdfs:comment "A person (alive, dead, undead, or fictional)." ;
   rdfs:label "Person" ;
@@ -76,13 +76,13 @@ schema:Person
   owl:equivalentClass foaf:Person ;
 .
 schema:Thing
-  rdf:type owl:Class ;
+  a owl:Class ;
   rdfs:comment "The most generic type of item." ;
   rdfs:label "Thing" ;
   owl:equivalentClass owl:Thing ;
 .
 schema:address
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:GeoCoordinates ;
   schema:domainIncludes schema:GeoShape ;
   schema:domainIncludes schema:Organization ;
@@ -96,7 +96,7 @@ schema:address
   rdfs:range xsd:anyURI ;
 .
 schema:alternateName
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "An alias for the item." ;
@@ -105,7 +105,7 @@ schema:alternateName
   rdfs:range rdfs:Literal ;
 .
 schema:description
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "A description of the item." ;
@@ -115,7 +115,7 @@ schema:description
   owl:equivalentProperty dct:description ;
 .
 schema:email
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:ContactPoint ;
   schema:domainIncludes schema:Organization ;
   schema:domainIncludes schema:Person ;
@@ -126,29 +126,29 @@ schema:email
   rdfs:range rdfs:Literal ;
 .
 schema:identifier
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:PropertyValue ;
   schema:rangeIncludes schema:Text ;
   schema:rangeIncludes schema:URL ;
   rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
+  rdfs:domain schema:Thing ;
   rdfs:label "identifier" ;
   owl:equivalentProperty dct:identifier ;
-  rdfs:domain schema:Thing ;
 .
 schema:name
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The name of the item." ;
+  rdfs:domain schema:Thing ;
   rdfs:label "name" ;
+  rdfs:range rdfs:Literal ;
   rdfs:subPropertyOf rdfs:label ;
   owl:equivalentProperty dct:title ;
-  rdfs:domain schema:Thing ;
-  rdfs:range rdfs:Literal ;
 .
 schema:parentOrganization
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Organization ;
   schema:inverseOf schema:subOrganization ;
   schema:rangeIncludes schema:Organization ;
@@ -159,16 +159,16 @@ schema:parentOrganization
   owl:inverseOf schema:subOrganization ;
 .
 schema:sameAs
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:URL ;
   rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
-  rdfs:label "sameAs" ;
   rdfs:domain schema:Thing ;
+  rdfs:label "sameAs" ;
   rdfs:range xsd:anyURI ;
 .
 schema:subOrganization
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Organization ;
   schema:inverseOf schema:parentOrganization ;
   schema:rangeIncludes schema:Organization ;
@@ -179,7 +179,7 @@ schema:subOrganization
   owl:inverseOf schema:parentOrganization ;
 .
 schema:taxID
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
   schema:domainIncludes schema:Organization ;
   schema:domainIncludes schema:Person ;
@@ -189,7 +189,7 @@ schema:taxID
   rdfs:subPropertyOf schema:identifier ;
 .
 schema:telephone
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:ContactPoint ;
   schema:domainIncludes schema:Organization ;
   schema:domainIncludes schema:Person ;
@@ -199,14 +199,14 @@ schema:telephone
   rdfs:label "telephone" ;
 .
 schema:url
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:URL ;
   rdfs:comment "URL of the item." ;
   rdfs:label "url" ;
 .
 prov:Agent
-  rdf:type owl:Class ;
+  a owl:Class ;
   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
   rdfs:label "Agent" ;
   rdfs:subClassOf schema:Thing ;
@@ -219,11 +219,13 @@ prov:Agent
   prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI ;
 .
 tern-org:
-  rdf:type owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  a owl:Ontology ;
+  rdfs:comment "A small profile of schema.org and the W3C Org ontology containing several classes to describe people and organisations with some extensions." ;
+  rdfs:label "TERN Organisations and Persons Ontology" ;
+  owl:versionInfo "Draft" ;
 .
 tern-org:agorID
-  rdf:type rdf:Property ;
+  a rdf:Property ;
   schema:domainIncludes schema:Organization ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "Australian Government Organisations Register ID" ;

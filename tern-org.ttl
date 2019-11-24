@@ -1,0 +1,234 @@
+# baseURI: https://w3id.org/tern/ontologies/org/
+# prefix: tern-org
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:identifier
+  rdf:type rdf:Property ;
+  dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
+  dct:hasVersion <http://dublincore.org/usage/terms/history/#identifier-006> ;
+  dct:issued "1999-07-02"^^xsd:date ;
+  dct:modified "2008-01-14"^^xsd:date ;
+  rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Identifier"@en ;
+  skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+.
+dc:type
+  rdf:type rdf:Property ;
+  dc:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+  dc:hasVersion <http://dublincore.org/usage/terms/history/#type-006> ;
+  dc:issued "1999-07-02"^^xsd:date ;
+  dc:modified "2008-01-14"^^xsd:date ;
+  rdfs:comment "The nature or genre of the resource."@en ;
+  rdfs:isDefinedBy dc: ;
+  rdfs:label "Type"@en ;
+  skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+.
+dct:identifier
+  rdf:type rdf:Property ;
+  dct:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
+  dct:hasVersion <http://dublincore.org/usage/terms/history/#identifierT-001> ;
+  dct:issued "2008-01-14"^^xsd:date ;
+  dct:modified "2008-01-14"^^xsd:date ;
+  rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+  rdfs:isDefinedBy dct: ;
+  rdfs:label "Identifier"@en ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:identifier ;
+.
+dct:type
+  rdf:type rdf:Property ;
+  dct:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+  dct:hasVersion <http://dublincore.org/usage/terms/history/#typeT-001> ;
+  dct:issued "2008-01-14"^^xsd:date ;
+  dct:modified "2008-01-14"^^xsd:date ;
+  rdfs:comment "The nature or genre of the resource."@en ;
+  rdfs:isDefinedBy dct: ;
+  rdfs:label "Type"@en ;
+  rdfs:range rdfs:Class ;
+  rdfs:subPropertyOf dc:type ;
+.
+schema:Organization
+  rdf:type owl:Class ;
+  rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+  rdfs:label "Organization" ;
+  rdfs:subClassOf prov:Agent ;
+.
+schema:Person
+  rdf:type owl:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+  rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+  rdfs:label "Person" ;
+  rdfs:subClassOf prov:Agent ;
+  owl:equivalentClass foaf:Person ;
+.
+schema:Thing
+  rdf:type owl:Class ;
+  rdfs:comment "The most generic type of item." ;
+  rdfs:label "Thing" ;
+  owl:equivalentClass owl:Thing ;
+.
+schema:address
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:domainIncludes schema:GeoShape ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:domainIncludes schema:Place ;
+  schema:rangeIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "Physical address of the item." ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "address" ;
+  rdfs:range xsd:anyURI ;
+.
+schema:alternateName
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "An alias for the item." ;
+  rdfs:domain schema:Thing ;
+  rdfs:label "alternateName" ;
+  rdfs:range rdfs:Literal ;
+.
+schema:description
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "A description of the item." ;
+  rdfs:domain schema:Thing ;
+  rdfs:label "description" ;
+  rdfs:range rdfs:Literal ;
+  owl:equivalentProperty dct:description ;
+.
+schema:email
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:ContactPoint ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "Email address." ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "email" ;
+  rdfs:range rdfs:Literal ;
+.
+schema:identifier
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:PropertyValue ;
+  schema:rangeIncludes schema:Text ;
+  schema:rangeIncludes schema:URL ;
+  rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
+  rdfs:label "identifier" ;
+  owl:equivalentProperty dct:identifier ;
+  rdfs:domain schema:Thing ;
+.
+schema:name
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The name of the item." ;
+  rdfs:label "name" ;
+  rdfs:subPropertyOf rdfs:label ;
+  owl:equivalentProperty dct:title ;
+  rdfs:domain schema:Thing ;
+  rdfs:range rdfs:Literal ;
+.
+schema:parentOrganization
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Organization ;
+  schema:inverseOf schema:subOrganization ;
+  schema:rangeIncludes schema:Organization ;
+  rdfs:comment "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any." ;
+  rdfs:domain schema:Organization ;
+  rdfs:label "parentOrganization" ;
+  rdfs:range schema:Organization ;
+  owl:inverseOf schema:subOrganization ;
+.
+schema:sameAs
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:URL ;
+  rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
+  rdfs:label "sameAs" ;
+  rdfs:domain schema:Thing ;
+  rdfs:range xsd:anyURI ;
+.
+schema:subOrganization
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Organization ;
+  schema:inverseOf schema:parentOrganization ;
+  schema:rangeIncludes schema:Organization ;
+  rdfs:comment "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property." ;
+  rdfs:domain schema:Organization ;
+  rdfs:label "subOrganization" ;
+  rdfs:range schema:Organization ;
+  owl:inverseOf schema:parentOrganization ;
+.
+schema:taxID
+  rdf:type rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." ;
+  rdfs:label "taxID" ;
+  rdfs:subPropertyOf schema:identifier ;
+.
+schema:telephone
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:ContactPoint ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:domainIncludes schema:Place ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The telephone number." ;
+  rdfs:label "telephone" ;
+.
+schema:url
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Thing ;
+  schema:rangeIncludes schema:URL ;
+  rdfs:comment "URL of the item." ;
+  rdfs:label "url" ;
+.
+prov:Agent
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+  rdfs:label "Agent" ;
+  rdfs:subClassOf schema:Thing ;
+  owl:disjointWith prov:InstantaneousEvent ;
+  owl:equivalentClass foaf:Agent ;
+  prov:category "starting-point" ;
+  prov:component "agents-responsibility" ;
+  prov:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+  prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+  prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI ;
+.
+tern-org:
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+tern-org:agorID
+  rdf:type rdf:Property ;
+  schema:domainIncludes schema:Organization ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "Australian Government Organisations Register ID" ;
+  rdfs:domain schema:Organization ;
+  rdfs:label "AGOR ID" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf schema:identifier ;
+.

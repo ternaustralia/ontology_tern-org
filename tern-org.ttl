@@ -294,18 +294,6 @@ org:resultingOrganization
   rdfs:label "resulted in"@en ;
   rdfs:range org:Organization ;
 .
-prov:Activity
-  a owl:Class ;
-  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-  rdfs:label "Activity" ;
-  owl:disjointWith prov:Entity ;
-  prov:category "starting-point" ;
-  prov:component "entities-activities" ;
-  prov:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
-  prov:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
-  prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity"^^xsd:anyURI ;
-  prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"^^xsd:anyURI ;
-.
 prov:Agent
   a owl:Class ;
   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
@@ -333,7 +321,6 @@ tern-org:
   dct:publisher <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> ;
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
-  owl:imports dct: ;
   owl:versionInfo "Draft" ;
   owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
   dct:created "2019-11-23"^^xsd:date ;

@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TERN Organisations and Persons Ontology</title>
+    <title>TERN Organisations Ontology</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
-<h1>TERN Organisations and Persons Ontology</h1>
+<h1>TERN Organisations Ontology</h1>
 <section id="metadata">
     <h2 style="display:none;">Metadata</h2>
     <dl>
         <dt>IRI</dt>
         <dd><code>https://w3id.org/tern/ontologies/org/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            Terrestrial Ecoystem Research Network<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            <a href="https://orcid.org/0000-0002-6047-9864">Edmond Chuc</a> (<a href="mailto:e.chuc@uq.edu.au">e.chuc@uq.edu.au</a>) of <a href="https://www.tern.org.au/">Terrestrial Ecoystem Research Network</a><br/>
+        </dd>
+        <dt>Created</dt>
+        <dd>2019-11-23</dd>
+        <dt>Modified</dt>
+        <dd>2019-11-24</dd>
         <dt>Version Information</dt>
-        <dd>Created with TopBraid Composer</dd>
+        <dd>Draft</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/tern/ontologies/org/0.1">https://w3id.org/tern/ontologies/org/0.1</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://purl.org/dc/terms/">dct:</a><br/>
+        </dd>
         <dt>Ontology Source</dt>
         <dd><a href="tern-org.ttl">RDF (turtle)</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>A small profile of schema.org and the W3C Org ontology containing several classes to describe people and organisations with some extensions.</p>
+        <p>A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. </p>
     </div>
 </section>
 <section id="toc">
     <h2>Table of Contents</h2>
     <ol>
         <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
         <li><a href="#properties">Properties</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
     </ol>
@@ -41,7 +60,9 @@
 <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#Activity">Activity</a></li>
         <li><a href="#Agent">Agent</a></li>
+        <li><a href="#ChangeEvent">Change Event</a></li>
         <li><a href="#Organization">Organization</a></li>
         <li><a href="#Person">Person</a></li>
         <li><a href="#Thing">Thing</a></li>
@@ -68,16 +89,22 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/tern/ontologies/org/agorID">tern-org:agorID</a><br/>
+                    <a href="http://schema.org/taxID">schema:taxID</a><br/>
+                    <a href="#AGORID">tern-org:agorID</a><br/>
+                    <a href="http://schema.org/foundingDate">schema:foundingDate</a><br/>
+                    <a href="http://schema.org/dissolutionDate">schema:dissolutionDate</a><br/>
                     <a href="http://schema.org/parentOrganization">schema:parentOrganization</a><br/>
                     <a href="http://schema.org/subOrganization">schema:subOrganization</a><br/>
+                    <a href="http://schema.org/member">schema:member</a><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://schema.org/subOrganization">schema:subOrganization</a><br/>
+                    <a href="http://schema.org/memberOf">schema:memberOf</a><br/>
                     <a href="http://schema.org/parentOrganization">schema:parentOrganization</a><br/>
+                    <a href="http://schema.org/affiliation">schema:affiliation</a><br/>
+                    <a href="http://schema.org/subOrganization">schema:subOrganization</a><br/>
                 </td>
             </tr>
         </table>
@@ -99,6 +126,14 @@
                 <th>Super-classes</th>
                 <td>
                     <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://schema.org/jobTitle">schema:jobTitle</a><br/>
+                    <a href="http://schema.org/honorificPrefix">schema:honorificPrefix</a><br/>
+                    <a href="http://schema.org/affiliation">schema:affiliation</a><br/>
                 </td>
             </tr>
         </table>
@@ -125,11 +160,63 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="http://schema.org/image">schema:image</a><br/>
+                    <a href="http://schema.org/identifier">schema:identifier</a><br/>
                     <a href="http://schema.org/description">schema:description</a><br/>
                     <a href="http://schema.org/name">schema:name</a><br/>
-                    <a href="http://schema.org/identifier">schema:identifier</a><br/>
-                    <a href="http://schema.org/sameAs">schema:sameAs</a><br/>
                     <a href="http://schema.org/alternateName">schema:alternateName</a><br/>
+                    <a href="http://schema.org/url">schema:url</a><br/>
+                    <a href="http://schema.org/sameAs">schema:sameAs</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ChangeEvent">
+        <h3>Change Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/org#ChangeEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. 
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Activity">prov:Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#originalOrganization">org:originalOrganization</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/org#resultingOrganization">org:resultingOrganization</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#changedBy">org:changedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/org#resultedFrom">org:resultedFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Activity">
+        <h3>Activity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/prov#Activity</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#ChangeEvent">org:ChangeEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -150,32 +237,174 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="http://schema.org/memberOf">schema:memberOf</a><br/>
+                    <a href="http://schema.org/telephone">schema:telephone</a><br/>
                     <a href="http://schema.org/email">schema:email</a><br/>
                     <a href="http://schema.org/address">schema:address</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://schema.org/member">schema:member</a><br/>
                 </td>
             </tr>
         </table>
     </div>
 </section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#changedby">changed by</a></li>
+        <li><a href="#originalorganization">original organization</a></li>
+        <li><a href="#resultedfrom">resulted from</a></li>
+        <li><a href="#resultedin">resulted in</a></li>
+    </ul>
+    <div class="entity property" id="changedby">
+        <h3>changed by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/org#changedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#Organization">org:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#ChangeEvent">org:ChangeEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="originalorganization">
+        <h3>original organization<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/org#originalOrganization</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#used">prov:used</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#ChangeEvent">org:ChangeEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#Organization">org:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="resultedfrom">
+        <h3>resulted from<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/org#resultedFrom</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#wasGeneratedBy">prov:wasGeneratedBy</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#Organization">org:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#ChangeEvent">org:ChangeEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="resultedin">
+        <h3>resulted in<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/ns/org#resultingOrganization</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#ChangeEvent">org:ChangeEvent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/org#Organization">org:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
 <section id="properties">
     <h2>Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#Identifier">Identifier</a></li>
-        <li><a href="#Type">Type</a></li>
-        <li><a href="#identifier">Identifier</a></li>
-        <li><a href="#type">Type</a></li>
         <li><a href="#address">address</a></li>
+        <li><a href="#affiliation">affiliation</a></li>
         <li><a href="#alternateName">alternateName</a></li>
         <li><a href="#description">description</a></li>
+        <li><a href="#dissolutionDate">dissolutionDate</a></li>
         <li><a href="#email">email</a></li>
-        <li><a href="#identifier1">identifier</a></li>
+        <li><a href="#foundingDate">foundingDate</a></li>
+        <li><a href="#honorificPrefix">honorificPrefix</a></li>
+        <li><a href="#identifier">identifier</a></li>
+        <li><a href="#image">image</a></li>
+        <li><a href="#Jobtitle">Job title</a></li>
+        <li><a href="#member">member</a></li>
+        <li><a href="#memberOf">memberOf</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#parentOrganization">parentOrganization</a></li>
         <li><a href="#sameAs">sameAs</a></li>
@@ -185,90 +414,6 @@
         <li><a href="#url">url</a></li>
         <li><a href="#AGORID">AGOR ID</a></li>
     </ul>
-    <div class="entity property" id="Identifier">
-        <h3>Identifier<sup title="property" class="sup-p">p</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://purl.org/dc/elements/1.1/identifier</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. 
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="Type">
-        <h3>Type<sup title="property" class="sup-p">p</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://purl.org/dc/elements/1.1/type</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    The nature or genre of the resource.
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="identifier">
-        <h3>Identifier<sup title="property" class="sup-p">p</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://purl.org/dc/terms/identifier</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    An unambiguous reference to the resource within a given context.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://purl.org/dc/elements/1.1/identifier">dc:identifier</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="type">
-        <h3>Type<sup title="property" class="sup-p">p</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://purl.org/dc/terms/type</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    The nature or genre of the resource.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://purl.org/dc/elements/1.1/type">dc:type</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="address">
         <h3>address<sup title="property" class="sup-p">p</sup></h3>
         <table>
@@ -287,11 +432,11 @@
                 <td>
                     <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
-                    <a href="http://schema.org/GeoCoordinates">schema:GeoCoordinates</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/GeoShape">schema:GeoShape</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Place">schema:Place</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/GeoCoordinates">schema:GeoCoordinates</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -299,8 +444,45 @@
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
-                    <a href="http://schema.org/PostalAddress">schema:PostalAddress</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/PostalAddress">schema:PostalAddress</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="affiliation">
+        <h3>affiliation<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/affiliation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An organization that this person is affiliated with. For example, a school/university, a club, or a team.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://schema.org/memberOf">schema:memberOf</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -367,6 +549,37 @@
             </tr>
         </table>
     </div>
+    <div class="entity property" id="dissolutionDate">
+        <h3>dissolutionDate<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/dissolutionDate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The date that this organization was dissolved.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Date">schema:Date</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="email">
         <h3>email<sup title="property" class="sup-p">p</sup></h3>
         <table>
@@ -385,8 +598,8 @@
                 <td>
                     <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
-                    <a href="http://schema.org/ContactPoint">schema:ContactPoint</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/ContactPoint">schema:ContactPoint</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
@@ -400,7 +613,69 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="identifier1">
+    <div class="entity property" id="foundingDate">
+        <h3>foundingDate<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/foundingDate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The date that this organization was founded.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Date">schema:Date</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="honorificPrefix">
+        <h3>honorificPrefix<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/honorificPrefix</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="identifier">
         <h3>identifier<sup title="property" class="sup-p">p</sup></h3>
         <table>
             <tr>
@@ -425,9 +700,138 @@
                 <th>Range(s)</th>
                 <td>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
-                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/PropertyValue">schema:PropertyValue</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="image">
+        <h3>image<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/image</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/ImageObject">schema:ImageObject</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Jobtitle">
+        <h3>Job title<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/jobTitle</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The job title of the person (for example, Financial Manager).
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/DefinedTerm">schema:DefinedTerm</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="member">
+        <h3>member<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/member</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/ProgramMembership">schema:ProgramMembership</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="memberOf">
+        <h3>memberOf<sup title="property" class="sup-p">p</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://schema.org/memberOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Organization (or ProgramMembership) to which this Person or Organization belongs.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://schema.org/ProgramMembership">schema:ProgramMembership</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -584,6 +988,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
+                    <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
                     <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
@@ -592,6 +997,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
                 </td>
@@ -614,16 +1020,18 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
+                    <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://schema.org/Place">schema:Place</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/ContactPoint">schema:ContactPoint</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://schema.org/Organization">schema:Organization</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://schema.org/Place">schema:Place</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://schema.org/Person">schema:Person</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://schema.org/Text">schema:Text</a><sup class="sup-c" title="class">c</sup>
                 </td>
@@ -646,6 +1054,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
+                    <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
                     <a href="http://schema.org/Thing">schema:Thing</a><sup class="sup-c" title="class">c</sup>
                 </td>
@@ -653,6 +1062,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a><sup class="sup-c" title="class">c</sup>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://schema.org/URL">schema:URL</a><sup class="sup-c" title="class">c</sup>
                 </td>
@@ -701,12 +1111,16 @@
 <section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
+        <dt><em>default (:)</em></dt>
+        <dd><code>https://w3id.org/tern/ontologies/org/</code></dd>
         <dt>dc</dt>
         <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
         <dt>dct</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
         <dt>foaf</dt>
         <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>org</dt>
+        <dd><code>http://www.w3.org/ns/org#</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
         <dt>prov</dt>
@@ -721,6 +1135,8 @@
         <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
         <dt>tern-org</dt>
         <dd><code>https://w3id.org/tern/ontologies/org/</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
         <dt>void</dt>
         <dd><code>http://rdfs.org/ns/void#</code></dd>
         <dt>xml</dt>

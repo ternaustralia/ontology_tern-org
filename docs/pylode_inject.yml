@@ -9,7 +9,7 @@ overview:
   p: An overview of the TERN Organisations ontology.
   figures:
     - figure:
-        src: diagram.svg
+        src: tern-org.ttl.svg
         alt: TERN Organisations ontology overview diagram.
         caption: TERN Organisations ontology overview.
 

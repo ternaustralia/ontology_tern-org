@@ -1,0 +1,17 @@
+# pyLODE Inject configuration file (https://github.com/edmondchuc/pylode-inject)
+
+logo:
+  src: 'https://www.tern.org.au/rs/7/sites/998/custom_files/tpl_images/assets/images/logo.png'
+  alt: TERN logo.
+  href: 'https://www.tern.org.au'
+
+overview:
+  p: An overview of the TERN Organisations ontology.
+  figures:
+    - figure:
+        src: diagram.svg
+        alt: TERN Organisations ontology overview diagram.
+        caption: TERN Organisations ontology overview.
+
+classes:
+  figures: []

@@ -1,5 +1,4 @@
 # baseURI: https://w3id.org/tern/ontologies/org/
-# imports: http://purl.org/dc/terms/
 # prefix: tern-org
 
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -13,11 +12,16 @@
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 
+<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66>
+  a schema:Organization ;
+  schema:name "Terrestrial Ecoystem Research Network" ;
+  schema:url <https://www.tern.org.au/> ;
+.
 schema:Organization
   a owl:Class ;
   rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
@@ -55,6 +59,7 @@ schema:address
 .
 schema:affiliation
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:Person ;
   schema:rangeIncludes schema:Organization ;
   rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team." ;
@@ -151,6 +156,7 @@ schema:jobTitle
 .
 schema:member
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:Organization ;
   schema:domainIncludes schema:ProgramMembership ;
   schema:inverseOf schema:memberOf ;
@@ -163,6 +169,7 @@ schema:member
 .
 schema:memberOf
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:Organization ;
   schema:domainIncludes schema:Person ;
   schema:inverseOf schema:member ;
@@ -186,6 +193,7 @@ schema:name
 .
 schema:parentOrganization
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:Organization ;
   schema:inverseOf schema:subOrganization ;
   schema:rangeIncludes schema:Organization ;
@@ -206,6 +214,7 @@ schema:sameAs
 .
 schema:subOrganization
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:Organization ;
   schema:inverseOf schema:parentOrganization ;
   schema:rangeIncludes schema:Organization ;
@@ -309,8 +318,7 @@ prov:Agent
 .
 tern-org:
   a owl:Ontology ;
-  vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
-  vann:preferredNamespacePrefix "tern-org" ;
+  dct:created "2019-11-23"^^xsd:date ;
   dct:creator [
       a schema:Person ;
       schema:affiliation <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> ;
@@ -318,26 +326,24 @@ tern-org:
       schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
       schema:name "Edmond Chuc" ;
     ] ;
+  dct:modified "2019-11-24"^^xsd:date ;
   dct:publisher <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  vann:preferredNamespacePrefix "tern-org" ;
+  vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
-  owl:versionInfo "Draft" ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
-  dct:created "2019-11-23"^^xsd:date ;
-  dct:modified "2019-11-24"^^xsd:date ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-.
-<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> a schema:Organization ;
-  schema:name "Terrestrial Ecoystem Research Network" ;
-  schema:url <https://www.tern.org.au/> ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
+  owl:versionInfo "Draft" ;
 .
 tern-org:agorID
   a rdf:Property ;
   schema:domainIncludes schema:Organization ;
   schema:rangeIncludes schema:Text ;
-  rdfs:comment "Australian Government Organisations Register ID" ;
+  rdfs:comment "The Australian Government Organisations Register ID" ;
   rdfs:domain schema:Organization ;
   rdfs:label "AGOR ID" ;
   rdfs:range rdfs:Literal ;
+  rdfs:seeAlso <https://data.gov.au/data/dataset/australian-government-organisations-register> ;
   rdfs:subPropertyOf schema:identifier ;
 .

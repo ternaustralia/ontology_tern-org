@@ -1,0 +1,120 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/tern/ontologies/org/.shapes> a owl:Ontology ;
+    owl:imports <http://datashapes.org/dash>,
+        tern-org: .
+
+schema:Person a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:affiliation ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:honorificPrefix ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:jobTitle ] ;
+    sh:targetClass schema:Person .
+
+schema:Thing a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:anyURI ;
+            sh:path schema:image ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:name ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:anyURI ;
+            sh:path schema:sameAs ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:anyURI ;
+            sh:path schema:url ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:alternateName ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:description ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:identifier ] ;
+    sh:targetClass schema:Thing .
+
+org:ChangeEvent a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:description ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:name ],
+        [ a sh:PropertyShape ;
+            sh:class org:Organization ;
+            sh:minCount 1 ;
+            sh:path org:originalOrganization ],
+        [ a sh:PropertyShape ;
+            sh:class org:Organization ;
+            sh:minCount 1 ;
+            sh:path org:resultingOrganization ] ;
+    sh:targetClass org:ChangeEvent .
+
+prov:Agent a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:anyURI ;
+            sh:path schema:address ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:email ],
+        [ a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:memberOf ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:telephone ] ;
+    sh:targetClass prov:Agent .
+
+schema:Organization a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:dissolutionDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:foundingDate ],
+        [ a sh:PropertyShape ;
+            sh:class prov:Agent ;
+            sh:path schema:member ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:name ],
+        [ a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:parentOrganization ],
+        [ a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:subOrganization ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:taxID ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path tern-org:agorID ] ;
+    sh:targetClass schema:Organization .
+

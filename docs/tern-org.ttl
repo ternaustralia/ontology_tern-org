@@ -46,7 +46,7 @@ schema:Thing
   a owl:Class ;
   rdfs:comment "The most generic type of item." ;
   rdfs:label "Thing" ;
-  owl:equivalentClass owl:Thing ;
+  rdfs:subClassOf owl:Thing ;
 .
 schema:address
   a rdf:Property ;
@@ -270,7 +270,27 @@ org:ChangeEvent
   rdfs:comment "Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. "@en ;
   rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
   rdfs:label "Change Event"@en ;
-  rdfs:subClassOf prov:Activity ;
+  rdfs:subClassOf schema:Thing ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:description ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:name ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty org:originalOrganization ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty org:resultingOrganization ;
+    ] ;
 .
 org:changedBy
   a rdf:Property ;
@@ -333,7 +353,7 @@ tern-org:
       schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
       schema:name "Edmond Chuc" ;
     ] ;
-  dct:modified "2019-11-24"^^xsd:date ;
+  dct:modified "2019-11-26"^^xsd:date ;
   dct:publisher <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> ;
   vann:preferredNamespacePrefix "tern-org" ;
   vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;

@@ -363,7 +363,7 @@ tern-org:Federal
 .
 tern-org:Government
   a owl:Class ;
-  rdfs:comment "Australian Government." ;
+  rdfs:comment "Australian Government organizations." ;
   rdfs:label "Government Organization" ;
   rdfs:subClassOf schema:Organization ;
 .

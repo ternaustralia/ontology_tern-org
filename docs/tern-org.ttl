@@ -20,7 +20,7 @@
 <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66>
   a schema:Organization ;
   schema:name "Terrestrial Ecoystem Research Network" ;
-  schema:url <https://www.tern.org.au/> ;
+  schema:url "https://www.tern.org.au/"^^xsd:anyURI ;
 .
 schema:Organization
   a owl:Class ;
@@ -80,7 +80,7 @@ schema:alternateName
   rdfs:comment "An alias for the item." ;
   rdfs:domain schema:Thing ;
   rdfs:label "alternateName" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
 .
 schema:description
   a rdf:Property ;
@@ -89,7 +89,7 @@ schema:description
   rdfs:comment "A description of the item." ;
   rdfs:domain schema:Thing ;
   rdfs:label "description" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
   owl:equivalentProperty dct:description ;
 .
 schema:dissolutionDate
@@ -110,7 +110,7 @@ schema:email
   rdfs:comment "Email address." ;
   rdfs:domain prov:Agent ;
   rdfs:label "email" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
 .
 schema:foundingDate
   a rdf:Property ;
@@ -128,7 +128,7 @@ schema:honorificPrefix
   rdfs:comment "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." ;
   rdfs:domain schema:Person ;
   rdfs:label "honorificPrefix" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
 .
 schema:identifier
   a rdf:Property ;
@@ -139,6 +139,7 @@ schema:identifier
   rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
   rdfs:domain schema:Thing ;
   rdfs:label "identifier" ;
+  rdfs:range xsd:string ;
 .
 schema:image
   a rdf:Property ;
@@ -148,6 +149,7 @@ schema:image
   rdfs:comment "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>." ;
   rdfs:domain schema:Thing ;
   rdfs:label "image" ;
+  rdfs:range xsd:anyURI ;
 .
 schema:jobTitle
   a rdf:Property ;
@@ -157,7 +159,7 @@ schema:jobTitle
   rdfs:comment "The job title of the person (for example, Financial Manager)." ;
   rdfs:domain schema:Person ;
   rdfs:label "Job title" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
 .
 schema:member
   a rdf:Property ;
@@ -192,7 +194,7 @@ schema:name
   rdfs:comment "The name of the item." ;
   rdfs:domain schema:Thing ;
   rdfs:label "name" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:label ;
   owl:equivalentProperty dct:title ;
 .
@@ -238,7 +240,7 @@ schema:taxID
   rdfs:comment "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." ;
   rdfs:domain schema:Organization ;
   rdfs:label "taxID" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf schema:identifier ;
 .
 schema:telephone
@@ -251,7 +253,7 @@ schema:telephone
   rdfs:comment "The telephone number." ;
   rdfs:domain prov:Agent ;
   rdfs:label "telephone" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
 .
 schema:url
   a rdf:Property ;
@@ -344,7 +346,7 @@ tern-org:
 tern-org:Academic
   a owl:Class ;
   rdfs:comment "Academic institutes like Universities." ;
-  rdfs:label "Academic Institutes" ;
+  rdfs:label "Academic Institution" ;
   rdfs:subClassOf tern-org:Institution ;
 .
 tern-org:Commercial
@@ -356,13 +358,19 @@ tern-org:Commercial
 tern-org:Federal
   a owl:Class ;
   rdfs:comment "Federal government organizations and agencies." ;
-  rdfs:label "Federal Government" ;
+  rdfs:label "Federal Government Organization" ;
+  rdfs:subClassOf tern-org:Government ;
+.
+tern-org:Government
+  a owl:Class ;
+  rdfs:comment "Australian Government." ;
+  rdfs:label "Government Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
 tern-org:GovernmentFunded
   a owl:Class ;
   rdfs:comment "Organizations funded by the government." ;
-  rdfs:label "Government Funded" ;
+  rdfs:label "Government Funded Institution" ;
   rdfs:subClassOf tern-org:Institution ;
 .
 tern-org:Institution
@@ -384,6 +392,18 @@ tern-org:NCRIS
   rdfs:seeAlso <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> ;
   rdfs:subClassOf tern-org:GovernmentFunded ;
 .
+tern-org:Regional
+  a owl:Class ;
+  rdfs:comment "Regional and local governments." ;
+  rdfs:label "Regional Government Organization" ;
+  rdfs:subClassOf tern-org:Government ;
+.
+tern-org:State
+  a owl:Class ;
+  rdfs:comment "State governments." ;
+  rdfs:label "State Government Organization" ;
+  rdfs:subClassOf tern-org:Government ;
+.
 tern-org:agorID
   a rdf:Property ;
   schema:domainIncludes schema:Organization ;
@@ -391,7 +411,7 @@ tern-org:agorID
   rdfs:comment "The Australian Government Organisations Register ID" ;
   rdfs:domain schema:Organization ;
   rdfs:label "AGOR ID" ;
-  rdfs:range rdfs:Literal ;
+  rdfs:range xsd:string ;
   rdfs:seeAlso <https://data.gov.au/data/dataset/australian-government-organisations-register> ;
   rdfs:subPropertyOf schema:identifier ;
 .

@@ -152,6 +152,11 @@
    </h2>
    <ul class="hlist">
     <li>
+     <a href="#AcademicInstitutes">
+      Academic Institutes
+     </a>
+    </li>
+    <li>
      <a href="#Agent">
       Agent
      </a>
@@ -159,6 +164,36 @@
     <li>
      <a href="#ChangeEvent">
       Change Event
+     </a>
+    </li>
+    <li>
+     <a href="#CommercialOrganization">
+      Commercial Organization
+     </a>
+    </li>
+    <li>
+     <a href="#FederalGovernment">
+      Federal Government
+     </a>
+    </li>
+    <li>
+     <a href="#GovernmentFunded">
+      Government Funded
+     </a>
+    </li>
+    <li>
+     <a href="#Institution">
+      Institution
+     </a>
+    </li>
+    <li>
+     <a href="#InternationalOrganization">
+      International Organization
+     </a>
+    </li>
+    <li>
+     <a href="#NCRIS">
+      NCRIS
      </a>
     </li>
     <li>
@@ -219,11 +254,72 @@
      </tr>
      <tr>
       <th>
+       Restrictions
+      </th>
+      <td>
+       <a href="http://schema.org/name">
+        schema:name
+       </a>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Sub-classes
+      </th>
+      <td>
+       <a href="#FederalGovernment">
+        tern-org:Federal
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#CommercialOrganization">
+        tern-org:Commercial
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#InternationalOrganization">
+        tern-org:International
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#Institution">
+        tern-org:Institution
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/taxID">
+        schema:taxID
+       </a>
+       <br/>
        <a href="http://schema.org/subOrganization">
         schema:subOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/member">
+        schema:member
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -235,17 +331,6 @@
        <br/>
        <a href="http://schema.org/dissolutionDate">
         schema:dissolutionDate
-       </a>
-       <br/>
-       <a href="http://schema.org/member">
-        schema:member
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="http://schema.org/taxID">
-        schema:taxID
        </a>
        <br/>
        <a href="http://schema.org/parentOrganization">
@@ -266,13 +351,6 @@
        In range of
       </th>
       <td>
-       <a href="http://schema.org/memberOf">
-        schema:memberOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="http://schema.org/affiliation">
         schema:affiliation
        </a>
@@ -280,8 +358,8 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/subOrganization">
-        schema:subOrganization
+       <a href="http://schema.org/memberOf">
+        schema:memberOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -289,6 +367,13 @@
        <br/>
        <a href="http://schema.org/parentOrganization">
         schema:parentOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/subOrganization">
+        schema:subOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -343,6 +428,13 @@
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/affiliation">
+        schema:affiliation
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="http://schema.org/honorificPrefix">
         schema:honorificPrefix
        </a>
@@ -350,13 +442,6 @@
        <a href="http://schema.org/jobTitle">
         schema:jobTitle
        </a>
-       <br/>
-       <a href="http://schema.org/affiliation">
-        schema:affiliation
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
        <br/>
       </td>
      </tr>
@@ -407,20 +492,20 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/url">
-        schema:url
+       <a href="http://schema.org/alternateName">
+        schema:alternateName
        </a>
        <br/>
        <a href="http://schema.org/description">
         schema:description
        </a>
        <br/>
-       <a href="http://schema.org/identifier">
-        schema:identifier
+       <a href="http://schema.org/url">
+        schema:url
        </a>
        <br/>
-       <a href="http://schema.org/name">
-        schema:name
+       <a href="http://schema.org/identifier">
+        schema:identifier
        </a>
        <br/>
        <a href="http://schema.org/image">
@@ -431,8 +516,8 @@
         schema:sameAs
        </a>
        <br/>
-       <a href="http://schema.org/alternateName">
-        schema:alternateName
+       <a href="http://schema.org/name">
+        schema:name
        </a>
        <br/>
       </td>
@@ -505,15 +590,15 @@
        In range of
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#changedBy">
-        org:changedBy
+       <a href="http://www.w3.org/ns/org#resultedFrom">
+        org:resultedFrom
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="http://www.w3.org/ns/org#resultedFrom">
-        org:resultedFrom
+       <a href="http://www.w3.org/ns/org#changedBy">
+        org:changedBy
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -581,10 +666,6 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/telephone">
-        schema:telephone
-       </a>
-       <br/>
        <a href="http://schema.org/memberOf">
         schema:memberOf
        </a>
@@ -594,6 +675,10 @@
        <br/>
        <a href="http://schema.org/address">
         schema:address
+       </a>
+       <br/>
+       <a href="http://schema.org/telephone">
+        schema:telephone
        </a>
        <br/>
        <a href="http://schema.org/email">
@@ -612,6 +697,335 @@
        </a>
        <sup class="sup-op" title="object property">
         op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="AcademicInstitutes">
+    <h3>
+     Academic Institutes
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/Academic
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Academic institutes like Universities.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="#Institution">
+        tern-org:Institution
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="CommercialOrganization">
+    <h3>
+     Commercial Organization
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/Commercial
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Commercial organizations from the industry.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="FederalGovernment">
+    <h3>
+     Federal Government
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/Federal
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Federal government organizations and agencies.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="GovernmentFunded">
+    <h3>
+     Government Funded
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/GovernmentFunded
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Organizations funded by the government.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="#Institution">
+        tern-org:Institution
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Sub-classes
+      </th>
+      <td>
+       <a href="#NCRIS">
+        tern-org:NCRIS
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="Institution">
+    <h3>
+     Institution
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/Institution
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       An organization founded for a religious, educational, professional, or social purpose.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Sub-classes
+      </th>
+      <td>
+       <a href="#GovernmentFunded">
+        tern-org:GovernmentFunded
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#AcademicInstitutes">
+        tern-org:Academic
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="InternationalOrganization">
+    <h3>
+     International Organization
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/International
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       International organizations.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="NCRIS">
+    <h3>
+     NCRIS
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/NCRIS
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="#GovernmentFunded">
+        tern-org:GovernmentFunded
+       </a>
+       <sup class="sup-c" title="class">
+        c
        </sup>
        <br/>
       </td>
@@ -836,14 +1250,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -894,14 +1308,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1466,20 +1880,8 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/Place">
         schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/GeoShape">
-        schema:GeoShape
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1492,6 +1894,18 @@
        </sup>
        <a href="http://schema.org/GeoCoordinates">
         schema:GeoCoordinates
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Person">
+        schema:Person
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/GeoShape">
+        schema:GeoShape
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2066,14 +2480,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/PropertyValue">
-        schema:PropertyValue
+       <a href="http://schema.org/URL">
+        schema:URL
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/URL">
-        schema:URL
+       <a href="http://schema.org/PropertyValue">
+        schema:PropertyValue
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2156,14 +2570,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/URL">
-        schema:URL
+       <a href="http://schema.org/ImageObject">
+        schema:ImageObject
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/ImageObject">
-        schema:ImageObject
+       <a href="http://schema.org/URL">
+        schema:URL
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2468,14 +2882,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2550,18 +2964,6 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Place">
-        schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/ContactPoint">
         schema:ContactPoint
        </a>
@@ -2570,6 +2972,18 @@
        </sup>
        <a href="http://schema.org/Person">
         schema:Person
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Place">
+        schema:Place
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c

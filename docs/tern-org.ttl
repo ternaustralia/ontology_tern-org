@@ -27,6 +27,11 @@ schema:Organization
   rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
   rdfs:label "Organization" ;
   rdfs:subClassOf prov:Agent ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:name ;
+    ] ;
   owl:equivalentClass org:Organization ;
 .
 schema:Person
@@ -335,6 +340,49 @@ tern-org:
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
   owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
   owl:versionInfo "Draft" ;
+.
+tern-org:Academic
+  a owl:Class ;
+  rdfs:comment "Academic institutes like Universities." ;
+  rdfs:label "Academic Institutes" ;
+  rdfs:subClassOf tern-org:Institution ;
+.
+tern-org:Commercial
+  a owl:Class ;
+  rdfs:comment "Commercial organizations from the industry." ;
+  rdfs:label "Commercial Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+tern-org:Federal
+  a owl:Class ;
+  rdfs:comment "Federal government organizations and agencies." ;
+  rdfs:label "Federal Government" ;
+  rdfs:subClassOf schema:Organization ;
+.
+tern-org:GovernmentFunded
+  a owl:Class ;
+  rdfs:comment "Organizations funded by the government." ;
+  rdfs:label "Government Funded" ;
+  rdfs:subClassOf tern-org:Institution ;
+.
+tern-org:Institution
+  a owl:Class ;
+  rdfs:comment "An organization founded for a religious, educational, professional, or social purpose." ;
+  rdfs:label "Institution" ;
+  rdfs:subClassOf schema:Organization ;
+.
+tern-org:International
+  a owl:Class ;
+  rdfs:comment "International organizations." ;
+  rdfs:label "International Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+tern-org:NCRIS
+  a owl:Class ;
+  rdfs:comment "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." ;
+  rdfs:label "NCRIS" ;
+  rdfs:seeAlso <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> ;
+  rdfs:subClassOf tern-org:GovernmentFunded ;
 .
 tern-org:agorID
   a rdf:Property ;

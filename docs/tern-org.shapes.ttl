@@ -40,10 +40,8 @@ schema:Thing a sh:NodeShape ;
             sh:datatype xsd:string ;
             sh:path schema:name ],
         [ a sh:PropertyShape ;
-            sh:datatype xsd:anyURI ;
             sh:path schema:sameAs ],
         [ a sh:PropertyShape ;
-            sh:datatype xsd:anyURI ;
             sh:path schema:url ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
@@ -77,7 +75,6 @@ org:ChangeEvent a sh:NodeShape ;
 
 prov:Agent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:anyURI ;
             sh:path schema:address ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;

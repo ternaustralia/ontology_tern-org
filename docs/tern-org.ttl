@@ -60,7 +60,6 @@ schema:address
   rdfs:comment "Physical address of the item." ;
   rdfs:domain prov:Agent ;
   rdfs:label "address" ;
-  rdfs:range xsd:anyURI ;
 .
 schema:affiliation
   a rdf:Property ;
@@ -217,7 +216,6 @@ schema:sameAs
   rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
   rdfs:domain schema:Thing ;
   rdfs:label "sameAs" ;
-  rdfs:range xsd:anyURI ;
 .
 schema:subOrganization
   a rdf:Property ;
@@ -262,7 +260,6 @@ schema:url
   rdfs:comment "URL of the item." ;
   rdfs:domain schema:Thing ;
   rdfs:label "url" ;
-  rdfs:range xsd:anyURI ;
 .
 org:ChangeEvent
   a rdfs:Class ;

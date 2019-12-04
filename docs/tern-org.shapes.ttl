@@ -29,11 +29,16 @@ schema:Person a sh:NodeShape ;
             sh:path schema:honorificPrefix ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:jobTitle ] ;
+            sh:path schema:jobTitle ],
+        [ a sh:PropertyShape ;
+            sh:path tern-org:orcID ] ;
     sh:targetClass schema:Person .
 
 schema:Thing a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:identifier ],
+        [ a sh:PropertyShape ;
             sh:datatype xsd:anyURI ;
             sh:path schema:image ],
         [ a sh:PropertyShape ;
@@ -48,10 +53,7 @@ schema:Thing a sh:NodeShape ;
             sh:path schema:alternateName ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:description ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:identifier ] ;
+            sh:path schema:description ] ;
     sh:targetClass schema:Thing .
 
 org:ChangeEvent a sh:NodeShape ;

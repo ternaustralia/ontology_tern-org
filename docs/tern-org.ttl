@@ -297,6 +297,7 @@ org:changedBy
   rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
   rdfs:label "changed by"@en ;
   rdfs:range org:ChangeEvent ;
+  owl:inverseOf org:originalOrganization ;
 .
 org:originalOrganization
   a rdf:Property ;
@@ -307,6 +308,7 @@ org:originalOrganization
   rdfs:label "original organization"@en ;
   rdfs:range org:Organization ;
   rdfs:subPropertyOf prov:used ;
+  owl:inverseOf org:changedBy ;
 .
 org:resultedFrom
   a rdf:Property ;
@@ -317,6 +319,7 @@ org:resultedFrom
   rdfs:label "resulted from"@en ;
   rdfs:range org:ChangeEvent ;
   rdfs:subPropertyOf prov:wasGeneratedBy ;
+  owl:inverseOf org:resultingOrganization ;
 .
 org:resultingOrganization
   a rdf:Property ;
@@ -326,6 +329,7 @@ org:resultingOrganization
   rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
   rdfs:label "resulted in"@en ;
   rdfs:range org:Organization ;
+  owl:inverseOf org:resultedFrom ;
 .
 prov:Agent
   a owl:Class ;

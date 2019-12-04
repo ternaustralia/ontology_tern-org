@@ -151,23 +151,6 @@ schema:url a rdf:Property ;
     rdfs:comment "URL of the item." ;
     rdfs:domain schema:Thing .
 
-org:changedBy a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "changed by"@en ;
-    rdfs:comment "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."@en ;
-    rdfs:domain org:Organization ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-    rdfs:range org:ChangeEvent .
-
-org:resultedFrom a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "resulted from"@en ;
-    rdfs:comment "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."@en ;
-    rdfs:domain org:Organization ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-    rdfs:range org:ChangeEvent ;
-    rdfs:subPropertyOf prov:wasGeneratedBy .
-
 tern-org: a owl:Ontology ;
     rdfs:label "TERN Organisations Ontology" ;
     dct:created "2019-11-23"^^xsd:date ;
@@ -259,22 +242,24 @@ schema:member a rdf:Property,
     rdfs:domain schema:Organization ;
     rdfs:range prov:Agent .
 
-org:originalOrganization a rdf:Property,
+org:changedBy a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "original organization"@en ;
-    rdfs:comment "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."@en ;
-    rdfs:domain org:ChangeEvent ;
+    rdfs:label "changed by"@en ;
+    rdfs:comment "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."@en ;
+    rdfs:domain org:Organization ;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-    rdfs:range org:Organization ;
-    rdfs:subPropertyOf prov:used .
+    rdfs:range org:ChangeEvent ;
+    owl:inverseOf org:originalOrganization .
 
-org:resultingOrganization a rdf:Property,
+org:resultedFrom a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "resulted in"@en ;
-    rdfs:comment "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."@en ;
-    rdfs:domain org:ChangeEvent ;
+    rdfs:label "resulted from"@en ;
+    rdfs:comment "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."@en ;
+    rdfs:domain org:Organization ;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-    rdfs:range org:Organization .
+    rdfs:range org:ChangeEvent ;
+    rdfs:subPropertyOf prov:wasGeneratedBy ;
+    owl:inverseOf org:resultingOrganization .
 
 tern-org:GovernmentFunded a owl:Class ;
     rdfs:label "Government Funded Institution" ;
@@ -328,6 +313,25 @@ schema:subOrganization a rdf:Property,
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
+
+org:originalOrganization a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "original organization"@en ;
+    rdfs:comment "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."@en ;
+    rdfs:domain org:ChangeEvent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:range org:Organization ;
+    rdfs:subPropertyOf prov:used ;
+    owl:inverseOf org:changedBy .
+
+org:resultingOrganization a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "resulted in"@en ;
+    rdfs:comment "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."@en ;
+    rdfs:domain org:ChangeEvent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+    rdfs:range org:Organization ;
+    owl:inverseOf org:resultedFrom .
 
 tern-org:Institution a owl:Class ;
     rdfs:label "Institution" ;

@@ -37,6 +37,12 @@ schema:Person a sh:NodeShape ;
 schema:Thing a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
+            sh:path schema:alternateName ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:description ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:path schema:identifier ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:anyURI ;
@@ -47,13 +53,7 @@ schema:Thing a sh:NodeShape ;
         [ a sh:PropertyShape ;
             sh:path schema:sameAs ],
         [ a sh:PropertyShape ;
-            sh:path schema:url ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:alternateName ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:description ] ;
+            sh:path schema:url ] ;
     sh:targetClass schema:Thing .
 
 org:ChangeEvent a sh:NodeShape ;
@@ -75,8 +75,32 @@ org:ChangeEvent a sh:NodeShape ;
             sh:path org:resultingOrganization ] ;
     sh:targetClass org:ChangeEvent .
 
+schema:PostalAddress a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:addressRegion ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:postalCode ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:streetAddress ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:addressCountry ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:addressLocality ] ;
+    sh:targetClass schema:PostalAddress .
+
 prov:Agent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:class schema:PostalAddress ;
             sh:path schema:address ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;

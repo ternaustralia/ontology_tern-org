@@ -42,6 +42,37 @@ schema:Person
   rdfs:subClassOf prov:Agent ;
   owl:equivalentClass foaf:Person ;
 .
+schema:PostalAddress
+  a owl:Class ;
+  rdfs:comment "The mailing address." ;
+  rdfs:label "PostalAddress" ;
+  rdfs:subClassOf schema:Thing ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:addressCountry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:addressLocality ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:addressRegion ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:postalCode ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:streetAddress ;
+    ] ;
+.
 schema:Thing
   a owl:Class ;
   rdfs:comment "The most generic type of item." ;
@@ -50,6 +81,7 @@ schema:Thing
 .
 schema:address
   a rdf:Property ;
+  a owl:ObjectProperty ;
   schema:domainIncludes schema:GeoCoordinates ;
   schema:domainIncludes schema:GeoShape ;
   schema:domainIncludes schema:Organization ;
@@ -60,6 +92,31 @@ schema:address
   rdfs:comment "Physical address of the item." ;
   rdfs:domain prov:Agent ;
   rdfs:label "address" ;
+  rdfs:range schema:PostalAddress ;
+.
+schema:addressCountry
+  a rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:domainIncludes schema:GeoShape ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Country ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." ;
+  rdfs:label "addressCountry" ;
+.
+schema:addressLocality
+  a rdf:Property ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." ;
+  rdfs:label "addressLocality" ;
+.
+schema:addressRegion
+  a rdf:Property ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" ;
+  rdfs:label "addressRegion" ;
 .
 schema:affiliation
   a rdf:Property ;
@@ -209,6 +266,22 @@ schema:parentOrganization
   rdfs:range schema:Organization ;
   owl:inverseOf schema:subOrganization ;
 .
+schema:postOfficeBoxNumber
+  a rdf:Property ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The post office box number for PO box addresses." ;
+  rdfs:label "postOfficeBoxNumber" ;
+.
+schema:postalCode
+  a rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:domainIncludes schema:GeoShape ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The postal code. For example, 94043." ;
+  rdfs:label "postalCode" ;
+.
 schema:sameAs
   a rdf:Property ;
   schema:domainIncludes schema:Thing ;
@@ -216,6 +289,13 @@ schema:sameAs
   rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
   rdfs:domain schema:Thing ;
   rdfs:label "sameAs" ;
+.
+schema:streetAddress
+  a rdf:Property ;
+  schema:domainIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." ;
+  rdfs:label "streetAddress" ;
 .
 schema:subOrganization
   a rdf:Property ;

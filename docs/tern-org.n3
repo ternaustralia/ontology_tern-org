@@ -231,6 +231,13 @@ tern-org:agorID a rdf:Property ;
     rdfs:seeAlso <https://data.gov.au/data/dataset/australian-government-organisations-register> ;
     rdfs:subPropertyOf schema:identifier .
 
+tern-org:orcID a rdf:Property ;
+    rdfs:label "Open Researcher and Contributer ID (ORCID)" ;
+    rdfs:comment "The ORCID is a nonpropriertary alphanumeric code to uniquely identify scientific and other academic authors and contributors." ;
+    rdfs:domain schema:Person ;
+    rdfs:seeAlso <https://orcid.org/> ;
+    rdfs:subPropertyOf schema:identifier .
+
 schema:description a rdf:Property ;
     rdfs:label "description" ;
     schema:domainIncludes schema:Thing ;
@@ -277,16 +284,6 @@ tern-org:GovernmentFunded a owl:Class ;
 <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> a schema:Organization ;
     schema:name "Terrestrial Ecoystem Research Network" ;
     schema:url "https://www.tern.org.au/"^^xsd:anyURI .
-
-schema:identifier a rdf:Property ;
-    rdfs:label "identifier" ;
-    schema:domainIncludes schema:Thing ;
-    schema:rangeIncludes schema:PropertyValue,
-        schema:Text,
-        schema:URL ;
-    rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
-    rdfs:domain schema:Thing ;
-    rdfs:range xsd:string .
 
 schema:memberOf a rdf:Property,
         owl:ObjectProperty ;
@@ -336,6 +333,16 @@ tern-org:Institution a owl:Class ;
     rdfs:label "Institution" ;
     rdfs:comment "An organization founded for a religious, educational, professional, or social purpose." ;
     rdfs:subClassOf schema:Organization .
+
+schema:identifier a rdf:Property ;
+    rdfs:label "identifier" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:PropertyValue,
+        schema:Text,
+        schema:URL ;
+    rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
+    rdfs:domain schema:Thing ;
+    rdfs:range xsd:string .
 
 tern-org:Government a owl:Class ;
     rdfs:label "Government Organization" ;

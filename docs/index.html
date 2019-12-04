@@ -132,7 +132,7 @@
     An overview of the TERN Organisations ontology.
    </p>
    <figure>
-    <img alt="TERN Organisations ontology overview diagram." src="tern-org.ttl.svg"/>
+    <img alt="TERN Organisations ontology overview diagram." src="tern-org.ttl.txt.svg"/>
     <figcaption style="padding-bottom: 3rem">
      <strong>
       Figure 1:
@@ -287,8 +287,8 @@
        Sub-classes
       </th>
       <td>
-       <a href="#Institution">
-        tern-org:Institution
+       <a href="#GovernmentOrganization">
+        tern-org:Government
        </a>
        <sup class="sup-c" title="class">
         c
@@ -301,15 +301,15 @@
         c
        </sup>
        <br/>
-       <a href="#InternationalOrganization">
-        tern-org:International
+       <a href="#Institution">
+        tern-org:Institution
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#GovernmentOrganization">
-        tern-org:Government
+       <a href="#InternationalOrganization">
+        tern-org:International
        </a>
        <sup class="sup-c" title="class">
         c
@@ -329,21 +329,6 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/foundingDate">
-        schema:foundingDate
-       </a>
-       <br/>
-       <a href="http://schema.org/dissolutionDate">
-        schema:dissolutionDate
-       </a>
-       <br/>
-       <a href="http://schema.org/parentOrganization">
-        schema:parentOrganization
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="http://schema.org/subOrganization">
         schema:subOrganization
        </a>
@@ -353,6 +338,21 @@
        <br/>
        <a href="#AGORID">
         tern-org:agorID
+       </a>
+       <br/>
+       <a href="http://schema.org/parentOrganization">
+        schema:parentOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/dissolutionDate">
+        schema:dissolutionDate
+       </a>
+       <br/>
+       <a href="http://schema.org/foundingDate">
+        schema:foundingDate
        </a>
        <br/>
        <a href="http://schema.org/taxID">
@@ -366,15 +366,8 @@
        In range of
       </th>
       <td>
-       <a href="http://schema.org/affiliation">
-        schema:affiliation
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="http://schema.org/subOrganization">
-        schema:subOrganization
+       <a href="http://schema.org/parentOrganization">
+        schema:parentOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -387,8 +380,15 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/parentOrganization">
-        schema:parentOrganization
+       <a href="http://schema.org/affiliation">
+        schema:affiliation
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/subOrganization">
+        schema:subOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -443,8 +443,12 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/jobTitle">
-        schema:jobTitle
+       <a href="http://schema.org/honorificPrefix">
+        schema:honorificPrefix
+       </a>
+       <br/>
+       <a href="#OpenResearcherandContributerID(ORCID)">
+        tern-org:orcID
        </a>
        <br/>
        <a href="http://schema.org/affiliation">
@@ -454,8 +458,8 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/honorificPrefix">
-        schema:honorificPrefix
+       <a href="http://schema.org/jobTitle">
+        schema:jobTitle
        </a>
        <br/>
       </td>
@@ -528,20 +532,8 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/url">
-        schema:url
-       </a>
-       <br/>
-       <a href="http://schema.org/description">
-        schema:description
-       </a>
-       <br/>
        <a href="http://schema.org/image">
         schema:image
-       </a>
-       <br/>
-       <a href="http://schema.org/alternateName">
-        schema:alternateName
        </a>
        <br/>
        <a href="http://schema.org/sameAs">
@@ -554,6 +546,18 @@
        <br/>
        <a href="http://schema.org/name">
         schema:name
+       </a>
+       <br/>
+       <a href="http://schema.org/alternateName">
+        schema:alternateName
+       </a>
+       <br/>
+       <a href="http://schema.org/description">
+        schema:description
+       </a>
+       <br/>
+       <a href="http://schema.org/url">
+        schema:url
        </a>
        <br/>
       </td>
@@ -605,14 +609,6 @@
        Restrictions
       </th>
       <td>
-       <a href="http://schema.org/name">
-        schema:name
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
        <a href="http://www.w3.org/ns/org#originalOrganization">
         org:originalOrganization
        </a>
@@ -630,6 +626,14 @@
        <sup class="sup-op" title="object property">
         op
        </sup>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://schema.org/name">
+        schema:name
+       </a>
        <span class="cardinality">
         min
        </span>
@@ -747,6 +751,10 @@
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/email">
+        schema:email
+       </a>
+       <br/>
        <a href="http://schema.org/telephone">
         schema:telephone
        </a>
@@ -757,10 +765,6 @@
        <sup class="sup-op" title="object property">
         op
        </sup>
-       <br/>
-       <a href="http://schema.org/email">
-        schema:email
-       </a>
        <br/>
        <a href="http://schema.org/address">
         schema:address
@@ -955,15 +959,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#RegionalGovernmentOrganization">
-        tern-org:Regional
+       <a href="#FederalGovernmentOrganization">
+        tern-org:Federal
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#FederalGovernmentOrganization">
-        tern-org:Federal
+       <a href="#RegionalGovernmentOrganization">
+        tern-org:Regional
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1081,15 +1085,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#GovernmentFundedInstitution">
-        tern-org:GovernmentFunded
+       <a href="#AcademicInstitution">
+        tern-org:Academic
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#AcademicInstitution">
-        tern-org:Academic
+       <a href="#GovernmentFundedInstitution">
+        tern-org:GovernmentFunded
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1485,14 +1489,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1573,14 +1577,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/ProgramMembership">
-        schema:ProgramMembership
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/ProgramMembership">
+        schema:ProgramMembership
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2072,6 +2076,11 @@
       AGOR ID
      </a>
     </li>
+    <li>
+     <a href="#OpenResearcherandContributerID(ORCID)">
+      Open Researcher and Contributer ID (ORCID)
+     </a>
+    </li>
    </ul>
    <div class="entity property" id="address">
     <h3>
@@ -2115,6 +2124,18 @@
         sdo:domainIncludes
        </a>
        )
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/GeoShape">
+        schema:GeoShape
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <a href="http://schema.org/Person">
         schema:Person
        </a>
@@ -2129,18 +2150,6 @@
        </sup>
        <a href="http://schema.org/Place">
         schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/GeoShape">
-        schema:GeoShape
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2443,14 +2452,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/ContactPoint">
+        schema:ContactPoint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/ContactPoint">
-        schema:ContactPoint
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2893,14 +2902,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/DefinedTerm">
-        schema:DefinedTerm
+       <a href="http://schema.org/Text">
+        schema:Text
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Text">
-        schema:Text
+       <a href="http://schema.org/DefinedTerm">
+        schema:DefinedTerm
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3117,14 +3126,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3205,6 +3214,12 @@
        <sup class="sup-c" title="class">
         c
        </sup>
+       <a href="http://schema.org/Person">
+        schema:Person
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <a href="http://schema.org/ContactPoint">
         schema:ContactPoint
        </a>
@@ -3213,12 +3228,6 @@
        </sup>
        <a href="http://schema.org/Place">
         schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3399,6 +3408,57 @@
        )
        <a href="http://schema.org/Text">
         schema:Text
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="OpenResearcherandContributerID(ORCID)">
+    <h3>
+     Open Researcher and Contributer ID (ORCID)
+     <sup class="sup-p" title="property">
+      p
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/orcID
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The ORCID is a nonpropriertary alphanumeric code to uniquely identify scientific and other academic authors and contributors.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="http://schema.org/identifier">
+        schema:identifier
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c

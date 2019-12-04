@@ -121,7 +121,9 @@ schema:postOfficeBoxNumber a rdf:Property ;
     rdfs:label "postOfficeBoxNumber" ;
     schema:domainIncludes schema:PostalAddress ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The post office box number for PO box addresses." .
+    rdfs:comment "The post office box number for PO box addresses." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 schema:sameAs a rdf:Property ;
     rdfs:label "sameAs" ;
@@ -236,19 +238,25 @@ schema:addressCountry a rdf:Property ;
         schema:PostalAddress ;
     schema:rangeIncludes schema:Country,
         schema:Text ;
-    rdfs:comment "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." .
+    rdfs:comment "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 schema:addressLocality a rdf:Property ;
     rdfs:label "addressLocality" ;
     schema:domainIncludes schema:PostalAddress ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." .
+    rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 schema:addressRegion a rdf:Property ;
     rdfs:label "addressRegion" ;
     schema:domainIncludes schema:PostalAddress ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" .
+    rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 schema:description a rdf:Property ;
     rdfs:label "description" ;
@@ -277,13 +285,17 @@ schema:postalCode a rdf:Property ;
         schema:GeoShape,
         schema:PostalAddress ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The postal code. For example, 94043." .
+    rdfs:comment "The postal code. For example, 94043." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 schema:streetAddress a rdf:Property ;
     rdfs:label "streetAddress" ;
     schema:domainIncludes schema:PostalAddress ;
     schema:rangeIncludes schema:Text ;
-    rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." .
+    rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
 
 org:changedBy a rdf:Property,
         owl:ObjectProperty ;
@@ -408,6 +420,13 @@ prov:Agent a owl:Class ;
     prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
 
+schema:Person a owl:Class ;
+    rdfs:label "Person" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+    rdfs:subClassOf prov:Agent ;
+    owl:equivalentClass foaf:Person .
+
 schema:PostalAddress a owl:Class ;
     rdfs:label "PostalAddress" ;
     rdfs:comment "The mailing address." ;
@@ -427,13 +446,6 @@ schema:PostalAddress a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:streetAddress ],
         schema:Thing .
-
-schema:Person a owl:Class ;
-    rdfs:label "Person" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
-    rdfs:comment "A person (alive, dead, undead, or fictional)." ;
-    rdfs:subClassOf prov:Agent ;
-    owl:equivalentClass foaf:Person .
 
 schema:Thing a owl:Class ;
     rdfs:label "Thing" ;

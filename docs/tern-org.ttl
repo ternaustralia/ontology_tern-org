@@ -102,21 +102,27 @@ schema:addressCountry
   schema:rangeIncludes schema:Country ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "addressCountry" ;
+  rdfs:range xsd:string ;
 .
 schema:addressLocality
   a rdf:Property ;
   schema:domainIncludes schema:PostalAddress ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "addressLocality" ;
+  rdfs:range xsd:string ;
 .
 schema:addressRegion
   a rdf:Property ;
   schema:domainIncludes schema:PostalAddress ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "addressRegion" ;
+  rdfs:range xsd:string ;
 .
 schema:affiliation
   a rdf:Property ;
@@ -271,7 +277,9 @@ schema:postOfficeBoxNumber
   schema:domainIncludes schema:PostalAddress ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The post office box number for PO box addresses." ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "postOfficeBoxNumber" ;
+  rdfs:range xsd:string ;
 .
 schema:postalCode
   a rdf:Property ;
@@ -280,7 +288,9 @@ schema:postalCode
   schema:domainIncludes schema:PostalAddress ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The postal code. For example, 94043." ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "postalCode" ;
+  rdfs:range xsd:string ;
 .
 schema:sameAs
   a rdf:Property ;
@@ -295,7 +305,9 @@ schema:streetAddress
   schema:domainIncludes schema:PostalAddress ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:label "streetAddress" ;
+  rdfs:range xsd:string ;
 .
 schema:subOrganization
   a rdf:Property ;

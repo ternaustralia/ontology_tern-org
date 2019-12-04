@@ -77,22 +77,30 @@ org:ChangeEvent a sh:NodeShape ;
 
 schema:PostalAddress a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:addressRegion ],
         [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:postOfficeBoxNumber ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:postalCode ],
         [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:streetAddress ],
         [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:addressCountry ],
         [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:addressLocality ] ;

@@ -18,3 +18,9 @@ We use TopBraid Composer for the OWL2SHACL feature where a SHACL file containing
 ```
 docker run --rm --name tbc-shacl-cleaner -e SHACL_FILE="tern-org.shapes.ttl" -v ${PWD}:/home/input edmondchuc/tbc-shacl-cleaner
 ```
+
+
+## Contact
+
+**Edmond Chuc**  
+e.chuc@uq.edu.au  

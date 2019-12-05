@@ -321,6 +321,25 @@ org:resultedFrom a rdf:Property,
     rdfs:subPropertyOf prov:wasGeneratedBy ;
     owl:inverseOf org:resultingOrganization .
 
+tern-org:addressLine1 a rdf:Property ;
+    rdfs:label "Address Line 1" ;
+    rdfs:comment "First line of the non-locality/state/postcode portion of the address." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
+
+tern-org:addressLine2 a rdf:Property ;
+    rdfs:label "Address Line 2" ;
+    rdfs:comment "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
+
+tern-org:fullAddressLine a owl:AnnotationProperty ;
+    rdfs:label "Full Address Line" ;
+    rdfs:comment "The full address or canonical address of the postal address in a single line." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf rdfs:label .
+
 <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> a schema:Organization ;
     schema:name "Terrestrial Ecoystem Research Network" ;
     schema:url "https://www.tern.org.au/"^^xsd:anyURI .
@@ -337,7 +356,8 @@ schema:memberOf a rdf:Property,
     rdfs:domain prov:Agent ;
     rdfs:range schema:Organization .
 
-schema:name a rdf:Property ;
+schema:name a rdf:Property,
+        owl:AnnotationProperty ;
     rdfs:label "name" ;
     schema:domainIncludes schema:Thing ;
     schema:rangeIncludes schema:Text ;
@@ -423,7 +443,7 @@ schema:Person a owl:Class ;
     owl:equivalentClass foaf:Person .
 
 schema:PostalAddress a owl:Class ;
-    rdfs:label "PostalAddress" ;
+    rdfs:label "Postal Address" ;
     rdfs:comment "The mailing address." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -440,6 +460,15 @@ schema:PostalAddress a owl:Class ;
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:streetAddress ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty tern-org:addressLine1 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty tern-org:addressLine2 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty tern-org:fullAddressLine ],
         schema:Thing .
 
 schema:Thing a owl:Class ;

@@ -113,6 +113,11 @@
      </a>
     </li>
     <li>
+     <a href="#annotationproperties">
+      Annotation Properties
+     </a>
+    </li>
+    <li>
      <a href="#properties">
       Properties
      </a>
@@ -203,7 +208,7 @@
     </li>
     <li>
      <a href="#PostalAddress">
-      PostalAddress
+      Postal Address
      </a>
     </li>
     <li>
@@ -314,8 +319,8 @@
        Sub-classes
       </th>
       <td>
-       <a href="#RegionalGovernmentOrganization">
-        tern-org:RegionalGovernmentOrganization
+       <a href="#FederalGovernmentOrganization">
+        tern-org:FederalGovernmentOrganization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -328,8 +333,8 @@
         c
        </sup>
        <br/>
-       <a href="#FederalGovernmentOrganization">
-        tern-org:FederalGovernmentOrganization
+       <a href="#RegionalGovernmentOrganization">
+        tern-org:RegionalGovernmentOrganization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -387,6 +392,9 @@
        <a href="http://schema.org/name">
         schema:name
        </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
        <span class="cardinality">
         min
        </span>
@@ -399,13 +407,6 @@
        Sub-classes
       </th>
       <td>
-       <a href="http://schema.org/Project">
-        schema:Project
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="#InternationalOrganization">
         tern-org:InternationalOrganization
        </a>
@@ -422,6 +423,13 @@
        <br/>
        <a href="http://schema.org/GovernmentOrganization">
         schema:GovernmentOrganization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://schema.org/Project">
+        schema:Project
        </a>
        <sup class="sup-c" title="class">
         c
@@ -452,10 +460,6 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/foundingDate">
-        schema:foundingDate
-       </a>
-       <br/>
        <a href="http://schema.org/member">
         schema:member
        </a>
@@ -463,8 +467,8 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/dissolutionDate">
-        schema:dissolutionDate
+       <a href="http://schema.org/foundingDate">
+        schema:foundingDate
        </a>
        <br/>
        <a href="http://schema.org/parentOrganization">
@@ -473,6 +477,10 @@
        <sup class="sup-op" title="object property">
         op
        </sup>
+       <br/>
+       <a href="http://schema.org/dissolutionDate">
+        schema:dissolutionDate
+       </a>
        <br/>
        <a href="#AGORID">
         tern-org:agorID
@@ -485,6 +493,13 @@
        In range of
       </th>
       <td>
+       <a href="http://schema.org/subOrganization">
+        schema:subOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="http://schema.org/affiliation">
         schema:affiliation
        </a>
@@ -494,13 +509,6 @@
        <br/>
        <a href="http://schema.org/memberOf">
         schema:memberOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="http://schema.org/subOrganization">
-        schema:subOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -562,6 +570,14 @@
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/honorificPrefix">
+        schema:honorificPrefix
+       </a>
+       <br/>
+       <a href="http://schema.org/jobTitle">
+        schema:jobTitle
+       </a>
+       <br/>
        <a href="#OpenResearcherandContributerID(ORCID)">
         tern-org:orcID
        </a>
@@ -573,21 +589,13 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/jobTitle">
-        schema:jobTitle
-       </a>
-       <br/>
-       <a href="http://schema.org/honorificPrefix">
-        schema:honorificPrefix
-       </a>
-       <br/>
       </td>
      </tr>
     </table>
    </div>
    <div class="entity class" id="PostalAddress">
     <h3>
-     PostalAddress
+     Postal Address
      <sup class="sup-c" title="class">
       c
      </sup>
@@ -630,14 +638,6 @@
        Restrictions
       </th>
       <td>
-       <a href="http://schema.org/addressLocality">
-        schema:addressLocality
-       </a>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
        <a href="http://schema.org/postalCode">
         schema:postalCode
        </a>
@@ -646,8 +646,35 @@
        </span>
        1
        <br/>
-       <a href="http://schema.org/addressRegion">
-        schema:addressRegion
+       <a href="#AddressLine1">
+        tern-org:addressLine1
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="http://schema.org/streetAddress">
+        schema:streetAddress
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="#FullAddressLine">
+        tern-org:fullAddressLine
+       </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="http://schema.org/addressLocality">
+        schema:addressLocality
        </a>
        <span class="cardinality">
         exactly
@@ -662,8 +689,16 @@
        </span>
        1
        <br/>
-       <a href="http://schema.org/streetAddress">
-        schema:streetAddress
+       <a href="http://schema.org/addressRegion">
+        schema:addressRegion
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="#AddressLine2">
+        tern-org:addressLine2
        </a>
        <span class="cardinality">
         exactly
@@ -677,28 +712,43 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/postOfficeBoxNumber">
-        schema:postOfficeBoxNumber
-       </a>
-       <br/>
        <a href="http://schema.org/postalCode">
         schema:postalCode
-       </a>
-       <br/>
-       <a href="http://schema.org/addressRegion">
-        schema:addressRegion
        </a>
        <br/>
        <a href="http://schema.org/streetAddress">
         schema:streetAddress
        </a>
        <br/>
+       <a href="http://schema.org/addressLocality">
+        schema:addressLocality
+       </a>
+       <br/>
+       <a href="#AddressLine2">
+        tern-org:addressLine2
+       </a>
+       <br/>
+       <a href="http://schema.org/addressRegion">
+        schema:addressRegion
+       </a>
+       <br/>
+       <a href="#FullAddressLine">
+        tern-org:fullAddressLine
+       </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
+       <br/>
        <a href="http://schema.org/addressCountry">
         schema:addressCountry
        </a>
        <br/>
-       <a href="http://schema.org/addressLocality">
-        schema:addressLocality
+       <a href="#AddressLine1">
+        tern-org:addressLine1
+       </a>
+       <br/>
+       <a href="http://schema.org/postOfficeBoxNumber">
+        schema:postOfficeBoxNumber
        </a>
        <br/>
       </td>
@@ -820,8 +870,8 @@
        Sub-classes
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#ChangeEvent">
-        org:ChangeEvent
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
        </a>
        <sup class="sup-c" title="class">
         c
@@ -834,8 +884,8 @@
         c
        </sup>
        <br/>
-       <a href="http://schema.org/PostalAddress">
-        schema:PostalAddress
+       <a href="http://www.w3.org/ns/org#ChangeEvent">
+        org:ChangeEvent
        </a>
        <sup class="sup-c" title="class">
         c
@@ -848,32 +898,35 @@
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/url">
+        schema:url
+       </a>
+       <br/>
+       <a href="http://schema.org/alternateName">
+        schema:alternateName
+       </a>
+       <br/>
        <a href="http://schema.org/description">
         schema:description
+       </a>
+       <br/>
+       <a href="http://schema.org/name">
+        schema:name
+       </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
+       <br/>
+       <a href="http://schema.org/identifier">
+        schema:identifier
        </a>
        <br/>
        <a href="http://schema.org/image">
         schema:image
        </a>
        <br/>
-       <a href="http://schema.org/name">
-        schema:name
-       </a>
-       <br/>
-       <a href="http://schema.org/url">
-        schema:url
-       </a>
-       <br/>
        <a href="http://schema.org/sameAs">
         schema:sameAs
-       </a>
-       <br/>
-       <a href="http://schema.org/identifier">
-        schema:identifier
-       </a>
-       <br/>
-       <a href="http://schema.org/alternateName">
-        schema:alternateName
        </a>
        <br/>
       </td>
@@ -936,9 +989,23 @@
        </span>
        1
        <br/>
+       <a href="http://www.w3.org/ns/org#originalOrganization">
+        org:originalOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
        <a href="http://schema.org/name">
         schema:name
        </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
        <span class="cardinality">
         min
        </span>
@@ -952,17 +1019,6 @@
        </span>
        1
        <br/>
-       <a href="http://www.w3.org/ns/org#originalOrganization">
-        org:originalOrganization
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
       </td>
      </tr>
      <tr>
@@ -970,15 +1026,15 @@
        In domain of
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#originalOrganization">
-        org:originalOrganization
+       <a href="http://www.w3.org/ns/org#resultingOrganization">
+        org:resultingOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="http://www.w3.org/ns/org#resultingOrganization">
-        org:resultingOrganization
+       <a href="http://www.w3.org/ns/org#originalOrganization">
+        org:originalOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -991,15 +1047,15 @@
        In range of
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#resultedFrom">
-        org:resultedFrom
+       <a href="http://www.w3.org/ns/org#changedBy">
+        org:changedBy
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="http://www.w3.org/ns/org#changedBy">
-        org:changedBy
+       <a href="http://www.w3.org/ns/org#resultedFrom">
+        org:resultedFrom
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1046,15 +1102,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1067,6 +1123,10 @@
        In domain of
       </th>
       <td>
+       <a href="http://schema.org/telephone">
+        schema:telephone
+       </a>
+       <br/>
        <a href="http://schema.org/memberOf">
         schema:memberOf
        </a>
@@ -1083,10 +1143,6 @@
        <br/>
        <a href="http://schema.org/email">
         schema:email
-       </a>
-       <br/>
-       <a href="http://schema.org/telephone">
-        schema:telephone
        </a>
        <br/>
       </td>
@@ -1463,14 +1519,20 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/GeoCoordinates">
+        schema:GeoCoordinates
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1483,12 +1545,6 @@
        </sup>
        <a href="http://schema.org/Place">
         schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/GeoCoordinates">
-        schema:GeoCoordinates
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2185,6 +2241,178 @@
     </table>
    </div>
   </section>
+  <section id="annotationproperties">
+   <h2>
+    Annotation Properties
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &uparrow
+     </a>
+    </span>
+   </h2>
+   <ul class="hlist">
+    <li>
+     <a href="#name">
+      name
+     </a>
+    </li>
+    <li>
+     <a href="#FullAddressLine">
+      Full Address Line
+     </a>
+    </li>
+   </ul>
+   <div class="entity property" id="name">
+    <h3>
+     name
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        http://schema.org/name
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The name of the item.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#label">
+        rdfs:label
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/Thing">
+        schema:Thing
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       (
+       <a href="https://schema.org/domainIncludes">
+        sdo:domainIncludes
+       </a>
+       )
+       <a href="http://schema.org/Thing">
+        schema:Thing
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">
+        xsd:string
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       (
+       <a href="https://schema.org/domainIncludes">
+        sdo:rangeIncludes
+       </a>
+       )
+       <a href="http://schema.org/Text">
+        schema:Text
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="FullAddressLine">
+    <h3>
+     Full Address Line
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/fullAddressLine
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The full address or canonical address of the postal address in a single line.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#label">
+        rdfs:label
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">
+        xsd:string
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </section>
   <section id="properties">
    <h2>
     Properties
@@ -2256,11 +2484,6 @@
      </a>
     </li>
     <li>
-     <a href="#name">
-      name
-     </a>
-    </li>
-    <li>
      <a href="#postOfficeBoxNumber">
       postOfficeBoxNumber
      </a>
@@ -2293,6 +2516,16 @@
     <li>
      <a href="#url">
       url
+     </a>
+    </li>
+    <li>
+     <a href="#AddressLine1">
+      Address Line 1
+     </a>
+    </li>
+    <li>
+     <a href="#AddressLine2">
+      Address Line 2
      </a>
     </li>
     <li>
@@ -2388,14 +2621,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Text">
-        schema:Text
+       <a href="http://schema.org/Country">
+        schema:Country
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Country">
-        schema:Country
+       <a href="http://schema.org/Text">
+        schema:Text
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2829,8 +3062,8 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/ContactPoint">
+        schema:ContactPoint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2841,8 +3074,8 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/ContactPoint">
-        schema:ContactPoint
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3101,12 +3334,6 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Text">
-        schema:Text
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/URL">
         schema:URL
        </a>
@@ -3115,6 +3342,12 @@
        </sup>
        <a href="http://schema.org/PropertyValue">
         schema:PropertyValue
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Text">
+        schema:Text
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3295,92 +3528,6 @@
      </tr>
     </table>
    </div>
-   <div class="entity property" id="name">
-    <h3>
-     name
-     <sup class="sup-p" title="property">
-      p
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       IRI
-      </th>
-      <td>
-       <code>
-        http://schema.org/name
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The name of the item.
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="http://www.w3.org/2000/01/rdf-schema#label">
-        rdfs:label
-       </a>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="http://schema.org/Thing">
-        schema:Thing
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       (
-       <a href="https://schema.org/domainIncludes">
-        sdo:domainIncludes
-       </a>
-       )
-       <a href="http://schema.org/Thing">
-        schema:Thing
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="http://www.w3.org/2001/XMLSchema#string">
-        xsd:string
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       (
-       <a href="https://schema.org/domainIncludes">
-        sdo:rangeIncludes
-       </a>
-       )
-       <a href="http://schema.org/Text">
-        schema:Text
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
    <div class="entity property" id="postOfficeBoxNumber">
     <h3>
      postOfficeBoxNumber
@@ -3505,14 +3652,14 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/GeoShape">
-        schema:GeoShape
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/PostalAddress">
-        schema:PostalAddress
+       <a href="http://schema.org/GeoShape">
+        schema:GeoShape
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3743,14 +3890,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3825,8 +3972,8 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Place">
-        schema:Place
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3837,8 +3984,8 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Place">
+        schema:Place
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3939,6 +4086,114 @@
        )
        <a href="http://schema.org/URL">
         schema:URL
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="AddressLine1">
+    <h3>
+     Address Line 1
+     <sup class="sup-p" title="property">
+      p
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/addressLine1
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       First line of the non-locality/state/postcode portion of the address.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">
+        xsd:string
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="AddressLine2">
+    <h3>
+     Address Line 2
+     <sup class="sup-p" title="property">
+      p
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/tern/ontologies/org/addressLine2
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Second line of the non-locality/state/postcode portion of the address. This is sometimes blank.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2001/XMLSchema#string">
+        xsd:string
        </a>
        <sup class="sup-c" title="class">
         c

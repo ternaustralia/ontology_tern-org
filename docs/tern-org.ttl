@@ -57,7 +57,7 @@ schema:Person
 schema:PostalAddress
   a owl:Class ;
   rdfs:comment "The mailing address." ;
-  rdfs:label "PostalAddress" ;
+  rdfs:label "Postal Address" ;
   rdfs:subClassOf schema:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -83,6 +83,21 @@ schema:PostalAddress
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty schema:streetAddress ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:addressLine1 ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:addressLine2 ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:fullAddressLine ;
     ] ;
 .
 schema:Project
@@ -269,6 +284,7 @@ schema:memberOf
 .
 schema:name
   a rdf:Property ;
+  a owl:AnnotationProperty ;
   schema:domainIncludes schema:Thing ;
   schema:rangeIncludes schema:Text ;
   rdfs:comment "The name of the item." ;
@@ -511,6 +527,20 @@ tern-org:StateGovernmentOrganization
   rdfs:label "State Government Organization" ;
   rdfs:subClassOf schema:GovernmentOrganization ;
 .
+tern-org:addressLine1
+  a rdf:Property ;
+  rdfs:comment "First line of the non-locality/state/postcode portion of the address." ;
+  rdfs:domain schema:PostalAddress ;
+  rdfs:label "Address Line 1" ;
+  rdfs:range xsd:string ;
+.
+tern-org:addressLine2
+  a rdf:Property ;
+  rdfs:comment "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." ;
+  rdfs:domain schema:PostalAddress ;
+  rdfs:label "Address Line 2" ;
+  rdfs:range xsd:string ;
+.
 tern-org:agorID
   a rdf:Property ;
   schema:domainIncludes schema:Organization ;
@@ -521,6 +551,14 @@ tern-org:agorID
   rdfs:range xsd:string ;
   rdfs:seeAlso <https://data.gov.au/data/dataset/australian-government-organisations-register> ;
   rdfs:subPropertyOf schema:identifier ;
+.
+tern-org:fullAddressLine
+  a owl:AnnotationProperty ;
+  rdfs:comment "The full address or canonical address of the postal address in a single line." ;
+  rdfs:domain schema:PostalAddress ;
+  rdfs:label "Full Address Line" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf rdfs:label ;
 .
 tern-org:orcID
   a rdf:Property ;

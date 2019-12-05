@@ -1,85 +1,82 @@
 @startuml
 title TERN Organisations Ontology
-"schema:Thing" <|-- "prov:Agent"
-"tern-org:Government" <|-- "tern-org:Federal"
-"schema:Organization" <|-- "tern-org:Commercial"
-"schema:Organization" <|-- "tern-org:Government"
-"prov:Agent" <|-- "schema:Organization"
-"tern-org:Institution" <|-- "tern-org:Academic"
-"tern-org:Government" <|-- "tern-org:Regional"
-"prov:Agent" <|-- "schema:Person"
-"tern-org:Institution" <|-- "tern-org:GovernmentFunded"
-"schema:Thing" <|-- "org:ChangeEvent"
+"schema:Organization" <|-- "schema:GovernmentOrganization"
 "schema:Thing" <|-- "schema:PostalAddress"
-"tern-org:GovernmentFunded" <|-- "tern-org:NCRIS"
+"prov:Agent" <|-- "schema:Person"
+"schema:Thing" <|-- "org:ChangeEvent"
+"schema:GovernmentOrganization" <|-- "tern-org:RegionalGovernmentOrganization"
+"schema:GovernmentOrganization" <|-- "tern-org:StateGovernmentOrganization"
+"schema:Organization" <|-- "tern-org:CommercialOrganization"
+"schema:Project" <|-- "tern-org:NCRISProject"
+"schema:GovernmentOrganization" <|-- "tern-org:FederalGovernmentOrganization"
 "owl:Thing" <|-- "schema:Thing"
-"schema:Organization" <|-- "tern-org:Institution"
-"tern-org:Government" <|-- "tern-org:State"
+"schema:Organization" <|-- "schema:EducationalOrganization"
 "schema:Organization" <|-- "tern-org:International"
-Class "prov:Agent" [[http://www.w3.org/ns/prov#Agent]] {
-[[http://schema.org/email schema:email]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/telephone schema:telephone]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+"prov:Agent" <|-- "schema:Organization"
+"schema:Thing" <|-- "prov:Agent"
+"schema:Organization" <|-- "schema:Project"
+Class "schema:GovernmentOrganization" [[http://schema.org/GovernmentOrganization]] {
 }
-Class "tern-org:Federal" [[https://w3id.org/tern/ontologies/org/Federal]] {
-}
-Class "tern-org:Commercial" [[https://w3id.org/tern/ontologies/org/Commercial]] {
-}
-Class "tern-org:Government" [[https://w3id.org/tern/ontologies/org/Government]] {
-}
-Class "schema:Organization" [[http://schema.org/Organization]] {
-[[https://w3id.org/tern/ontologies/org/agorID tern-org:agorID]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/foundingDate schema:foundingDate]] : [[http://www.w3.org/2001/XMLSchema#date xsd:date]]
-[[http://schema.org/taxID schema:taxID]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/dissolutionDate schema:dissolutionDate]] : [[http://www.w3.org/2001/XMLSchema#date xsd:date]]
-}
-Class "tern-org:Academic" [[https://w3id.org/tern/ontologies/org/Academic]] {
-}
-Class "tern-org:Regional" [[https://w3id.org/tern/ontologies/org/Regional]] {
+Class "schema:PostalAddress" [[http://schema.org/PostalAddress]] {
+[[http://schema.org/postalCode schema:postalCode]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/postOfficeBoxNumber schema:postOfficeBoxNumber]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/addressLocality schema:addressLocality]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/streetAddress schema:streetAddress]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/addressRegion schema:addressRegion]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/addressCountry schema:addressCountry]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
 }
 Class "schema:Person" [[http://schema.org/Person]] {
 [[http://schema.org/jobTitle schema:jobTitle]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
 [[http://schema.org/honorificPrefix schema:honorificPrefix]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
 }
-Class "tern-org:GovernmentFunded" [[https://w3id.org/tern/ontologies/org/GovernmentFunded]] {
-}
 Class "org:ChangeEvent" [[http://www.w3.org/ns/org#ChangeEvent]] {
 }
-Class "schema:PostalAddress" [[http://schema.org/PostalAddress]] {
-[[http://schema.org/streetAddress schema:streetAddress]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/addressLocality schema:addressLocality]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/postOfficeBoxNumber schema:postOfficeBoxNumber]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/addressRegion schema:addressRegion]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/postalCode schema:postalCode]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/addressCountry schema:addressCountry]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+Class "tern-org:RegionalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization]] {
 }
-Class "tern-org:NCRIS" [[https://w3id.org/tern/ontologies/org/NCRIS]] {
+Class "tern-org:StateGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/StateGovernmentOrganization]] {
+}
+Class "tern-org:CommercialOrganization" [[https://w3id.org/tern/ontologies/org/CommercialOrganization]] {
+}
+Class "tern-org:NCRISProject" [[https://w3id.org/tern/ontologies/org/NCRISProject]] {
+}
+Class "tern-org:FederalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization]] {
 }
 Class "schema:Thing" [[http://schema.org/Thing]] {
-[[http://schema.org/identifier schema:identifier]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
 [[http://schema.org/description schema:description]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
-[[http://schema.org/image schema:image]] : [[http://www.w3.org/2001/XMLSchema#anyURI xsd:anyURI]]
 [[http://schema.org/alternateName schema:alternateName]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/image schema:image]] : [[http://www.w3.org/2001/XMLSchema#anyURI xsd:anyURI]]
 [[http://schema.org/name schema:name]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/identifier schema:identifier]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
 }
-Class "tern-org:Institution" [[https://w3id.org/tern/ontologies/org/Institution]] {
-}
-Class "tern-org:State" [[https://w3id.org/tern/ontologies/org/State]] {
+Class "schema:EducationalOrganization" [[http://schema.org/EducationalOrganization]] {
 }
 Class "tern-org:International" [[https://w3id.org/tern/ontologies/org/International]] {
 }
-"schema:Organization" --> "schema:Organization" : "[[http://schema.org/parentOrganization schema:parentOrganization]]"
-"org:ChangeEvent" --> "org:Organization" : "[[http://www.w3.org/ns/org#originalOrganization org:originalOrganization]]"
+Class "schema:Organization" [[http://schema.org/Organization]] {
+[[http://schema.org/taxID schema:taxID]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[https://w3id.org/tern/ontologies/org/agorID tern-org:agorID]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/dissolutionDate schema:dissolutionDate]] : [[http://www.w3.org/2001/XMLSchema#date xsd:date]]
+[[http://schema.org/foundingDate schema:foundingDate]] : [[http://www.w3.org/2001/XMLSchema#date xsd:date]]
+}
+Class "prov:Agent" [[http://www.w3.org/ns/prov#Agent]] {
+[[http://schema.org/telephone schema:telephone]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+[[http://schema.org/email schema:email]] : [[http://www.w3.org/2001/XMLSchema#string xsd:string]]
+}
+Class "schema:Project" [[http://schema.org/Project]] {
+}
 "prov:Agent" --> "schema:PostalAddress" : "[[http://schema.org/address schema:address]]"
-"schema:Person" --> "schema:Organization" : "[[http://schema.org/affiliation schema:affiliation]]"
-"org:ChangeEvent" --> "org:Organization" : "[[http://www.w3.org/ns/org#resultingOrganization org:resultingOrganization]]"
-"org:Organization" --> "org:ChangeEvent" : "[[http://www.w3.org/ns/org#changedBy org:changedBy]]"
 "prov:Agent" --> "schema:Organization" : "[[http://schema.org/memberOf schema:memberOf]]"
-"schema:Organization" --> "prov:Agent" : "[[http://schema.org/member schema:member]]"
-"schema:Organization" --> "schema:Organization" : "[[http://schema.org/subOrganization schema:subOrganization]]"
+"schema:Person" --> "schema:Organization" : "[[http://schema.org/affiliation schema:affiliation]]"
 "org:Organization" --> "org:ChangeEvent" : "[[http://www.w3.org/ns/org#resultedFrom org:resultedFrom]]"
-"foaf:Agent" .. "prov:Agent"
-"org:Organization" .. "schema:Organization"
+"org:Organization" --> "org:ChangeEvent" : "[[http://www.w3.org/ns/org#changedBy org:changedBy]]"
+"schema:Organization" --> "prov:Agent" : "[[http://schema.org/member schema:member]]"
+"schema:Organization" --> "schema:Organization" : "[[http://schema.org/parentOrganization schema:parentOrganization]]"
+"org:ChangeEvent" --> "org:Organization" : "[[http://www.w3.org/ns/org#resultingOrganization org:resultingOrganization]]"
+"org:ChangeEvent" --> "org:Organization" : "[[http://www.w3.org/ns/org#originalOrganization org:originalOrganization]]"
+"schema:Organization" --> "schema:Organization" : "[[http://schema.org/subOrganization schema:subOrganization]]"
 "foaf:Person" .. "schema:Person"
+"org:Organization" .. "schema:Organization"
+"foaf:Agent" .. "prov:Agent"
 header
 Creator: Edmond Chuc (e.chuc@uq.edu.au) 
 endheader

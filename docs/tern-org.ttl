@@ -22,6 +22,18 @@
   schema:name "Terrestrial Ecoystem Research Network" ;
   schema:url "https://www.tern.org.au/"^^xsd:anyURI ;
 .
+schema:EducationalOrganization
+  a owl:Class ;
+  rdfs:comment "An educational organization." ;
+  rdfs:label "Educational Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:GovernmentOrganization
+  a owl:Class ;
+  rdfs:comment "A governmental organization or agency." ;
+  rdfs:label "Government Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
 schema:Organization
   a owl:Class ;
   rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
@@ -72,6 +84,12 @@ schema:PostalAddress
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty schema:streetAddress ;
     ] ;
+.
+schema:Project
+  a owl:Class ;
+  rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
+  rdfs:label "Project" ;
+  rdfs:subClassOf schema:Organization ;
 .
 schema:Thing
   a owl:Class ;
@@ -456,41 +474,17 @@ tern-org:
   owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
   owl:versionInfo "Draft" ;
 .
-tern-org:Academic
-  a owl:Class ;
-  rdfs:comment "Academic institutes like Universities." ;
-  rdfs:label "Academic Institution" ;
-  rdfs:subClassOf tern-org:Institution ;
-.
-tern-org:Commercial
+tern-org:CommercialOrganization
   a owl:Class ;
   rdfs:comment "Commercial organizations from the industry." ;
   rdfs:label "Commercial Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
-tern-org:Federal
+tern-org:FederalGovernmentOrganization
   a owl:Class ;
   rdfs:comment "Federal government organizations and agencies." ;
   rdfs:label "Federal Government Organization" ;
-  rdfs:subClassOf tern-org:Government ;
-.
-tern-org:Government
-  a owl:Class ;
-  rdfs:comment "Australian Government organizations." ;
-  rdfs:label "Government Organization" ;
-  rdfs:subClassOf schema:Organization ;
-.
-tern-org:GovernmentFunded
-  a owl:Class ;
-  rdfs:comment "Organizations funded by the government." ;
-  rdfs:label "Government Funded Institution" ;
-  rdfs:subClassOf tern-org:Institution ;
-.
-tern-org:Institution
-  a owl:Class ;
-  rdfs:comment "An organization founded for a religious, educational, professional, or social purpose." ;
-  rdfs:label "Institution" ;
-  rdfs:subClassOf schema:Organization ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
 .
 tern-org:International
   a owl:Class ;
@@ -498,24 +492,24 @@ tern-org:International
   rdfs:label "International Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
-tern-org:NCRIS
+tern-org:NCRISProject
   a owl:Class ;
   rdfs:comment "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." ;
-  rdfs:label "NCRIS" ;
+  rdfs:label "NCRIS Project" ;
   rdfs:seeAlso <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> ;
-  rdfs:subClassOf tern-org:GovernmentFunded ;
+  rdfs:subClassOf schema:Project ;
 .
-tern-org:Regional
+tern-org:RegionalGovernmentOrganization
   a owl:Class ;
   rdfs:comment "Regional and local governments." ;
   rdfs:label "Regional Government Organization" ;
-  rdfs:subClassOf tern-org:Government ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
 .
-tern-org:State
+tern-org:StateGovernmentOrganization
   a owl:Class ;
   rdfs:comment "State governments." ;
   rdfs:label "State Government Organization" ;
-  rdfs:subClassOf tern-org:Government ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
 .
 tern-org:agorID
   a rdf:Property ;

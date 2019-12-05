@@ -193,7 +193,7 @@ tern-org:FederalGovernmentOrganization a owl:Class ;
     rdfs:comment "Federal government organizations and agencies." ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
-tern-org:International a owl:Class ;
+tern-org:InternationalOrganization a owl:Class ;
     rdfs:label "International Organization" ;
     rdfs:comment "International organizations." ;
     rdfs:subClassOf schema:Organization .

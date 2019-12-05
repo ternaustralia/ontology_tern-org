@@ -8,528 +8,528 @@
    xmlns:schema="http://schema.org/"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://schema.org/dissolutionDate">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <rdfs:label>dissolutionDate</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:comment>The date that this organization was dissolved.</rdfs:comment>
+  <rdf:Description rdf:about="http://schema.org/EducationalOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>Educational Organization</rdfs:label>
+    <rdfs:comment>An educational organization.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/postalCode">
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:label>postalCode</rdfs:label>
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
+  <rdf:Description rdf:about="http://schema.org/alternateName">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment>The postal code. For example, 94043.</rdfs:comment>
-    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>An alias for the item.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/">
-    <owl:versionIRI rdf:resource="https://w3id.org/tern/ontologies/org/0.1"/>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-26</dct:modified>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-23</dct:created>
-    <vann:preferredNamespaceUri>https://w3id.org/tern/ontologies/org/</vann:preferredNamespaceUri>
-    <rdfs:label>TERN Organisations Ontology</rdfs:label>
-    <dct:publisher rdf:resource="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66"/>
-    <dct:creator rdf:nodeID="ub1bL459C15"/>
-    <rdfs:comment>A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. </rdfs:comment>
-    <vann:preferredNamespacePrefix>tern-org</vann:preferredNamespacePrefix>
-    <owl:versionInfo>Draft</owl:versionInfo>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:seeAlso rdf:resource="https://github.com/ternaustralia/ontology_tern-org"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/agorID">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:seeAlso rdf:resource="https://data.gov.au/data/dataset/australian-government-organisations-register"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <rdfs:label>AGOR ID</rdfs:label>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:comment>The Australian Government Organisations Register ID</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/address">
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://schema.org/PostalAddress"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/PostalAddress"/>
-    <rdfs:comment>Physical address of the item.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <rdfs:label>address</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/email">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:comment>Email address.</rdfs:comment>
-    <rdfs:label>email</rdfs:label>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/ContactPoint"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/org#changedBy">
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <rdfs:label xml:lang="en">changed by</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/name">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label>name</rdfs:label>
     <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment>The name of the item.</rdfs:comment>
-    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL76C19">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://schema.org/postalCode"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/streetAddress">
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
-    <rdfs:comment>The street address. For example, 1600 Amphitheatre Pkwy.</rdfs:comment>
-    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
-    <rdfs:label>streetAddress</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/description">
-    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment>A description of the item.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label>description</rdfs:label>
-    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>alternateName</rdfs:label>
     <rdfs:domain rdf:resource="http://schema.org/Thing"/>
     <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="ub1bL41C19"/>
+    <rdfs:comment>An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/InternationalOrganization">
+    <rdfs:label>International Organization</rdfs:label>
+    <rdfs:comment>International organizations.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/identifier">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <schema:rangeIncludes rdf:resource="http://schema.org/PropertyValue"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <rdfs:comment>The identifier property represents any kind of identifier for any kind of &lt;a class="localLink" href="http://schema.org/Thing"&gt;Thing&lt;/a&gt;, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See &lt;a href="/docs/datamodel.html#identifierBg"&gt;background notes&lt;/a&gt; for more details.</rdfs:comment>
-    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
     <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
     <rdfs:label>identifier</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/orcID">
-    <rdfs:domain rdf:resource="http://schema.org/Person"/>
-    <rdfs:seeAlso rdf:resource="https://orcid.org/"/>
-    <rdfs:comment>The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors.</rdfs:comment>
-    <rdfs:label>Open Researcher and Contributer ID (ORCID)</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/url">
-    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <rdfs:comment>URL of the item.</rdfs:comment>
-    <rdfs:label>url</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/addressCountry">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Country"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
-    <rdfs:label>addressCountry</rdfs:label>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
-    <rdfs:comment>The country. For example, USA. You can also provide the two-letter &lt;a href="http://en.wikipedia.org/wiki/ISO_3166-1"&gt;ISO 3166-1 alpha-2 country code&lt;/a&gt;.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/PostalAddress">
-    <rdfs:subClassOf rdf:nodeID="ub1bL66C19"/>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL71C19"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL76C19"/>
-    <rdfs:label>PostalAddress</rdfs:label>
-    <rdfs:comment>The mailing address.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="ub1bL81C19"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL61C19"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL380C19">
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://schema.org/description"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/Project">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Project</rdfs:label>
-    <rdfs:comment>An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/org#resultedFrom">
-    <rdfs:label xml:lang="en">resulted from</rdfs:label>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/jobTitle">
-    <rdfs:comment>The job title of the person (for example, Financial Manager).</rdfs:comment>
-    <schema:rangeIncludes rdf:resource="http://schema.org/DefinedTerm"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <rdfs:label>Job title</rdfs:label>
-    <rdfs:domain rdf:resource="http://schema.org/Person"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/sameAs">
-    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <rdfs:label>sameAs</rdfs:label>
-    <rdfs:comment>URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/member">
-    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:label>member</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/ProgramMembership"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
-    <rdfs:comment>A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <schema:inverseOf rdf:resource="http://schema.org/memberOf"/>
+    <rdfs:comment>The identifier property represents any kind of identifier for any kind of &lt;a class="localLink" href="http://schema.org/Thing"&gt;Thing&lt;/a&gt;, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See &lt;a href="/docs/datamodel.html#identifierBg"&gt;background notes&lt;/a&gt; for more details.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/addressLocality">
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
     <rdfs:label>addressLocality</rdfs:label>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
     <rdfs:comment>The locality in which the street address is, and which is in the region. For example, Mountain View.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/memberOf">
-    <rdfs:comment>An Organization (or ProgramMembership) to which this Person or Organization belongs.</rdfs:comment>
-    <rdfs:label>memberOf</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <rdfs:range rdf:resource="http://schema.org/Organization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <schema:inverseOf rdf:resource="http://schema.org/member"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/ProgramMembership"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/addressRegion">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:comment>The region in which the locality is, and which is in the country. For example, California or another appropriate first-level &lt;a href="https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country"&gt;Administrative division&lt;/a&gt;</rdfs:comment>
-    <rdfs:label>addressRegion</rdfs:label>
-    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/image">
-    <schema:rangeIncludes rdf:resource="http://schema.org/ImageObject"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label>image</rdfs:label>
-    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    <rdfs:comment>An image of the item. This can be a &lt;a class="localLink" href="http://schema.org/URL"&gt;URL&lt;/a&gt; or a fully described &lt;a class="localLink" href="http://schema.org/ImageObject"&gt;ImageObject&lt;/a&gt;.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/telephone">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/ContactPoint"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
-    <rdfs:label>telephone</rdfs:label>
-    <rdfs:comment>The telephone number.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/EducationalOrganization">
-    <rdfs:comment>An educational organization.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Educational Organization</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/org#ChangeEvent">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL385C19"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <rdfs:label xml:lang="en">Change Event</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="ub1bL395C19"/>
-    <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. </rdfs:comment>
+  <rdf:Description rdf:about="http://schema.org/PostalAddress">
+    <rdfs:subClassOf rdf:nodeID="ub1bL71C19"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL81C19"/>
     <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL380C19"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL390C19"/>
+    <rdfs:comment>The mailing address.</rdfs:comment>
+    <rdfs:label>PostalAddress</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL76C19"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL66C19"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL61C19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
+    <prov:dm rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</prov:dm>
+    <prov:definition xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. </prov:definition>
+    <prov:n rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent</prov:n>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>Agent</rdfs:label>
+    <prov:category>starting-point</prov:category>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <prov:component>agents-responsibility</prov:component>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/address">
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>Physical address of the item.</rdfs:comment>
+    <rdfs:label>address</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://schema.org/PostalAddress"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/honorificPrefix">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment>An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.</rdfs:comment>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label>honorificPrefix</rdfs:label>
-    <rdfs:domain rdf:resource="http://schema.org/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/GovernmentOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>A governmental organization or agency.</rdfs:comment>
-    <rdfs:label>Government Organization</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization">
-    <rdfs:comment>Federal government organizations and agencies.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
-    <rdfs:label>Federal Government Organization</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL395C19">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/CommercialOrganization">
-    <rdfs:label>Commercial Organization</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Commercial organizations from the industry.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/affiliation">
-    <rdfs:comment>An organization that this person is affiliated with. For example, a school/university, a club, or a team.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.</rdfs:comment>
     <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <rdfs:range rdf:resource="http://schema.org/Organization"/>
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/memberOf"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>affiliation</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://schema.org/Person"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/foundingDate">
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
-    <rdfs:label>foundingDate</rdfs:label>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <rdfs:comment>The date that this organization was founded.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#ChangeEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL390C19"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL395C19"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL380C19"/>
+    <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. </rdfs:comment>
+    <rdfs:label xml:lang="en">Change Event</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="ub1bL385C19"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/postOfficeBoxNumber">
     <rdfs:comment>The post office box number for PO box addresses.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:label>postOfficeBoxNumber</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label>postOfficeBoxNumber</rdfs:label>
     <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/image">
+    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    <rdfs:comment>An image of the item. This can be a &lt;a class="localLink" href="http://schema.org/URL"&gt;URL&lt;/a&gt; or a fully described &lt;a class="localLink" href="http://schema.org/ImageObject"&gt;ImageObject&lt;/a&gt;.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/ImageObject"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>image</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/email">
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Email address.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:label>email</rdfs:label>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/ContactPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/postalCode">
+    <rdfs:comment>The postal code. For example, 94043.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:label>postalCode</rdfs:label>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
     <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/StateGovernmentOrganization">
-    <rdfs:comment>State governments.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>State Government Organization</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
+  <rdf:Description rdf:about="http://schema.org/sameAs">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>sameAs</rdfs:label>
+    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization">
-    <rdfs:label>Regional Government Organization</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
-    <rdfs:comment>Regional and local governments.</rdfs:comment>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/agorID">
+    <rdfs:seeAlso rdf:resource="https://data.gov.au/data/dataset/australian-government-organisations-register"/>
+    <rdfs:comment>The Australian Government Organisations Register ID</rdfs:comment>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>AGOR ID</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL41C19">
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://schema.org/name"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/International">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>International organizations.</rdfs:comment>
-    <rdfs:label>International Organization</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL390C19">
-    <owl:onProperty rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL459C15">
-    <schema:identifier>https://orcid.org/0000-0002-6047-9864</schema:identifier>
-    <schema:name>Edmond Chuc</schema:name>
-    <schema:email>e.chuc@uq.edu.au</schema:email>
-    <schema:affiliation rdf:resource="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66"/>
-    <rdf:type rdf:resource="http://schema.org/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/NCRISProject">
-    <rdfs:seeAlso rdf:resource="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"/>
-    <rdfs:label>NCRIS Project</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://schema.org/Project"/>
+  <rdf:Description rdf:about="http://schema.org/member">
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:inverseOf rdf:resource="http://schema.org/memberOf"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/ProgramMembership"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>member</rdfs:label>
+    <rdfs:comment>A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/org#resultingOrganization">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
     <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultedFrom"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:label xml:lang="en">resulted in</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
     <rdfs:comment xml:lang="en">Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/alternateName">
-    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment>An alias for the item.</rdfs:comment>
-    <rdfs:label>alternateName</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/org#originalOrganization">
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#changedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-    <rdfs:label xml:lang="en">original organization</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/taxID">
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
-    <rdfs:comment>The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.</rdfs:comment>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>taxID</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/subOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:inverseOf rdf:resource="http://schema.org/parentOrganization"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <rdfs:range rdf:resource="http://schema.org/Organization"/>
-    <rdfs:comment>A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.</rdfs:comment>
-    <rdfs:label>subOrganization</rdfs:label>
-    <owl:inverseOf rdf:resource="http://schema.org/parentOrganization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label xml:lang="en">resulted in</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/parentOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://schema.org/Organization"/>
-    <owl:inverseOf rdf:resource="http://schema.org/subOrganization"/>
-    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
-    <rdfs:comment>The larger organization that this organization is a &lt;a class="localLink" href="http://schema.org/subOrganization"&gt;subOrganization&lt;/a&gt; of, if any.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
-    <rdfs:label>parentOrganization</rdfs:label>
     <schema:inverseOf rdf:resource="http://schema.org/subOrganization"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://schema.org/subOrganization"/>
+    <rdfs:comment>The larger organization that this organization is a &lt;a class="localLink" href="http://schema.org/subOrganization"&gt;subOrganization&lt;/a&gt; of, if any.</rdfs:comment>
+    <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>parentOrganization</rdfs:label>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/Organization">
-    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:subClassOf rdf:nodeID="ub1bL41C19"/>
-    <rdfs:comment>An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
-    <rdfs:label>Organization</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+  <rdf:Description rdf:about="http://schema.org/name">
+    <rdfs:comment>The name of the item.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <rdfs:label>name</rdfs:label>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/Person">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"/>
-    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label>Person</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     <rdfs:comment>A person (alive, dead, undead, or fictional).</rdfs:comment>
-    <rdfs:label>Person</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
-    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
-    <prov:category>starting-point</prov:category>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <prov:dm rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</prov:dm>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <prov:n rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent</prov:n>
-    <prov:component>agents-responsibility</prov:component>
-    <prov:definition xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. </prov:definition>
-    <rdfs:label>Agent</rdfs:label>
-    <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL61C19">
-    <owl:onProperty rdf:resource="http://schema.org/addressCountry"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://schema.org/telephone">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>The telephone number.</rdfs:comment>
+    <rdfs:label>telephone</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66">
+    <schema:name>Terrestrial Ecoystem Research Network</schema:name>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <schema:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tern.org.au/</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/taxID">
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>taxID</rdfs:label>
+    <rdfs:comment>The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#changedBy">
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="en">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.</rdfs:comment>
+    <rdfs:label xml:lang="en">changed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization">
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Regional and local governments.</rdfs:comment>
+    <rdfs:label>Regional Government Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/affiliation">
+    <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>An organization that this person is affiliated with. For example, a school/university, a club, or a team.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/memberOf"/>
+    <rdfs:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>affiliation</rdfs:label>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/url">
+    <rdfs:label>url</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>URL of the item.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:nodeID="ub1bL81C19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://schema.org/streetAddress"/>
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ub1bL66C19">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  <rdf:Description rdf:about="http://schema.org/memberOf">
+    <rdfs:label>memberOf</rdfs:label>
+    <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>An Organization (or ProgramMembership) to which this Person or Organization belongs.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:inverseOf rdf:resource="http://schema.org/member"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/ProgramMembership"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/description">
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+    <rdfs:domain rdf:resource="http://schema.org/Thing"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:comment>A description of the item.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/GovernmentOrganization">
+    <rdfs:comment>A governmental organization or agency.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Government Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/subOrganization">
+    <schema:inverseOf rdf:resource="http://schema.org/parentOrganization"/>
+    <rdfs:comment>A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    <owl:inverseOf rdf:resource="http://schema.org/parentOrganization"/>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>subOrganization</rdfs:label>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/orcID">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+    <rdfs:label>Open Researcher and Contributer ID (ORCID)</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://orcid.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-23</dct:created>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:seeAlso rdf:resource="https://github.com/ternaustralia/ontology_tern-org"/>
+    <vann:preferredNamespacePrefix>tern-org</vann:preferredNamespacePrefix>
+    <owl:versionInfo>Draft</owl:versionInfo>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-26</dct:modified>
+    <rdfs:label>TERN Organisations Ontology</rdfs:label>
+    <dct:publisher rdf:resource="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66"/>
+    <dct:creator rdf:nodeID="ub1bL459C15"/>
+    <rdfs:comment>A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. </rdfs:comment>
+    <vann:preferredNamespaceUri>https://w3id.org/tern/ontologies/org/</vann:preferredNamespaceUri>
+    <owl:versionIRI rdf:resource="https://w3id.org/tern/ontologies/org/0.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/foundingDate">
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment>The date that this organization was founded.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>foundingDate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/addressRegion">
+    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:label>addressRegion</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:comment>The region in which the locality is, and which is in the country. For example, California or another appropriate first-level &lt;a href="https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country"&gt;Administrative division&lt;/a&gt;</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/CommercialOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>Commercial Organization</rdfs:label>
+    <rdfs:comment>Commercial organizations from the industry.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Federal government organizations and agencies.</rdfs:comment>
+    <rdfs:label>Federal Government Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/Project">
+    <rdfs:comment>An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>Project</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#originalOrganization">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="en">original organization</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#changedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/streetAddress">
+    <rdfs:label>streetAddress</rdfs:label>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The street address. For example, 1600 Amphitheatre Pkwy.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL41C19">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://schema.org/addressLocality"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://schema.org/name"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="ub1bL71C19">
     <owl:onProperty rdf:resource="http://schema.org/addressRegion"/>
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66">
-    <rdf:type rdf:resource="http://schema.org/Organization"/>
-    <schema:name>Terrestrial Ecoystem Research Network</schema:name>
-    <schema:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tern.org.au/</schema:url>
+  <rdf:Description rdf:nodeID="ub1bL61C19">
+    <owl:onProperty rdf:resource="http://schema.org/addressCountry"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="http://schema.org/Thing">
-    <rdfs:label>Thing</rdfs:label>
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#resultedFrom">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
+    <rdfs:label xml:lang="en">resulted from</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL66C19">
+    <owl:onProperty rdf:resource="http://schema.org/addressLocality"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/addressCountry">
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>The country. For example, USA. You can also provide the two-letter &lt;a href="http://en.wikipedia.org/wiki/ISO_3166-1"&gt;ISO 3166-1 alpha-2 country code&lt;/a&gt;.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/GeoCoordinates"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Country"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:label>addressCountry</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL76C19">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://schema.org/postalCode"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL459C15">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:email>e.chuc@uq.edu.au</schema:email>
+    <schema:affiliation rdf:resource="http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66"/>
+    <schema:identifier>https://orcid.org/0000-0002-6047-9864</schema:identifier>
+    <schema:name>Edmond Chuc</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/NCRISProject">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Project"/>
+    <rdfs:seeAlso rdf:resource="https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"/>
+    <rdfs:label>NCRIS Project</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>The most generic type of item.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment>National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/dissolutionDate">
+    <rdfs:comment>The date that this organization was dissolved.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+    <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>dissolutionDate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/jobTitle">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/DefinedTerm"/>
+    <rdfs:domain rdf:resource="http://schema.org/Person"/>
+    <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>The job title of the person (for example, Financial Manager).</rdfs:comment>
+    <rdfs:label>Job title</rdfs:label>
+    <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="ub1bL385C19">
+    <owl:onProperty rdf:resource="http://schema.org/name"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://schema.org/name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL380C19">
+    <owl:onProperty rdf:resource="http://schema.org/description"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment>The most generic type of item.</rdfs:comment>
+    <rdfs:label>Thing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL395C19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL390C19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/StateGovernmentOrganization">
+    <rdfs:comment>State governments.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>State Government Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOrganization"/>
   </rdf:Description>
 </rdf:RDF>

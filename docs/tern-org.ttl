@@ -486,7 +486,7 @@ tern-org:FederalGovernmentOrganization
   rdfs:label "Federal Government Organization" ;
   rdfs:subClassOf schema:GovernmentOrganization ;
 .
-tern-org:International
+tern-org:InternationalOrganization
   a owl:Class ;
   rdfs:comment "International organizations." ;
   rdfs:label "International Organization" ;

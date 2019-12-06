@@ -22,16 +22,54 @@
   schema:name "Terrestrial Ecoystem Research Network" ;
   schema:url "https://www.tern.org.au/"^^xsd:anyURI ;
 .
+schema:Consortium
+  a owl:Class ;
+  rdfs:comment "A Consortium is a membership Organization whose members are typically Organizations." ;
+  rdfs:label "Consortium" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:Corporation
+  a owl:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+  rdfs:comment "Organization: A business corporation." ;
+  rdfs:label "Corporation" ;
+  rdfs:subClassOf schema:Organization ;
+.
 schema:EducationalOrganization
   a owl:Class ;
   rdfs:comment "An educational organization." ;
   rdfs:label "Educational Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:FundingScheme
+  a owl:Class ;
+  rdfs:comment "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." ;
+  rdfs:label "Funding Scheme" ;
+  rdfs:subClassOf schema:Organization ;
+.
 schema:GovernmentOrganization
   a owl:Class ;
   rdfs:comment "A governmental organization or agency." ;
   rdfs:label "Government Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:LocalBusiness
+  a owl:Class ;
+  rdfs:comment "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc." ;
+  rdfs:label "LocalBusiness" ;
+  rdfs:subClassOf schema:Organization ;
+  skos:closeMatch <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+.
+schema:MedicalOrganization
+  a owl:Class ;
+  rdfs:comment "A medical organization (physical or not), such as hospital, institution or clinic." ;
+  rdfs:label "Medical Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:NGO
+  a owl:Class ;
+  rdfs:comment "Organization: Non-governmental Organization." ;
+  rdfs:label "NGO" ;
   rdfs:subClassOf schema:Organization ;
 .
 schema:Organization
@@ -206,6 +244,21 @@ schema:foundingDate
   rdfs:label "foundingDate" ;
   rdfs:range xsd:date ;
 .
+schema:funder
+  a rdf:Property ;
+  schema:domainIncludes schema:CreativeWork ;
+  schema:domainIncludes schema:Event ;
+  schema:domainIncludes schema:MonetaryGrant ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:rangeIncludes schema:Organization ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:comment "A person or organization that supports (sponsors) something through some kind of financial contribution." ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "funder" ;
+  rdfs:range prov:Agent ;
+  rdfs:subPropertyOf schema:sponsor ;
+.
 schema:honorificPrefix
   a rdf:Property ;
   schema:domainIncludes schema:Person ;
@@ -323,6 +376,21 @@ schema:sameAs
   rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
   rdfs:domain schema:Thing ;
   rdfs:label "sameAs" ;
+.
+schema:sponsor
+  a rdf:Property ;
+  schema:domainIncludes schema:CreativeWork ;
+  schema:domainIncludes schema:Event ;
+  schema:domainIncludes schema:Grant ;
+  schema:domainIncludes schema:MedicalStudy ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:rangeIncludes schema:Organization ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:comment "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event." ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "sponsor" ;
+  rdfs:range prov:Agent ;
 .
 schema:streetAddress
   a rdf:Property ;
@@ -479,12 +547,6 @@ tern-org:
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
   owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
   owl:versionInfo "Draft" ;
-.
-tern-org:CommercialOrganization
-  a owl:Class ;
-  rdfs:comment "Commercial organizations from the industry." ;
-  rdfs:label "Commercial Organization" ;
-  rdfs:subClassOf schema:Organization ;
 .
 tern-org:FederalGovernmentOrganization
   a owl:Class ;

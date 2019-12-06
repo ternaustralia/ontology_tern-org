@@ -33,9 +33,41 @@ org:ChangeEvent a rdfs:Class,
             owl:onProperty org:resultingOrganization ],
         schema:Thing .
 
+schema:Consortium a owl:Class ;
+    rdfs:label "Consortium" ;
+    rdfs:comment "A Consortium is a membership Organization whose members are typically Organizations." ;
+    rdfs:subClassOf schema:Organization .
+
+schema:Corporation a owl:Class ;
+    rdfs:label "Corporation" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "Organization: A business corporation." ;
+    rdfs:subClassOf schema:Organization .
+
 schema:EducationalOrganization a owl:Class ;
     rdfs:label "Educational Organization" ;
     rdfs:comment "An educational organization." ;
+    rdfs:subClassOf schema:Organization .
+
+schema:FundingScheme a owl:Class ;
+    rdfs:label "Funding Scheme" ;
+    rdfs:comment "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." ;
+    rdfs:subClassOf schema:Organization .
+
+schema:LocalBusiness a owl:Class ;
+    rdfs:label "LocalBusiness" ;
+    rdfs:comment "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc." ;
+    rdfs:subClassOf schema:Organization ;
+    skos:closeMatch <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+schema:MedicalOrganization a owl:Class ;
+    rdfs:label "Medical Organization" ;
+    rdfs:comment "A medical organization (physical or not), such as hospital, institution or clinic." ;
+    rdfs:subClassOf schema:Organization .
+
+schema:NGO a owl:Class ;
+    rdfs:label "NGO" ;
+    rdfs:comment "Organization: Non-governmental Organization." ;
     rdfs:subClassOf schema:Organization .
 
 schema:address a rdf:Property,
@@ -95,6 +127,20 @@ schema:foundingDate a rdf:Property ;
     rdfs:comment "The date that this organization was founded." ;
     rdfs:domain schema:Organization ;
     rdfs:range xsd:date .
+
+schema:funder a rdf:Property ;
+    rdfs:label "funder" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Event,
+        schema:MonetaryGrant,
+        schema:Organization,
+        schema:Person ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "A person or organization that supports (sponsors) something through some kind of financial contribution." ;
+    rdfs:domain prov:Agent ;
+    rdfs:range prov:Agent ;
+    rdfs:subPropertyOf schema:sponsor .
 
 schema:honorificPrefix a rdf:Property ;
     rdfs:label "honorificPrefix" ;
@@ -182,11 +228,6 @@ tern-org: a owl:Ontology ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
     owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
     owl:versionInfo "Draft" .
-
-tern-org:CommercialOrganization a owl:Class ;
-    rdfs:label "Commercial Organization" ;
-    rdfs:comment "Commercial organizations from the industry." ;
-    rdfs:subClassOf schema:Organization .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;
     rdfs:label "Federal Government Organization" ;
@@ -305,6 +346,20 @@ schema:postalCode a rdf:Property ;
     rdfs:comment "The postal code. For example, 94043." ;
     rdfs:domain schema:PostalAddress ;
     rdfs:range xsd:positiveInteger .
+
+schema:sponsor a rdf:Property ;
+    rdfs:label "sponsor" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Event,
+        schema:Grant,
+        schema:MedicalStudy,
+        schema:Organization,
+        schema:Person ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event." ;
+    rdfs:domain prov:Agent ;
+    rdfs:range prov:Agent .
 
 schema:streetAddress a rdf:Property ;
     rdfs:label "streetAddress" ;
@@ -435,20 +490,10 @@ prov:Agent a owl:Class ;
     prov:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
 
-schema:Person a owl:Class ;
-    rdfs:label "Person" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
-    rdfs:comment "A person (alive, dead, undead, or fictional)." ;
-    rdfs:subClassOf prov:Agent ;
-    owl:equivalentClass foaf:Person .
-
 schema:PostalAddress a owl:Class ;
     rdfs:label "Postal Address" ;
     rdfs:comment "The mailing address." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty schema:addressCountry ],
-        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:addressLocality ],
         [ a owl:Restriction ;
@@ -463,12 +508,22 @@ schema:PostalAddress a owl:Class ;
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty tern-org:fullAddressLine ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty schema:addressCountry ],
         schema:Thing .
 
 schema:Thing a owl:Class ;
     rdfs:label "Thing" ;
     rdfs:comment "The most generic type of item." ;
     rdfs:subClassOf owl:Thing .
+
+schema:Person a owl:Class ;
+    rdfs:label "Person" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+    rdfs:subClassOf prov:Agent ;
+    owl:equivalentClass foaf:Person .
 
 schema:Organization a owl:Class ;
     rdfs:label "Organization" ;

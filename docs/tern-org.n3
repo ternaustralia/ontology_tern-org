@@ -214,6 +214,18 @@ tern-org:StateGovernmentOrganization a owl:Class ;
     rdfs:comment "State governments." ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
+tern-org:addressLine1 a rdf:Property ;
+    rdfs:label "Address Line 1" ;
+    rdfs:comment "First line of the non-locality/state/postcode portion of the address." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
+
+tern-org:addressLine2 a rdf:Property ;
+    rdfs:label "Address Line 2" ;
+    rdfs:comment "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range xsd:string .
+
 tern-org:agorID a rdf:Property ;
     rdfs:label "AGOR ID" ;
     schema:domainIncludes schema:Organization ;
@@ -292,7 +304,7 @@ schema:postalCode a rdf:Property ;
     schema:rangeIncludes schema:Text ;
     rdfs:comment "The postal code. For example, 94043." ;
     rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:positiveInteger .
 
 schema:streetAddress a rdf:Property ;
     rdfs:label "streetAddress" ;
@@ -320,18 +332,6 @@ org:resultedFrom a rdf:Property,
     rdfs:range org:ChangeEvent ;
     rdfs:subPropertyOf prov:wasGeneratedBy ;
     owl:inverseOf org:resultingOrganization .
-
-tern-org:addressLine1 a rdf:Property ;
-    rdfs:label "Address Line 1" ;
-    rdfs:comment "First line of the non-locality/state/postcode portion of the address." ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string .
-
-tern-org:addressLine2 a rdf:Property ;
-    rdfs:label "Address Line 2" ;
-    rdfs:comment "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string .
 
 tern-org:fullAddressLine a owl:AnnotationProperty ;
     rdfs:label "Full Address Line" ;
@@ -460,12 +460,6 @@ schema:PostalAddress a owl:Class ;
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:streetAddress ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty tern-org:addressLine1 ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty tern-org:addressLine2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty tern-org:fullAddressLine ],

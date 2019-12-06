@@ -1,434 +1,426 @@
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."@en .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasGeneratedBy> .
-<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#definition> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en .
-<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-_:ub1bL411C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#resultingOrganization> .
-<http://schema.org/taxID> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
-<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#label> "addressLocality" .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. "@en .
-<http://schema.org/parentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Commercial organizations from the industry." .
-<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The street address. For example, 1600 Amphitheatre Pkwy." .
-_:ub1bL96C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/fullAddressLine> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#label> "Address Line 1" .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/creator> _:ub1bL475C15 .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tern-org" .
-<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/Person> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> .
-<http://schema.org/name> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-_:ub1bL81C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL81C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/streetAddress> .
-_:ub1bL96C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
-_:ub1bL71C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressRegion> .
-<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#label> "addressRegion" .
-<http://schema.org/email> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/sameAs> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
-<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#label> "taxID" .
-_:ub1bL76C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/memberOf> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL406C19 .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL76C19 .
-<http://schema.org/alternateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#label> "member" .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#comment> "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#ChangeEvent> .
-<http://schema.org/addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-_:ub1bL396C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/name> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/dc/terms/title> .
-<http://schema.org/addressRegion> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-_:ub1bL41C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<http://schema.org/memberOf> <http://schema.org/inverseOf> <http://schema.org/member> .
-<http://schema.org/member> <http://schema.org/inverseOf> <http://schema.org/memberOf> .
-<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The post office box number for PO box addresses." .
-<http://schema.org/taxID> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:ub1bL475C15 <http://schema.org/email> "e.chuc@uq.edu.au" .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL96C19 .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#ChangeEvent> .
-<http://schema.org/member> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
-<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "State governments." .
-_:ub1bL475C15 <http://schema.org/name> "Edmond Chuc" .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/created> "2019-11-23"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
-_:ub1bL401C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/name> .
-<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
-<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postalCode" .
-<http://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ternaustralia/ontology_tern-org> .
-<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#label> "dissolutionDate" .
-<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL41C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/addressLocality> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-<http://schema.org/foundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/url> "https://www.tern.org.au/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "memberOf" .
-<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
-<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Place> .
-_:ub1bL61C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/postalCode> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" .
-<http://schema.org/alternateName> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#category> "starting-point" .
-_:ub1bL396C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Project> .
-<http://schema.org/addressRegion> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/subOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://data.gov.au/data/dataset/australian-government-organisations-register> .
-<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#comment> "The telephone number." .
-<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "url" .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#comment> "First line of the non-locality/state/postcode portion of the address." .
-<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> .
-<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#label> "AGOR ID" .
-<http://schema.org/description> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/dc/terms/description> .
-<http://schema.org/parentOrganization> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/addressCountry> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The full address or canonical address of the postal address in a single line." .
-<http://schema.org/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#comment> "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." .
-<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "State Government Organization" .
-_:ub1bL81C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/member> <http://schema.org/rangeIncludes> <http://schema.org/Person> .
-<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Regional and local governments." .
-<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/foundingDate> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
-<http://schema.org/subOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/parentOrganization> .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#resultedFrom> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL81C19 .
-<http://schema.org/addressCountry> <http://schema.org/rangeIncludes> <http://schema.org/Country> .
-<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "An educational organization." .
-<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
-<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
-<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "addressCountry" .
-<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "The locality in which the street address is, and which is in the region. For example, Mountain View." .
-<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL401C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." .
-<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Educational Organization" .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#resultingOrganization> .
-<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of the item." .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://schema.org/member> <http://schema.org/domainIncludes> <http://schema.org/ProgramMembership> .
-<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL475C15 <http://schema.org/identifier> "https://orcid.org/0000-0002-6047-9864" .
-<http://schema.org/alternateName> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
-_:ub1bL406C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "Draft" .
-<http://schema.org/streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/image> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
-_:ub1bL401C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#component> "agents-responsibility" .
-_:ub1bL71C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL396C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/description> .
-<http://schema.org/parentOrganization> <http://schema.org/inverseOf> <http://schema.org/subOrganization> .
-<http://schema.org/honorificPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#label> "changed by"@en .
-<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation" .
-<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
-<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL411C19 .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL401C19 .
-<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was founded." .
-<http://schema.org/description> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/honorificPrefix> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
-<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "subOrganization" .
-<http://schema.org/name> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-_:ub1bL406C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#ChangeEvent> .
-<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the item." .
-<http://schema.org/address> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
-<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
-<http://schema.org/url> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-_:ub1bL61C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressCountry> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL71C19 .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#label> "Open Researcher and Contributer ID (ORCID)" .
-<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL61C19 .
-_:ub1bL91C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#comment> "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " .
-<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/EducationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://schema.org/jobTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL411C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
-<http://schema.org/dissolutionDate> <http://schema.org/rangeIncludes> <http://schema.org/Date> .
-<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL41C19 .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#label> "Address Line 2" .
-<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
-<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/memberOf> <http://schema.org/rangeIncludes> <http://schema.org/ProgramMembership> .
-_:ub1bL91C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/addressLine2> .
-_:ub1bL71C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/tern/ontologies/org/" .
-<http://schema.org/streetAddress> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Commercial Organization" .
-<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical address of the item." .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
-_:ub1bL411C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
-<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint> .
-<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
-<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." .
-<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "International organizations." .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#comment> "An alias for the item." .
-<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/member> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates> .
-<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/parentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any." .
-<http://schema.org/affiliation> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
-<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.1> .
-<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/modified> "2019-11-26"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL66C19 .
-<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
-<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
-_:ub1bL91C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that this person is affiliated with. For example, a school/university, a club, or a team." .
-_:ub1bL86C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL41C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/name> .
-_:ub1bL66C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressLocality> .
-<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization (or ProgramMembership) to which this Person or Organization belongs." .
-<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." .
-<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was dissolved." .
-<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#label> "alternateName" .
-<http://schema.org/dissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/jobTitle> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/honorificPrefix> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#label> "image" .
-<http://schema.org/foundingDate> <http://schema.org/rangeIncludes> <http://schema.org/Date> .
-<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address" .
-<http://schema.org/sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/telephone> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-_:ub1bL475C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
-<http://schema.org/taxID> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> .
-<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<http://schema.org/url> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
-<http://schema.org/subOrganization> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#label> "NCRIS Project" .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
+<http://schema.org/jobTitle> <http://schema.org/rangeIncludes> <http://schema.org/DefinedTerm> .
+<http://schema.org/memberOf> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The full address or canonical address of the postal address in a single line." .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#comment> "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." .
+<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+_:ub1bL465C15 <http://schema.org/identifier> "https://orcid.org/0000-0002-6047-9864" .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Federal government organizations and agencies." .
+<http://schema.org/description> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/memberOf> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL86C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://schema.org/image> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/name> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/address> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/member> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+_:ub1bL76C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/subOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL391C19 .
+_:ub1bL386C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/description> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/publisher> <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/email> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/name> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/dc/terms/title> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL86C19 .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://schema.org/addressCountry> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "subOrganization" .
+_:ub1bL391C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/name> .
+<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." .
+<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/honorificPrefix> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#category> "starting-point" .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+_:ub1bL465C15 <http://schema.org/email> "e.chuc@uq.edu.au" .
+_:ub1bL41C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "International Organization" .
+<http://schema.org/dissolutionDate> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The post office box number for PO box addresses." .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL401C19 .
+_:ub1bL86C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/fullAddressLine> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the item." .
+<http://schema.org/taxID> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> .
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Federal Government Organization" .
+<http://schema.org/description> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/postOfficeBoxNumber> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/name> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/parentOrganization> <http://schema.org/inverseOf> <http://schema.org/subOrganization> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#label> "Address Line 1" .
+<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:ub1bL66C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/subOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/parentOrganization> .
+<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL81C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/streetAddress> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL66C19 .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was founded." .
+<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
 <http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "resulted in"@en .
 <http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/> .
-<http://schema.org/parentOrganization> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Federal Government Organization" .
-<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
-<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The most generic type of item." .
-<http://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (alive, dead, undead, or fictional)." .
-<http://schema.org/streetAddress> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "original organization"@en .
-_:ub1bL406C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#originalOrganization> .
 <https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A governmental organization or agency." .
-<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Government Organization" .
-<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The most generic type of item." .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The job title of the person (for example, Financial Manager)." .
-<http://schema.org/jobTitle> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Federal government organizations and agencies." .
-<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/name> "Terrestrial Ecoystem Research Network" .
-<http://schema.org/memberOf> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
-<http://schema.org/postOfficeBoxNumber> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o#> .
-<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/PropertyValue> .
-<http://schema.org/subOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/sameAs> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
-<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the item." .
-<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL86C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/dissolutionDate> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/description> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "parentOrganization" .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL396C19 .
-<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/address> <http://schema.org/rangeIncludes> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
-<http://schema.org/GovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#label> "Full Address Line" .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#originalOrganization> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "resulted from"@en .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://schema.org/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/affiliation> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Regional Government Organization" .
-<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#label> "honorificPrefix" .
-<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The street address. For example, 1600 Amphitheatre Pkwy." .
+<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/url> "https://www.tern.org.au/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#ChangeEvent> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#label> "NCRIS Project" .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/> .
+<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/memberOf> .
+<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#label> "TERN Organisations Ontology" .
+<http://schema.org/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
+<http://schema.org/memberOf> <http://schema.org/inverseOf> <http://schema.org/member> .
+<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "parentOrganization" .
+<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation" .
+<http://schema.org/jobTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
+_:ub1bL386C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postalCode" .
+_:ub1bL401C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://schema.org/foundingDate> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
 _:ub1bL76C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL66C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/org#Organization> .
-<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/postOfficeBoxNumber> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."@en .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Australian Government Organisations Register ID" .
-<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL86C19 .
-<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
-<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint> .
+<http://schema.org/member> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://data.gov.au/data/dataset/australian-government-organisations-register> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#label> "Open Researcher and Contributer ID (ORCID)" .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
 <http://schema.org/addressCountry> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates> .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "International Organization" .
-<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" .
-_:ub1bL86C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/addressLine1> .
-<http://schema.org/taxID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#label> "streetAddress" .
-<http://schema.org/identifier> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
-<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email address." .
-<http://schema.org/subOrganization> <http://schema.org/inverseOf> <http://schema.org/parentOrganization> .
+<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL391C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.1> .
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://schema.org/addressLocality> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
+<http://schema.org/postalCode> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
+<http://schema.org/sameAs> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that this person is affiliated with. For example, a school/university, a club, or a team." .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/addressRegion> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/creator> _:ub1bL465C15 .
 <http://schema.org/subOrganization> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/honorificPrefix> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#label> "image" .
+_:ub1bL61C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Government Organization" .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#resultingOrganization> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o#> .
+<http://schema.org/Person> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
+<http://schema.org/dissolutionDate> <http://schema.org/rangeIncludes> <http://schema.org/Date> .
+<http://schema.org/image> <http://schema.org/rangeIncludes> <http://schema.org/ImageObject> .
+_:ub1bL86C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL81C19 .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Regional Government Organization" .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/prov#InstantaneousEvent> .
+<http://schema.org/member> <http://schema.org/rangeIncludes> <http://schema.org/Person> .
+<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "International organizations." .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Educational Organization" .
+<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/taxID> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#comment> "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." .
+_:ub1bL465C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "url" .
+<http://schema.org/subOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/streetAddress> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+_:ub1bL71C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressRegion> .
+<http://schema.org/addressCountry> <http://schema.org/rangeIncludes> <http://schema.org/Country> .
+_:ub1bL401C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#resultingOrganization> .
+<http://schema.org/member> <http://schema.org/inverseOf> <http://schema.org/memberOf> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of the item." .
+<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "The country. For example, USA. You can also provide the two-letter <a href=\"http://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1 alpha-2 country code</a>." .
+<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#ChangeEvent> .
+_:ub1bL71C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "addressCountry" .
+_:ub1bL66C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL396C19 .
+<http://schema.org/alternateName> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/addressCountry> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates> .
+<http://schema.org/foundingDate> <http://schema.org/rangeIncludes> <http://schema.org/Date> .
+<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
+<http://schema.org/honorificPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#comment> "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " .
+<http://schema.org/PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/taxID> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
-<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
-<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#label> "postOfficeBoxNumber" .
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL76C19 .
+<http://schema.org/dissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization such as a school, NGO, corporation, club, etc." .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL396C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/foundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/url> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
+<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Place> .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://schema.org/sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/alternateName> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#ChangeEvent> .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>" .
+_:ub1bL81C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization (or ProgramMembership) to which this Person or Organization belongs." .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "An educational organization." .
+<http://schema.org/description> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/dc/terms/description> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A governmental organization or agency." .
+_:ub1bL41C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/name> .
+<http://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL61C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressCountry> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:ub1bL41C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL386C19 .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
 <https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#comment> "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors." .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was dissolved." .
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#label> "Address Line 2" .
+_:ub1bL401C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."@en .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#comment> "First line of the non-locality/state/postcode portion of the address." .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#label> "Full Address Line" .
+<http://schema.org/taxID> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#originalOrganization> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#label> "member" .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."@en .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL61C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Commercial organizations from the industry." .
+<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "Draft" .
+<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address" .
+<http://schema.org/parentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#label> "addressLocality" .
+<http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/name> "Terrestrial Ecoystem Research Network" .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "State governments." .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "The locality in which the street address is, and which is in the region. For example, Mountain View." .
+_:ub1bL386C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
+<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://schema.org/addressCountry> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
+_:ub1bL66C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressLocality> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Job title" .
+<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint> .
+<http://schema.org/parentOrganization> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/tern/ontologies/org/" .
+<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any." .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+_:ub1bL465C15 <http://schema.org/name> "Edmond Chuc" .
+<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#label> "alternateName" .
+_:ub1bL465C15 <http://schema.org/affiliation> <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> .
+<http://schema.org/addressRegion> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/url> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Regional and local governments." .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Change Event"@en .
+<http://schema.org/description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Organization> .
+_:ub1bL396C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#originalOrganization> .
+<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Commercial Organization" .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#changedBy> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#comment> "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#label> "addressRegion" .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://schema.org/affiliation> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/jobTitle> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#label> "sameAs" .
+<http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#comment> "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>." .
 <http://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#ChangeEvent> .
-<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The postal code. For example, 94043." .
-<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#label> "sameAs" .
-<http://schema.org/parentOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/subOrganization> .
-<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."@en .
-_:ub1bL96C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL91C19 .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Change Event"@en .
-<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#comment> "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." .
-<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/memberOf> .
-_:ub1bL475C15 <http://schema.org/affiliation> <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> .
-<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The mailing address." .
-<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/GeoCoordinates> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/prov#InstantaneousEvent> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/publisher> <http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66> .
-<http://schema.org/memberOf> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
-<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." .
-<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property." .
-<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
-<http://schema.org/addressRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Place> .
+<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL61C19 .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ternaustralia/ontology_tern-org> .
+<http://schema.org/parentOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/postOfficeBoxNumber> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/telephone> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL41C19 .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/sameAs> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the item." .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasGeneratedBy> .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL71C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/ns/org#Organization> .
+<http://schema.org/affiliation> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
 <https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-_:ub1bL61C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
-<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."@en .
-_:ub1bL66C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
-<http://schema.org/email> <http://schema.org/domainIncludes> <http://schema.org/Person> .
-<http://schema.org/image> <http://schema.org/rangeIncludes> <http://schema.org/ImageObject> .
-<http://schema.org/addressCountry> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#changedBy> .
-<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization such as a school, NGO, corporation, club, etc." .
+<http://schema.org/addressRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property." .
+<http://schema.org/subOrganization> <http://schema.org/inverseOf> <http://schema.org/parentOrganization> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/PropertyValue> .
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/Place> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "resulted from"@en .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email address." .
 <https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> .
-<http://schema.org/addressCountry> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
-<http://schema.org/postalCode> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
-<http://schema.org/jobTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Job title" .
-<http://schema.org/addressLocality> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#label> "TERN Organisations Ontology" .
-<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "foundingDate" .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The mailing address." .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/org#resultedFrom> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#label> "dissolutionDate" .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. "@en .
+<http://www.w3.org/ns/org#originalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "original organization"@en .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical address of the item." .
+<http://schema.org/Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL391C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/alternateName> <http://www.w3.org/2000/01/rdf-schema#comment> "An alias for the item." .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#definition> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en .
+_:ub1bL81C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/parentOrganization> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
+<http://schema.org/taxID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Australian Government Organisations Register ID" .
+<http://schema.org/subOrganization> <http://schema.org/rangeIncludes> <http://schema.org/Organization> .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
 <http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." .
-<http://schema.org/jobTitle> <http://schema.org/rangeIncludes> <http://schema.org/DefinedTerm> .
+<http://schema.org/sameAs> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#ChangeEvent> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."@en .
+<http://schema.org/subOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#label> "AGOR ID" .
+<http://schema.org/image> <http://schema.org/rangeIncludes> <http://schema.org/URL> .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "State Government Organization" .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "memberOf" .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<http://schema.org/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/identifier> <http://schema.org/domainIncludes> <http://schema.org/Thing> .
+<http://schema.org/streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/streetAddress> <http://schema.org/domainIncludes> <http://schema.org/PostalAddress> .
+<http://schema.org/addressLocality> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/created> "2019-11-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (alive, dead, undead, or fictional)." .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+<http://schema.org/postOfficeBoxNumber> <http://www.w3.org/2000/01/rdf-schema#label> "postOfficeBoxNumber" .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 _:ub1bL76C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/postalCode> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tern-org" .
+<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+_:ub1bL396C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://schema.org/memberOf> <http://schema.org/rangeIncludes> <http://schema.org/ProgramMembership> .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://schema.org/jobTitle> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/modified> "2019-11-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#comment> "The telephone number." .
+<http://schema.org/memberOf> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/ns/prov#component> "agents-responsibility" .
+<http://schema.org/parentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/org#ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#label> "taxID" .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#label> "streetAddress" .
+<http://www.w3.org/ns/org#resultingOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."@en .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Project> .
+<http://schema.org/honorificPrefix> <http://www.w3.org/2000/01/rdf-schema#label> "honorificPrefix" .
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#changedBy> <http://www.w3.org/2000/01/rdf-schema#label> "changed by"@en .
+<http://schema.org/taxID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<http://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL71C19 .
+<http://schema.org/member> <http://schema.org/domainIncludes> <http://schema.org/ProgramMembership> .
+<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/Person> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The postal code. For example, 94043." .
+<http://www.w3.org/ns/org#resultedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> .
+<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/identifier> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<http://schema.org/address> <http://schema.org/rangeIncludes> <http://schema.org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/CommercialOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/parentOrganization> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/subOrganization> .
+<http://schema.org/telephone> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "foundingDate" .
+<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Thing> .
+<http://schema.org/address> <http://schema.org/domainIncludes> <http://schema.org/GeoShape> .
+<http://schema.org/alternateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 

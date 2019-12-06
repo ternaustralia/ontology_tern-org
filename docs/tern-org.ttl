@@ -87,16 +87,6 @@ schema:PostalAddress
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty tern-org:addressLine1 ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty tern-org:addressLine2 ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty tern-org:fullAddressLine ;
     ] ;
 .
@@ -324,7 +314,7 @@ schema:postalCode
   rdfs:comment "The postal code. For example, 94043." ;
   rdfs:domain schema:PostalAddress ;
   rdfs:label "postalCode" ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:positiveInteger ;
 .
 schema:sameAs
   a rdf:Property ;

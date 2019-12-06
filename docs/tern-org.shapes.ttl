@@ -85,7 +85,7 @@ schema:PostalAddress a sh:NodeShape ;
             sh:datatype xsd:string ;
             sh:path schema:postOfficeBoxNumber ],
         [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
+            sh:datatype xsd:positiveInteger ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:postalCode ],
@@ -96,13 +96,9 @@ schema:PostalAddress a sh:NodeShape ;
             sh:path schema:streetAddress ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:path tern-org:addressLine1 ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:path tern-org:addressLine2 ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;

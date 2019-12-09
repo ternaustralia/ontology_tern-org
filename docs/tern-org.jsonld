@@ -1,5 +1,31 @@
 [
   {
+    "@id": "http://schema.org/LocalBusiness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "LocalBusiness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/tern/ontologies/org/StateGovernmentOrganization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -21,6 +47,220 @@
     ]
   },
   {
+    "@id": "http://schema.org/postalCode",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      },
+      {
+        "@id": "http://schema.org/GeoCoordinates"
+      },
+      {
+        "@id": "http://schema.org/GeoShape"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The postal code. For example, 94043."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "postalCode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/PostalAddress",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The mailing address."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Postal Address"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL99C19"
+      },
+      {
+        "@id": "_:ub1bL119C19"
+      },
+      {
+        "@id": "_:ub1bL124C19"
+      },
+      {
+        "@id": "http://schema.org/Thing"
+      },
+      {
+        "@id": "_:ub1bL109C19"
+      },
+      {
+        "@id": "_:ub1bL114C19"
+      },
+      {
+        "@id": "_:ub1bL104C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL99C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/addressCountry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL119C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/streetAddress"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL124C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL109C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/addressRegion"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL114C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/postalCode"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL104C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/addressLocality"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A person (alive, dead, undead, or fictional)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Person"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -38,6 +278,403 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/url",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/URL"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "URL of the item."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "url"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/EducationalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An educational organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Educational Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/taxID",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"
+      }
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "taxID"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/identifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/address",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Place"
+      },
+      {
+        "@id": "http://schema.org/GeoCoordinates"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/GeoShape"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      },
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Physical address of the item."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "address"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/org#changedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/org#Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/org"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "changed by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/org#ChangeEvent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/org#originalOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/agorID",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The Australian Government Organisations Register ID"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "AGOR ID"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://data.gov.au/data/dataset/australian-government-organisations-register"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/identifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/addressRegion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "addressRegion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Consortium",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Consortium is a membership Organization whose members are typically Organizations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Consortium"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/foundingDate",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The date that this organization was founded."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "foundingDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/telephone",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Place"
+      },
+      {
+        "@id": "http://schema.org/ContactPoint"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The telephone number."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "telephone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/FundingScheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding Scheme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
       }
     ]
   },
@@ -89,51 +726,6 @@
     ]
   },
   {
-    "@id": "http://schema.org/telephone",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Place"
-      },
-      {
-        "@id": "http://schema.org/ContactPoint"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The telephone number."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "telephone"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
@@ -165,269 +757,210 @@
     ]
   },
   {
-    "@id": "http://schema.org/description",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A description of the item."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "description"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/description"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/foundingDate",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Date"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The date that this organization was founded."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "foundingDate"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/LocalBusiness",
+    "@id": "http://schema.org/Organization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc."
+        "@value": "An organization such as a school, NGO, corporation, club, etc."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "LocalBusiness"
+        "@value": "Organization"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "_:ub1bL79C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+        "@id": "http://www.w3.org/ns/org#Organization"
       }
     ]
   },
   {
-    "@id": "http://schema.org/postalCode",
+    "@id": "_:ub1bL79C19",
     "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://schema.org/domainIncludes": [
+    "http://www.w3.org/2002/07/owl#minCardinality": [
       {
-        "@id": "http://schema.org/GeoCoordinates"
-      },
-      {
-        "@id": "http://schema.org/GeoShape"
-      },
-      {
-        "@id": "http://schema.org/PostalAddress"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://schema.org/rangeIncludes": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The postal code. For example, 94043."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "postalCode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        "@id": "http://schema.org/name"
       }
     ]
   },
   {
-    "@id": "http://schema.org/dissolutionDate",
+    "@id": "http://schema.org/memberOf",
     "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://schema.org/domainIncludes": [
       {
         "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/inverseOf": [
+      {
+        "@id": "http://schema.org/member"
       }
     ],
     "http://schema.org/rangeIncludes": [
       {
-        "@id": "http://schema.org/Date"
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/ProgramMembership"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "The date that this organization was dissolved."
+        "@value": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "http://www.w3.org/ns/prov#Agent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "dissolutionDate"
+        "@value": "memberOf"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://schema.org/member"
       }
     ]
   },
   {
-    "@id": "http://schema.org/Project",
+    "@id": "http://www.w3.org/ns/org#ChangeEvent",
     "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim."
+        "@language": "en",
+        "@value": "Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/org"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Project"
+        "@language": "en",
+        "@value": "Change Event"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/image",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/URL"
+        "@id": "_:ub1bL471C19"
       },
       {
-        "@id": "http://schema.org/ImageObject"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
         "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+      },
       {
-        "@value": "image"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+        "@id": "_:ub1bL466C19"
+      },
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+        "@id": "_:ub1bL461C19"
+      },
+      {
+        "@id": "_:ub1bL456C19"
       }
     ]
   },
   {
-    "@id": "http://schema.org/Corporation",
+    "@id": "_:ub1bL471C19",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://purl.org/dc/terms/source": [
+    "http://www.w3.org/2002/07/owl#minCardinality": [
       {
-        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@value": "Organization: A business corporation."
+        "@id": "http://www.w3.org/ns/org#resultingOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL466C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@value": "Corporation"
+        "@id": "http://www.w3.org/ns/org#originalOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL461C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "http://schema.org/name"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL456C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://schema.org/description"
       }
     ]
   },
@@ -458,69 +991,6 @@
     ]
   },
   {
-    "@id": "http://schema.org/GovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A governmental organization or agency."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Government Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/affiliation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An organization that this person is affiliated with. For example, a school/university, a club, or a team."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "affiliation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://schema.org/memberOf"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/tern/ontologies/org/InternationalOrganization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -542,308 +1012,19 @@
     ]
   },
   {
-    "@id": "http://schema.org/url",
+    "@id": "http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66",
     "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      "http://schema.org/Organization"
     ],
-    "http://schema.org/domainIncludes": [
+    "http://schema.org/name": [
       {
-        "@id": "http://schema.org/Thing"
+        "@value": "Terrestrial Ecoystem Research Network"
       }
     ],
-    "http://schema.org/rangeIncludes": [
+    "http://schema.org/url": [
       {
-        "@id": "http://schema.org/URL"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "URL of the item."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "url"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/email",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      },
-      {
-        "@id": "http://schema.org/ContactPoint"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Email address."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "email"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/streetAddress",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The street address. For example, 1600 Amphitheatre Pkwy."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "streetAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/honorificPrefix",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "honorificPrefix"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/Consortium",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A Consortium is a membership Organization whose members are typically Organizations."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Consortium"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/address",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/GeoShape"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/GeoCoordinates"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      },
-      {
-        "@id": "http://schema.org/Place"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      },
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Physical address of the item."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "address"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/alternateName",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An alias for the item."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "alternateName"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/Person",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A person (alive, dead, undead, or fictional)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/Person"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/NGO",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Organization: Non-governmental Organization."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "NGO"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://www.tern.org.au/"
       }
     ]
   },
@@ -937,18 +1118,62 @@
     ]
   },
   {
-    "@id": "http://schema.org/EducationalOrganization",
+    "@id": "http://www.w3.org/ns/org#originalOrganization",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/org#ChangeEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/org"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "original organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/org#Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#used"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/org#changedBy"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/NGO",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "An educational organization."
+        "@value": "Organization: Non-governmental Organization."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Educational Organization"
+        "@value": "NGO"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -958,58 +1183,100 @@
     ]
   },
   {
-    "@id": "http://schema.org/funder",
+    "@id": "http://schema.org/MedicalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A medical organization (physical or not), such as hospital, institution or clinic."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Medical Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/description",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://schema.org/domainIncludes": [
       {
-        "@id": "http://schema.org/Event"
-      },
-      {
-        "@id": "http://schema.org/CreativeWork"
-      },
-      {
-        "@id": "http://schema.org/MonetaryGrant"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
+        "@id": "http://schema.org/Thing"
       }
     ],
     "http://schema.org/rangeIncludes": [
       {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
+        "@id": "http://schema.org/Text"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+        "@value": "A description of the item."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://www.w3.org/ns/prov#Agent"
+        "@id": "http://schema.org/Thing"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "funder"
+        "@value": "description"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/ns/prov#Agent"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "http://www.w3.org/2002/07/owl#equivalentProperty": [
       {
-        "@id": "http://schema.org/sponsor"
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/postOfficeBoxNumber",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The post office box number for PO box addresses."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "postOfficeBoxNumber"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -1023,18 +1290,18 @@
         "@id": "http://schema.org/PostalAddress"
       },
       {
-        "@id": "http://schema.org/GeoShape"
+        "@id": "http://schema.org/GeoCoordinates"
       },
       {
-        "@id": "http://schema.org/GeoCoordinates"
+        "@id": "http://schema.org/GeoShape"
       }
     ],
     "http://schema.org/rangeIncludes": [
       {
-        "@id": "http://schema.org/Country"
+        "@id": "http://schema.org/Text"
       },
       {
-        "@id": "http://schema.org/Text"
+        "@id": "http://schema.org/Country"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -1059,59 +1326,7 @@
     ]
   },
   {
-    "@id": "http://schema.org/FundingScheme",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding Scheme"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/orcID",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Open Researcher and Contributer ID (ORCID)"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://orcid.org/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://schema.org/identifier"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/addressRegion",
+    "@id": "http://schema.org/addressLocality",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
@@ -1127,7 +1342,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href=\"https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country\">Administrative division</a>"
+        "@value": "The locality in which the street address is, and which is in the region. For example, Mountain View."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -1137,12 +1352,72 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "addressRegion"
+        "@value": "addressLocality"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/org#resultingOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/org#ChangeEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/org"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resulted in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/org#Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/org#resultedFrom"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Federal government organizations and agencies."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Federal Government Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
       }
     ]
   },
@@ -1164,6 +1439,252 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/sponsor",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/CreativeWork"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      },
+      {
+        "@id": "http://schema.org/MedicalStudy"
+      },
+      {
+        "@id": "http://schema.org/Grant"
+      },
+      {
+        "@id": "http://schema.org/Event"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "sponsor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/streetAddress",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The street address. For example, 1600 Amphitheatre Pkwy."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "streetAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/sameAs",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/URL"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "sameAs"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/affiliation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An organization that this person is affiliated with. For example, a school/university, a club, or a team."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "affiliation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/memberOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/GovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A governmental organization or agency."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Government Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/honorificPrefix",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "honorificPrefix"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/NCRISProject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NCRIS Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Project"
       }
     ]
   },
@@ -1215,28 +1736,88 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/addressLine2",
+    "@id": "http://schema.org/image",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/ImageObject"
+      },
+      {
+        "@id": "http://schema.org/URL"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank."
+        "@value": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://schema.org/PostalAddress"
+        "@id": "http://schema.org/Thing"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Address Line 2"
+        "@value": "image"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Corporation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Organization: A business corporation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Corporation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Project",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
       }
     ]
   },
@@ -1255,10 +1836,10 @@
         "@id": "http://schema.org/URL"
       },
       {
-        "@id": "http://schema.org/Text"
+        "@id": "http://schema.org/PropertyValue"
       },
       {
-        "@id": "http://schema.org/PropertyValue"
+        "@id": "http://schema.org/Text"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -1283,40 +1864,8 @@
     ]
   },
   {
-    "@id": "http://schema.org/sameAs",
+    "@id": "http://schema.org/dissolutionDate",
     "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/URL"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "sameAs"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/subOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://schema.org/domainIncludes": [
@@ -1324,19 +1873,14 @@
         "@id": "http://schema.org/Organization"
       }
     ],
-    "http://schema.org/inverseOf": [
-      {
-        "@id": "http://schema.org/parentOrganization"
-      }
-    ],
     "http://schema.org/rangeIncludes": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "http://schema.org/Date"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property."
+        "@value": "The date that this organization was dissolved."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -1346,177 +1890,29 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "subOrganization"
+        "@value": "dissolutionDate"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://schema.org/parentOrganization"
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
       }
     ]
   },
   {
-    "@id": "http://schema.org/PostalAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The mailing address."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Postal Address"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Thing"
-      },
-      {
-        "@id": "_:ub1bL124C19"
-      },
-      {
-        "@id": "_:ub1bL119C19"
-      },
-      {
-        "@id": "_:ub1bL99C19"
-      },
-      {
-        "@id": "_:ub1bL109C19"
-      },
-      {
-        "@id": "_:ub1bL104C19"
-      },
-      {
-        "@id": "_:ub1bL114C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL124C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL119C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/streetAddress"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL99C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressCountry"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL109C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressRegion"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL104C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressLocality"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL114C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/postalCode"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/taxID",
+    "@id": "http://schema.org/email",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"
-      }
-    ],
     "http://schema.org/domainIncludes": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "http://schema.org/Person"
       },
       {
-        "@id": "http://schema.org/Person"
+        "@id": "http://schema.org/ContactPoint"
+      },
+      {
+        "@id": "http://schema.org/Organization"
       }
     ],
     "http://schema.org/rangeIncludes": [
@@ -1526,678 +1922,22 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain."
+        "@value": "Email address."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://schema.org/Organization"
+        "@id": "http://www.w3.org/ns/prov#Agent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "taxID"
+        "@value": "email"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://schema.org/identifier"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/postOfficeBoxNumber",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The post office box number for PO box addresses."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "postOfficeBoxNumber"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/jobTitle",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/DefinedTerm"
-      },
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The job title of the person (for example, Financial Manager)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Job title"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Federal government organizations and agencies."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Federal Government Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/GovernmentOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/org#ChangeEvent",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/org"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Change Event"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL456C19"
-      },
-      {
-        "@id": "http://schema.org/Thing"
-      },
-      {
-        "@id": "_:ub1bL461C19"
-      },
-      {
-        "@id": "_:ub1bL466C19"
-      },
-      {
-        "@id": "_:ub1bL471C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL456C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/description"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL461C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL466C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#originalOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL471C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#resultingOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/org#changedBy",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/org"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "changed by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/org#ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/org#originalOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/MedicalOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A medical organization (physical or not), such as hospital, institution or clinic."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Medical Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/memberOf",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://schema.org/inverseOf": [
-      {
-        "@id": "http://schema.org/member"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/ProgramMembership"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "memberOf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://schema.org/member"
-      }
-    ]
-  },
-  {
-    "@id": "http://linkeddata.tern.org.au/def/agent/a083902d-d821-41be-b663-1d7cb33eea66",
-    "@type": [
-      "http://schema.org/Organization"
-    ],
-    "http://schema.org/name": [
-      {
-        "@value": "Terrestrial Ecoystem Research Network"
-      }
-    ],
-    "http://schema.org/url": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://www.tern.org.au/"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/Organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An organization such as a school, NGO, corporation, club, etc."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      },
-      {
-        "@id": "_:ub1bL79C19"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL79C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/name"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/member",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/ProgramMembership"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://schema.org/inverseOf": [
-      {
-        "@id": "http://schema.org/memberOf"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "member"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://schema.org/memberOf"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/sponsor",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/CreativeWork"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Grant"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      },
-      {
-        "@id": "http://schema.org/Event"
-      },
-      {
-        "@id": "http://schema.org/MedicalStudy"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "http://schema.org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "sponsor"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/org#resultingOrganization",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/org#ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/org"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "resulted in"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/org#resultedFrom"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/org#originalOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/org#ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/org"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "original organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#used"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/org#changedBy"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/addressLocality",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://schema.org/domainIncludes": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://schema.org/rangeIncludes": [
-      {
-        "@id": "http://schema.org/Text"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The locality in which the street address is, and which is in the region. For example, Mountain View."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "addressLocality"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/org#resultedFrom",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.w3.org/ns/org"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "resulted from"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/org#ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#wasGeneratedBy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/org#resultingOrganization"
       }
     ]
   },
@@ -2261,49 +2001,29 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/NCRISProject",
+    "@id": "http://schema.org/subOrganization",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "NCRIS Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Project"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/agorID",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://schema.org/domainIncludes": [
       {
         "@id": "http://schema.org/Organization"
       }
     ],
+    "http://schema.org/inverseOf": [
+      {
+        "@id": "http://schema.org/parentOrganization"
+      }
+    ],
     "http://schema.org/rangeIncludes": [
       {
-        "@id": "http://schema.org/Text"
+        "@id": "http://schema.org/Organization"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "The Australian Government Organisations Register ID"
+        "@value": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -2313,22 +2033,302 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "AGOR ID"
+        "@value": "subOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://schema.org/parentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/funder",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/CreativeWork"
+      },
+      {
+        "@id": "http://schema.org/Event"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      },
+      {
+        "@id": "http://schema.org/MonetaryGrant"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "funder"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/sponsor"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/orcID",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Open Researcher and Contributer ID (ORCID)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://orcid.org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/identifier"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/addressLine2",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Address Line 2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/org#resultedFrom",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "https://data.gov.au/data/dataset/australian-government-organisations-register"
+        "@language": "en",
+        "@value": "Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/ns/org#Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/ns/org"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resulted from"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/org#ChangeEvent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://schema.org/identifier"
+        "@id": "http://www.w3.org/ns/prov#wasGeneratedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/org#resultingOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/member",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/ProgramMembership"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://schema.org/inverseOf": [
+      {
+        "@id": "http://schema.org/memberOf"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "member"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://schema.org/memberOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/alternateName",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An alias for the item."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Thing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "alternateName"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/jobTitle",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://schema.org/domainIncludes": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://schema.org/rangeIncludes": [
+      {
+        "@id": "http://schema.org/Text"
+      },
+      {
+        "@id": "http://schema.org/DefinedTerm"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The job title of the person (for example, Financial Manager)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Job title"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   }

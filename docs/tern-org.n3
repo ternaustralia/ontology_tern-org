@@ -325,18 +325,6 @@ schema:description a rdf:Property ;
     rdfs:range xsd:string ;
     owl:equivalentProperty dct:description .
 
-schema:member a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "member" ;
-    schema:domainIncludes schema:Organization,
-        schema:ProgramMembership ;
-    schema:inverseOf schema:memberOf ;
-    schema:rangeIncludes schema:Organization,
-        schema:Person ;
-    rdfs:comment "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." ;
-    rdfs:domain schema:Organization ;
-    rdfs:range prov:Agent .
-
 schema:postalCode a rdf:Property ;
     rdfs:label "postalCode" ;
     schema:domainIncludes schema:GeoCoordinates,
@@ -399,17 +387,18 @@ tern-org:fullAddressLine a owl:AnnotationProperty ;
     schema:name "Terrestrial Ecoystem Research Network" ;
     schema:url "https://www.tern.org.au/"^^xsd:anyURI .
 
-schema:memberOf a rdf:Property,
+schema:member a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "memberOf" ;
+    rdfs:label "member" ;
     schema:domainIncludes schema:Organization,
-        schema:Person ;
-    schema:inverseOf schema:member ;
-    schema:rangeIncludes schema:Organization,
         schema:ProgramMembership ;
-    rdfs:comment "An Organization (or ProgramMembership) to which this Person or Organization belongs." ;
-    rdfs:domain prov:Agent ;
-    rdfs:range schema:Organization .
+    schema:inverseOf schema:memberOf ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." ;
+    rdfs:domain schema:Organization ;
+    rdfs:range prov:Agent ;
+    owl:inverseOf schema:memberOf .
 
 schema:name a rdf:Property,
         owl:AnnotationProperty ;
@@ -477,6 +466,19 @@ schema:identifier a rdf:Property ;
     rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
     rdfs:domain schema:Thing ;
     rdfs:range xsd:string .
+
+schema:memberOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "memberOf" ;
+    schema:domainIncludes schema:Organization,
+        schema:Person ;
+    schema:inverseOf schema:member ;
+    schema:rangeIncludes schema:Organization,
+        schema:ProgramMembership ;
+    rdfs:comment "An Organization (or ProgramMembership) to which this Person or Organization belongs." ;
+    rdfs:domain prov:Agent ;
+    rdfs:range schema:Organization ;
+    owl:inverseOf schema:member .
 
 prov:Agent a owl:Class ;
     rdfs:label "Agent" ;

@@ -311,6 +311,7 @@ schema:member
   rdfs:domain schema:Organization ;
   rdfs:label "member" ;
   rdfs:range prov:Agent ;
+  owl:inverseOf schema:memberOf ;
 .
 schema:memberOf
   a rdf:Property ;
@@ -324,6 +325,7 @@ schema:memberOf
   rdfs:domain prov:Agent ;
   rdfs:label "memberOf" ;
   rdfs:range schema:Organization ;
+  owl:inverseOf schema:member ;
 .
 schema:name
   a rdf:Property ;

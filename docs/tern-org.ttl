@@ -182,6 +182,22 @@ schema:Project
   rdfs:label "Project" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:typeOfGood a rdf:Property ;
+    rdfs:label "typeOfGood" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:OwnershipInfo,
+        schema:TypeAndQuantityNode ;
+    schema:rangeIncludes schema:Product,
+        schema:Service ;
+    rdfs:comment "The product that this structured value is referring to." ;
+    rdfs:domain schema:OwnershipInfo ;
+    rdfs:range schema:Product ;
+.
+schema:Product a owl:Class ;
+    rdfs:label "Product" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+    rdfs:subClassOf schema:Thing .
 schema:Thing
   a owl:Class ;
   rdfs:comment "The most generic type of item." ;

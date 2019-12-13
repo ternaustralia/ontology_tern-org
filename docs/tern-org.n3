@@ -246,6 +246,17 @@ schema:telephone a rdf:Property ;
     rdfs:domain prov:Agent ;
     rdfs:range xsd:string .
 
+schema:typeOfGood a rdf:Property ;
+    rdfs:label "typeOfGood" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:OwnershipInfo,
+        schema:TypeAndQuantityNode ;
+    schema:rangeIncludes schema:Product,
+        schema:Service ;
+    rdfs:comment "The product that this structured value is referring to." ;
+    rdfs:domain schema:OwnershipInfo ;
+    rdfs:range schema:Product .
+
 schema:url a rdf:Property ;
     rdfs:label "url" ;
     schema:domainIncludes schema:Thing ;
@@ -497,6 +508,12 @@ schema:GovernmentOrganization a owl:Class ;
     rdfs:label "Government Organization" ;
     rdfs:comment "A governmental organization or agency." ;
     rdfs:subClassOf schema:Organization .
+
+schema:Product a owl:Class ;
+    rdfs:label "Product" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+    rdfs:subClassOf schema:Thing .
 
 schema:identifier a rdf:Property ;
     rdfs:label "identifier" ;

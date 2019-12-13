@@ -22,16 +22,16 @@
 
 schema:Person a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:jobTitle ],
+        [ a sh:PropertyShape ;
             sh:path tern-org:orcID ],
         [ a sh:PropertyShape ;
             sh:class schema:Organization ;
             sh:path schema:affiliation ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:honorificPrefix ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:jobTitle ] ;
+            sh:path schema:honorificPrefix ] ;
     sh:targetClass schema:Person .
 
 schema:Thing a sh:NodeShape ;
@@ -84,7 +84,10 @@ schema:OwnershipInfo a sh:NodeShape ;
             sh:path schema:ownedFrom ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:date ;
-            sh:path schema:ownedThrough ] ;
+            sh:path schema:ownedThrough ],
+        [ a sh:PropertyShape ;
+            sh:class schema:Product ;
+            sh:path schema:typeOfGood ] ;
     sh:targetClass schema:OwnershipInfo .
 
 schema:PostalAddress a sh:NodeShape ;

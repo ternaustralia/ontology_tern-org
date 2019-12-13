@@ -242,6 +242,11 @@
      </a>
     </li>
     <li>
+     <a href="#Product">
+      Product
+     </a>
+    </li>
+    <li>
      <a href="#Project">
       Project
      </a>
@@ -475,13 +480,6 @@
        Sub-classes
       </th>
       <td>
-       <a href="#RegionalGovernmentOrganization">
-        tern-org:RegionalGovernmentOrganization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="#FederalGovernmentOrganization">
         tern-org:FederalGovernmentOrganization
        </a>
@@ -491,6 +489,13 @@
        <br/>
        <a href="#StateGovernmentOrganization">
         tern-org:StateGovernmentOrganization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#RegionalGovernmentOrganization">
+        tern-org:RegionalGovernmentOrganization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -689,27 +694,6 @@
        Sub-classes
       </th>
       <td>
-       <a href="http://schema.org/EducationalOrganization">
-        schema:EducationalOrganization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://schema.org/Consortium">
-        schema:Consortium
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://schema.org/FundingScheme">
-        schema:FundingScheme
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="#InternationalOrganization">
         tern-org:InternationalOrganization
        </a>
@@ -724,22 +708,22 @@
         c
        </sup>
        <br/>
-       <a href="http://schema.org/GovernmentOrganization">
-        schema:GovernmentOrganization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://schema.org/Project">
-        schema:Project
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="http://schema.org/Corporation">
         schema:Corporation
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://schema.org/Consortium">
+        schema:Consortium
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://schema.org/GovernmentOrganization">
+        schema:GovernmentOrganization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -759,6 +743,27 @@
         c
        </sup>
        <br/>
+       <a href="http://schema.org/EducationalOrganization">
+        schema:EducationalOrganization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://schema.org/Project">
+        schema:Project
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://schema.org/FundingScheme">
+        schema:FundingScheme
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
       </td>
      </tr>
      <tr>
@@ -768,17 +773,6 @@
       <td>
        <a href="http://schema.org/taxID">
         schema:taxID
-       </a>
-       <br/>
-       <a href="http://schema.org/member">
-        schema:member
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="http://schema.org/dissolutionDate">
-        schema:dissolutionDate
        </a>
        <br/>
        <a href="http://schema.org/foundingDate">
@@ -796,12 +790,23 @@
         op
        </sup>
        <br/>
+       <a href="http://schema.org/member">
+        schema:member
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="http://schema.org/subOrganization">
         schema:subOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
+       <br/>
+       <a href="http://schema.org/dissolutionDate">
+        schema:dissolutionDate
+       </a>
        <br/>
       </td>
      </tr>
@@ -810,15 +815,8 @@
        In range of
       </th>
       <td>
-       <a href="http://schema.org/memberOf">
-        schema:memberOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="http://schema.org/affiliation">
-        schema:affiliation
+       <a href="http://schema.org/parentOrganization">
+        schema:parentOrganization
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -831,8 +829,15 @@
         op
        </sup>
        <br/>
-       <a href="http://schema.org/parentOrganization">
-        schema:parentOrganization
+       <a href="http://schema.org/affiliation">
+        schema:affiliation
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/memberOf">
+        schema:memberOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -894,12 +899,16 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/ownedThrough">
-        schema:ownedThrough
-       </a>
-       <br/>
        <a href="http://schema.org/ownedFrom">
         schema:ownedFrom
+       </a>
+       <br/>
+       <a href="http://schema.org/typeOfGood">
+        schema:typeOfGood
+       </a>
+       <br/>
+       <a href="http://schema.org/ownedThrough">
+        schema:ownedThrough
        </a>
        <br/>
        <a href="http://schema.org/acquiredFrom">
@@ -972,12 +981,16 @@
        In domain of
       </th>
       <td>
-       <a href="#OpenResearcherandContributerID(ORCID)">
-        tern-org:orcID
-       </a>
-       <br/>
        <a href="http://schema.org/jobTitle">
         schema:jobTitle
+       </a>
+       <br/>
+       <a href="http://schema.org/honorificPrefix">
+        schema:honorificPrefix
+       </a>
+       <br/>
+       <a href="#OpenResearcherandContributerID(ORCID)">
+        tern-org:orcID
        </a>
        <br/>
        <a href="http://schema.org/affiliation">
@@ -986,10 +999,6 @@
        <sup class="sup-op" title="object property">
         op
        </sup>
-       <br/>
-       <a href="http://schema.org/honorificPrefix">
-        schema:honorificPrefix
-       </a>
        <br/>
       </td>
      </tr>
@@ -1040,12 +1049,9 @@
        Restrictions
       </th>
       <td>
-       <a href="#FullAddressLine">
-        tern-org:fullAddressLine
+       <a href="http://schema.org/addressLocality">
+        schema:addressLocality
        </a>
-       <sup class="sup-ap" title="annotation property">
-        ap
-       </sup>
        <span class="cardinality">
         exactly
        </span>
@@ -1054,6 +1060,17 @@
        <a href="http://schema.org/streetAddress">
         schema:streetAddress
        </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="#FullAddressLine">
+        tern-org:fullAddressLine
+       </a>
+       <sup class="sup-ap" title="annotation property">
+        ap
+       </sup>
        <span class="cardinality">
         exactly
        </span>
@@ -1077,14 +1094,6 @@
        <br/>
        <a href="http://schema.org/postalCode">
         schema:postalCode
-       </a>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
-       <a href="http://schema.org/addressLocality">
-        schema:addressLocality
        </a>
        <span class="cardinality">
         exactly
@@ -1098,12 +1107,12 @@
        In domain of
       </th>
       <td>
-       <a href="#AddressLine1">
-        tern-org:addressLine1
-       </a>
-       <br/>
        <a href="http://schema.org/postOfficeBoxNumber">
         schema:postOfficeBoxNumber
+       </a>
+       <br/>
+       <a href="#AddressLine1">
+        tern-org:addressLine1
        </a>
        <br/>
        <a href="#FullAddressLine">
@@ -1113,28 +1122,28 @@
         ap
        </sup>
        <br/>
-       <a href="http://schema.org/addressLocality">
-        schema:addressLocality
-       </a>
-       <br/>
-       <a href="http://schema.org/addressCountry">
-        schema:addressCountry
-       </a>
-       <br/>
-       <a href="#AddressLine2">
-        tern-org:addressLine2
-       </a>
-       <br/>
-       <a href="http://schema.org/streetAddress">
-        schema:streetAddress
-       </a>
-       <br/>
        <a href="http://schema.org/addressRegion">
         schema:addressRegion
        </a>
        <br/>
        <a href="http://schema.org/postalCode">
         schema:postalCode
+       </a>
+       <br/>
+       <a href="#AddressLine2">
+        tern-org:addressLine2
+       </a>
+       <br/>
+       <a href="http://schema.org/addressCountry">
+        schema:addressCountry
+       </a>
+       <br/>
+       <a href="http://schema.org/streetAddress">
+        schema:streetAddress
+       </a>
+       <br/>
+       <a href="http://schema.org/addressLocality">
+        schema:addressLocality
        </a>
        <br/>
       </td>
@@ -1150,6 +1159,59 @@
        <sup class="sup-op" title="object property">
         op
        </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="Product">
+    <h3>
+     Product
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        http://schema.org/Product
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://schema.org/Thing">
+        schema:Thing
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="http://schema.org/typeOfGood">
+        schema:typeOfGood
+       </a>
        <br/>
       </td>
      </tr>
@@ -1256,8 +1318,8 @@
        Sub-classes
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#ChangeEvent">
-        org:ChangeEvent
+       <a href="http://schema.org/Product">
+        schema:Product
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1277,6 +1339,13 @@
         c
        </sup>
        <br/>
+       <a href="http://www.w3.org/ns/org#ChangeEvent">
+        org:ChangeEvent
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
       </td>
      </tr>
      <tr>
@@ -1284,20 +1353,16 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/image">
-        schema:image
-       </a>
-       <br/>
        <a href="http://schema.org/sameAs">
         schema:sameAs
        </a>
        <br/>
-       <a href="http://schema.org/alternateName">
-        schema:alternateName
+       <a href="http://schema.org/identifier">
+        schema:identifier
        </a>
        <br/>
-       <a href="http://schema.org/description">
-        schema:description
+       <a href="http://schema.org/alternateName">
+        schema:alternateName
        </a>
        <br/>
        <a href="http://schema.org/name">
@@ -1307,12 +1372,16 @@
         ap
        </sup>
        <br/>
-       <a href="http://schema.org/url">
-        schema:url
+       <a href="http://schema.org/image">
+        schema:image
        </a>
        <br/>
-       <a href="http://schema.org/identifier">
-        schema:identifier
+       <a href="http://schema.org/description">
+        schema:description
+       </a>
+       <br/>
+       <a href="http://schema.org/url">
+        schema:url
        </a>
        <br/>
       </td>
@@ -1364,25 +1433,6 @@
        Restrictions
       </th>
       <td>
-       <a href="http://www.w3.org/ns/org#originalOrganization">
-        org:originalOrganization
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
-       <a href="http://schema.org/description">
-        schema:description
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
        <a href="http://www.w3.org/ns/org#resultingOrganization">
         org:resultingOrganization
        </a>
@@ -1400,6 +1450,25 @@
        <sup class="sup-ap" title="annotation property">
         ap
        </sup>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://www.w3.org/ns/org#originalOrganization">
+        org:originalOrganization
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://schema.org/description">
+        schema:description
+       </a>
        <span class="cardinality">
         min
        </span>
@@ -1509,13 +1578,6 @@
        In domain of
       </th>
       <td>
-       <a href="http://schema.org/owns">
-        schema:owns
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="http://schema.org/sponsor">
         schema:sponsor
        </a>
@@ -1531,6 +1593,17 @@
         schema:funder
        </a>
        <br/>
+       <a href="http://schema.org/owns">
+        schema:owns
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="http://schema.org/telephone">
+        schema:telephone
+       </a>
+       <br/>
        <a href="http://schema.org/memberOf">
         schema:memberOf
        </a>
@@ -1542,10 +1615,6 @@
         schema:email
        </a>
        <br/>
-       <a href="http://schema.org/telephone">
-        schema:telephone
-       </a>
-       <br/>
       </td>
      </tr>
      <tr>
@@ -1553,16 +1622,16 @@
        In range of
       </th>
       <td>
+       <a href="http://schema.org/sponsor">
+        schema:sponsor
+       </a>
+       <br/>
        <a href="http://schema.org/member">
         schema:member
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
-       <br/>
-       <a href="http://schema.org/sponsor">
-        schema:sponsor
-       </a>
        <br/>
        <a href="http://schema.org/funder">
         schema:funder
@@ -1978,8 +2047,20 @@
         sdo:domainIncludes
        </a>
        )
+       <a href="http://schema.org/Place">
+        schema:Place
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <a href="http://schema.org/Person">
         schema:Person
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/GeoCoordinates">
+        schema:GeoCoordinates
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1992,18 +2073,6 @@
        </sup>
        <a href="http://schema.org/Organization">
         schema:Organization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Place">
-        schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/GeoCoordinates">
-        schema:GeoCoordinates
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2026,14 +2095,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Text">
-        schema:Text
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/PostalAddress">
-        schema:PostalAddress
+       <a href="http://schema.org/Text">
+        schema:Text
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2291,14 +2360,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/ProgramMembership">
-        schema:ProgramMembership
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/ProgramMembership">
+        schema:ProgramMembership
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2349,14 +2418,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2379,14 +2448,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/OwnershipInfo">
-        schema:OwnershipInfo
+       <a href="http://schema.org/Product">
+        schema:Product
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Product">
-        schema:Product
+       <a href="http://schema.org/OwnershipInfo">
+        schema:OwnershipInfo
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3081,6 +3150,11 @@
      </a>
     </li>
     <li>
+     <a href="#typeOfGood">
+      typeOfGood
+     </a>
+    </li>
+    <li>
      <a href="#url">
       url
      </a>
@@ -3152,14 +3226,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/PostalAddress">
-        schema:PostalAddress
+       <a href="http://schema.org/GeoCoordinates">
+        schema:GeoCoordinates
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/GeoCoordinates">
-        schema:GeoCoordinates
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3629,14 +3703,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/ContactPoint">
-        schema:ContactPoint
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/ContactPoint">
+        schema:ContactPoint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3803,20 +3877,8 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Organization">
-        schema:Organization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Event">
-        schema:Event
+       <a href="http://schema.org/MonetaryGrant">
+        schema:MonetaryGrant
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3827,8 +3889,20 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/MonetaryGrant">
-        schema:MonetaryGrant
+       <a href="http://schema.org/Event">
+        schema:Event
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Organization">
+        schema:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3851,14 +3925,14 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/Organization">
-        schema:Organization
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
+       <a href="http://schema.org/Organization">
+        schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4017,12 +4091,6 @@
         sdo:rangeIncludes
        </a>
        )
-       <a href="http://schema.org/URL">
-        schema:URL
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/PropertyValue">
         schema:PropertyValue
        </a>
@@ -4031,6 +4099,12 @@
        </sup>
        <a href="http://schema.org/Text">
         schema:Text
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/URL">
+        schema:URL
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4481,8 +4555,8 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/PostalAddress">
-        schema:PostalAddress
+       <a href="http://schema.org/GeoShape">
+        schema:GeoShape
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4493,8 +4567,8 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/GeoShape">
-        schema:GeoShape
+       <a href="http://schema.org/PostalAddress">
+        schema:PostalAddress
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4639,20 +4713,14 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Person">
-        schema:Person
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/CreativeWork">
         schema:CreativeWork
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Grant">
-        schema:Grant
+       <a href="http://schema.org/Event">
+        schema:Event
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4663,14 +4731,20 @@
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/MedicalStudy">
-        schema:MedicalStudy
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
-       <a href="http://schema.org/Event">
-        schema:Event
+       <a href="http://schema.org/Grant">
+        schema:Grant
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/MedicalStudy">
+        schema:MedicalStudy
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4919,26 +4993,26 @@
         sdo:domainIncludes
        </a>
        )
-       <a href="http://schema.org/Place">
-        schema:Place
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <a href="http://schema.org/Person">
-        schema:Person
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <a href="http://schema.org/Organization">
         schema:Organization
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
+       <a href="http://schema.org/Place">
+        schema:Place
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <a href="http://schema.org/ContactPoint">
         schema:ContactPoint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Person">
+        schema:Person
        </a>
        <sup class="sup-c" title="class">
         c
@@ -4963,6 +5037,94 @@
        )
        <a href="http://schema.org/Text">
         schema:Text
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="typeOfGood">
+    <h3>
+     typeOfGood
+     <sup class="sup-p" title="property">
+      p
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       IRI
+      </th>
+      <td>
+       <code>
+        http://schema.org/typeOfGood
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The product that this structured value is referring to.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="http://schema.org/OwnershipInfo">
+        schema:OwnershipInfo
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       (
+       <a href="https://schema.org/domainIncludes">
+        sdo:domainIncludes
+       </a>
+       )
+       <a href="http://schema.org/TypeAndQuantityNode">
+        schema:TypeAndQuantityNode
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/OwnershipInfo">
+        schema:OwnershipInfo
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://schema.org/Product">
+        schema:Product
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       (
+       <a href="https://schema.org/domainIncludes">
+        sdo:rangeIncludes
+       </a>
+       )
+       <a href="http://schema.org/Product">
+        schema:Product
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <a href="http://schema.org/Service">
+        schema:Service
        </a>
        <sup class="sup-c" title="class">
         c

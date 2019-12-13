@@ -22,6 +22,54 @@
   schema:name "Terrestrial Ecoystem Research Network" ;
   schema:url "https://www.tern.org.au/"^^xsd:anyURI ;
 .
+schema:OwnershipInfo a owl:Class ;
+    rdfs:label "OwnershipInfo" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
+    rdfs:comment "A structured value providing information about when a certain organization or person owned a certain product." ;
+    rdfs:subClassOf schema:StructuredValue .
+
+schema:owns a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "owns" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:Organization,
+        schema:Person ;
+    schema:rangeIncludes schema:OwnershipInfo,
+        schema:Product ;
+    rdfs:comment "Products owned by the organization or person." ;
+    rdfs:domain prov:Agent ;
+    rdfs:range schema:OwnershipInfo ;
+.
+
+schema:acquiredFrom a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "acquiredFrom" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:OwnershipInfo ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "The organization or person from which the product was acquired." ;
+    rdfs:domain schema:OwnershipInfo ;
+    rdfs:range schema:Organization ;
+.
+
+schema:ownedFrom a rdf:Property ;
+    rdfs:label "ownedFrom" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:OwnershipInfo ;
+    schema:rangeIncludes schema:DateTime ;
+    rdfs:comment "The date and time of obtaining the product." ;
+    rdfs:domain schema:OwnershipInfo ;
+    rdfs:range xsd:date ;
+.
+
+schema:ownedThrough a rdf:Property ;
+    rdfs:label "ownedThrough" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:OwnershipInfo ;
+    schema:rangeIncludes schema:DateTime ;
+    rdfs:comment "The date and time of giving up ownership on the product." ;
+    rdfs:domain schema:OwnershipInfo ;
+    rdfs:range xsd:date ;
+.
 schema:Consortium
   a owl:Class ;
   rdfs:comment "A Consortium is a membership Organization whose members are typically Organizations." ;

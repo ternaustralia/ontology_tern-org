@@ -22,6 +22,8 @@
 
 schema:Person a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:path tern-org:orcID ],
+        [ a sh:PropertyShape ;
             sh:class schema:Organization ;
             sh:path schema:affiliation ],
         [ a sh:PropertyShape ;
@@ -29,9 +31,7 @@ schema:Person a sh:NodeShape ;
             sh:path schema:honorificPrefix ],
         [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:jobTitle ],
-        [ a sh:PropertyShape ;
-            sh:path tern-org:orcID ] ;
+            sh:path schema:jobTitle ] ;
     sh:targetClass schema:Person .
 
 schema:Thing a sh:NodeShape ;
@@ -75,8 +75,30 @@ org:ChangeEvent a sh:NodeShape ;
             sh:path org:resultingOrganization ] ;
     sh:targetClass org:ChangeEvent .
 
+schema:OwnershipInfo a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:acquiredFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:ownedFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:ownedThrough ] ;
+    sh:targetClass schema:OwnershipInfo .
+
 schema:PostalAddress a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:addressCountry ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:addressLocality ],
+        [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -104,17 +126,7 @@ schema:PostalAddress a sh:NodeShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path tern-org:fullAddressLine ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:addressCountry ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:addressLocality ] ;
+            sh:path tern-org:fullAddressLine ] ;
     sh:targetClass schema:PostalAddress .
 
 prov:Agent a sh:NodeShape ;
@@ -130,6 +142,9 @@ prov:Agent a sh:NodeShape ;
         [ a sh:PropertyShape ;
             sh:class schema:Organization ;
             sh:path schema:memberOf ],
+        [ a sh:PropertyShape ;
+            sh:class schema:OwnershipInfo ;
+            sh:path schema:owns ],
         [ a sh:PropertyShape ;
             sh:class prov:Agent ;
             sh:path schema:sponsor ],

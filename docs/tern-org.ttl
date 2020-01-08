@@ -17,7 +17,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
   a schema:Organization ;
   schema:name "Terrestrial Ecoystem Research Network" ;
   schema:alternateName "TERN" ;

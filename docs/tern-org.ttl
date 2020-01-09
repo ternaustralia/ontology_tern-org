@@ -62,6 +62,14 @@ schema:ownedFrom a rdf:Property ;
     rdfs:range xsd:date ;
 .
 
+schema:model a rdf:Property ;
+    rdfs:label "model" ;
+    schema:domainIncludes schema:Product ;
+    schema:rangeIncludes schema:ProductModel,
+        schema:Text ;
+    rdfs:comment "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties." .
+
+
 schema:ownedThrough a rdf:Property ;
     rdfs:label "ownedThrough" ;
     dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;

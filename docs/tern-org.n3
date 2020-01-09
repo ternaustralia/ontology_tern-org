@@ -179,6 +179,13 @@ schema:jobTitle a rdf:Property ;
     rdfs:domain schema:Person ;
     rdfs:range xsd:string .
 
+schema:model a rdf:Property ;
+    rdfs:label "model" ;
+    schema:domainIncludes schema:Product ;
+    schema:rangeIncludes schema:ProductModel,
+        schema:Text ;
+    rdfs:comment "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties." .
+
 schema:ownedFrom a rdf:Property ;
     rdfs:label "ownedFrom" ;
     dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
@@ -510,12 +517,6 @@ schema:GovernmentOrganization a owl:Class ;
     rdfs:comment "A governmental organization or agency." ;
     rdfs:subClassOf schema:Organization .
 
-schema:Product a owl:Class ;
-    rdfs:label "Product" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
-    rdfs:subClassOf schema:Thing .
-
 schema:identifier a rdf:Property ;
     rdfs:label "identifier" ;
     schema:domainIncludes schema:Thing ;
@@ -538,6 +539,12 @@ schema:memberOf a rdf:Property,
     rdfs:domain prov:Agent ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:member .
+
+schema:Product a owl:Class ;
+    rdfs:label "Product" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+    rdfs:subClassOf schema:Thing .
 
 schema:OwnershipInfo a owl:Class ;
     rdfs:label "OwnershipInfo" ;

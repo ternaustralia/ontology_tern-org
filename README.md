@@ -25,6 +25,15 @@ docker run --rm --name tbc-shacl-cleaner -e SHACL_FILE="tern-org.shapes.ttl" -v 
 - Bump the version number in the ontology, the version information, and the modified date. 
 - Enter the new changes into `CHANGELOG.md` following the conventions of semantic versioning. 
 
+Each version should:
+- List its release date in the above format.
+- Group changes to describe their impact on the project, as follows:
+- `Added` for new features.
+- `Changed` for changes in existing functionality.
+- `Deprecated` for once-stable features removed in upcoming releases.
+- `Removed` for deprecated features removed in this release.
+- `Fixed` for any bug fixes.
+- `Security` to invite users to upgrade in case of vulnerabilities.
 
 ## Contact
 

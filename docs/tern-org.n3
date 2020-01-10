@@ -33,6 +33,11 @@ org:ChangeEvent a rdfs:Class,
             owl:onProperty org:resultingOrganization ],
         schema:Thing .
 
+org:Site a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Site"@en ;
+    rdfs:comment "An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site."@en .
+
 schema:Consortium a owl:Class ;
     rdfs:label "Consortium" ;
     rdfs:comment "A Consortium is a membership Organization whose members are typically Organizations." ;
@@ -271,6 +276,30 @@ schema:url a rdf:Property ;
     rdfs:comment "URL of the item." ;
     rdfs:domain schema:Thing .
 
+org:basedAt a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "based At"@en ;
+    rdfs:comment "Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites."@en ;
+    rdfs:domain schema:Person,
+        foaf:Person ;
+    rdfs:range org:Site .
+
+org:hasPrimarySite a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "primary Site"@en ;
+    rdfs:comment "Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters."@en ;
+    rdfs:domain schema:Organization,
+        org:Organization ;
+    rdfs:range org:Site ;
+    rdfs:subPropertyOf org:hasSite .
+
+org:siteAddress a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "site Address"@en ;
+    rdfs:comment "Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. "@en ;
+    rdfs:domain org:Site ;
+    rdfs:range schema:PostalAddress .
+
 tern-org: a owl:Ontology ;
     rdfs:label "TERN Organisations Ontology" ;
     dct:created "2019-11-23"^^xsd:date ;
@@ -435,6 +464,15 @@ org:resultedFrom a rdf:Property,
     rdfs:subPropertyOf prov:wasGeneratedBy ;
     owl:inverseOf org:resultingOrganization .
 
+org:siteOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "site of"@en ;
+    rdfs:comment "Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`."@en ;
+    rdfs:domain org:Site ;
+    rdfs:range schema:Organization,
+        org:Organization ;
+    owl:inverseOf org:hasSite .
+
 tern-org:fullAddressLine a owl:AnnotationProperty ;
     rdfs:label "Full Address Line" ;
     rdfs:comment "The full address or canonical address of the postal address in a single line." ;
@@ -487,6 +525,15 @@ schema:subOrganization a rdf:Property,
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
+
+org:hasSite a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has site"@en ;
+    rdfs:comment "Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`."@en ;
+    rdfs:domain schema:Organization,
+        org:Organization ;
+    rdfs:range org:Site ;
+    owl:inverseOf org:siteOf .
 
 org:originalOrganization a rdf:Property,
         owl:ObjectProperty ;

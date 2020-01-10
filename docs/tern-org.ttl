@@ -17,68 +17,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
-  a schema:Organization ;
-  schema:name "Terrestrial Ecoystem Research Network" ;
-  schema:alternateName "TERN" ;
-  schema:url <https://www.tern.org.au/> ;
-.
-schema:OwnershipInfo a owl:Class ;
-    rdfs:label "OwnershipInfo" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
-    rdfs:comment "A structured value providing information about when a certain organization or person owned a certain product." ;
-    rdfs:subClassOf schema:StructuredValue .
-
-schema:owns a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "owns" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    schema:domainIncludes schema:Organization,
-        schema:Person ;
-    schema:rangeIncludes schema:OwnershipInfo,
-        schema:Product ;
-    rdfs:comment "Products owned by the organization or person." ;
-    rdfs:domain prov:Agent ;
-    rdfs:range schema:OwnershipInfo ;
-.
-
-schema:acquiredFrom a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "acquiredFrom" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    schema:domainIncludes schema:OwnershipInfo ;
-    schema:rangeIncludes schema:Organization,
-        schema:Person ;
-    rdfs:comment "The organization or person from which the product was acquired." ;
-    rdfs:domain schema:OwnershipInfo ;
-    rdfs:range schema:Organization ;
-.
-
-schema:ownedFrom a rdf:Property ;
-    rdfs:label "ownedFrom" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    schema:domainIncludes schema:OwnershipInfo ;
-    schema:rangeIncludes schema:DateTime ;
-    rdfs:comment "The date and time of obtaining the product." ;
-    rdfs:domain schema:OwnershipInfo ;
-    rdfs:range xsd:date ;
-.
-
-schema:model a rdf:Property ;
-    rdfs:label "model" ;
-    schema:domainIncludes schema:Product ;
-    schema:rangeIncludes schema:ProductModel,
-        schema:Text ;
-    rdfs:comment "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties." .
-
-
-schema:ownedThrough a rdf:Property ;
-    rdfs:label "ownedThrough" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    schema:domainIncludes schema:OwnershipInfo ;
-    schema:rangeIncludes schema:DateTime ;
-    rdfs:comment "The date and time of giving up ownership on the product." ;
-    rdfs:domain schema:OwnershipInfo ;
-    rdfs:range xsd:date ;
-.
 schema:Consortium
   a owl:Class ;
   rdfs:comment "A Consortium is a membership Organization whose members are typically Organizations." ;
@@ -141,6 +79,13 @@ schema:Organization
     ] ;
   owl:equivalentClass org:Organization ;
 .
+schema:OwnershipInfo
+  a owl:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
+  rdfs:comment "A structured value providing information about when a certain organization or person owned a certain product." ;
+  rdfs:label "OwnershipInfo" ;
+  rdfs:subClassOf schema:StructuredValue ;
+.
 schema:Person
   a owl:Class ;
   dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
@@ -185,33 +130,36 @@ schema:PostalAddress
       owl:onProperty tern-org:fullAddressLine ;
     ] ;
 .
+schema:Product
+  a owl:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+  rdfs:label "Product" ;
+  rdfs:subClassOf schema:Thing ;
+.
 schema:Project
   a owl:Class ;
   rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
   rdfs:label "Project" ;
   rdfs:subClassOf schema:Organization ;
 .
-schema:typeOfGood a rdf:Property ;
-    rdfs:label "typeOfGood" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    schema:domainIncludes schema:OwnershipInfo,
-        schema:TypeAndQuantityNode ;
-    schema:rangeIncludes schema:Product,
-        schema:Service ;
-    rdfs:comment "The product that this structured value is referring to." ;
-    rdfs:domain schema:OwnershipInfo ;
-    rdfs:range schema:Product ;
-.
-schema:Product a owl:Class ;
-    rdfs:label "Product" ;
-    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
-    rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
-    rdfs:subClassOf schema:Thing .
 schema:Thing
   a owl:Class ;
   rdfs:comment "The most generic type of item." ;
   rdfs:label "Thing" ;
   rdfs:subClassOf owl:Thing ;
+.
+schema:acquiredFrom
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:OwnershipInfo ;
+  schema:rangeIncludes schema:Organization ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:comment "The organization or person from which the product was acquired." ;
+  rdfs:domain schema:OwnershipInfo ;
+  rdfs:label "acquiredFrom" ;
+  rdfs:range schema:Organization ;
 .
 schema:addressCountry
   a rdf:Property ;
@@ -385,6 +333,14 @@ schema:memberOf
   rdfs:range schema:Organization ;
   owl:inverseOf schema:member ;
 .
+schema:model
+  a rdf:Property ;
+  schema:domainIncludes schema:Product ;
+  schema:rangeIncludes schema:ProductModel ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties." ;
+  rdfs:label "model" ;
+.
 schema:name
   a rdf:Property ;
   a owl:AnnotationProperty ;
@@ -396,6 +352,39 @@ schema:name
   rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:label ;
   owl:equivalentProperty dct:title ;
+.
+schema:ownedFrom
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:OwnershipInfo ;
+  schema:rangeIncludes schema:DateTime ;
+  rdfs:comment "The date and time of obtaining the product." ;
+  rdfs:domain schema:OwnershipInfo ;
+  rdfs:label "ownedFrom" ;
+  rdfs:range xsd:date ;
+.
+schema:ownedThrough
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:OwnershipInfo ;
+  schema:rangeIncludes schema:DateTime ;
+  rdfs:comment "The date and time of giving up ownership on the product." ;
+  rdfs:domain schema:OwnershipInfo ;
+  rdfs:label "ownedThrough" ;
+  rdfs:range xsd:date ;
+.
+schema:owns
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:Organization ;
+  schema:domainIncludes schema:Person ;
+  schema:rangeIncludes schema:OwnershipInfo ;
+  schema:rangeIncludes schema:Product ;
+  rdfs:comment "Products owned by the organization or person." ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "owns" ;
+  rdfs:range schema:OwnershipInfo ;
 .
 schema:parentOrganization
   a rdf:Property ;
@@ -497,6 +486,18 @@ schema:telephone
   rdfs:label "telephone" ;
   rdfs:range xsd:string ;
 .
+schema:typeOfGood
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:OwnershipInfo ;
+  schema:domainIncludes schema:TypeAndQuantityNode ;
+  schema:rangeIncludes schema:Product ;
+  schema:rangeIncludes schema:Service ;
+  rdfs:comment "The product that this structured value is referring to." ;
+  rdfs:domain schema:OwnershipInfo ;
+  rdfs:label "typeOfGood" ;
+  rdfs:range schema:Product ;
+.
 schema:url
   a rdf:Property ;
   schema:domainIncludes schema:Thing ;
@@ -533,6 +534,21 @@ org:ChangeEvent
       owl:onProperty org:resultingOrganization ;
     ] ;
 .
+org:Site
+  a rdfs:Class ;
+  a owl:Class ;
+  rdfs:comment "An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site."@en ;
+  rdfs:label "Site"@en ;
+.
+org:basedAt
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites."@en ;
+  rdfs:domain schema:Person ;
+  rdfs:domain foaf:Person ;
+  rdfs:label "based At"@en ;
+  rdfs:range org:Site ;
+.
 org:changedBy
   a rdf:Property ;
   a owl:ObjectProperty ;
@@ -542,6 +558,26 @@ org:changedBy
   rdfs:label "changed by"@en ;
   rdfs:range org:ChangeEvent ;
   owl:inverseOf org:originalOrganization ;
+.
+org:hasPrimarySite
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters."@en ;
+  rdfs:domain schema:Organization ;
+  rdfs:domain org:Organization ;
+  rdfs:label "primary Site"@en ;
+  rdfs:range org:Site ;
+  rdfs:subPropertyOf org:hasSite ;
+.
+org:hasSite
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`."@en ;
+  rdfs:domain schema:Organization ;
+  rdfs:domain org:Organization ;
+  rdfs:label "has site"@en ;
+  rdfs:range org:Site ;
+  owl:inverseOf org:siteOf ;
 .
 org:originalOrganization
   a rdf:Property ;
@@ -575,6 +611,24 @@ org:resultingOrganization
   rdfs:range org:Organization ;
   owl:inverseOf org:resultedFrom ;
 .
+org:siteAddress
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. "@en ;
+  rdfs:domain org:Site ;
+  rdfs:label "site Address"@en ;
+  rdfs:range schema:PostalAddress ;
+.
+org:siteOf
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`."@en ;
+  rdfs:domain org:Site ;
+  rdfs:label "site of"@en ;
+  rdfs:range schema:Organization ;
+  rdfs:range org:Organization ;
+  owl:inverseOf org:hasSite ;
+.
 prov:Agent
   a owl:Class ;
   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
@@ -605,7 +659,7 @@ tern-org:
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.6> ;
   owl:versionInfo "Draft" ;
 .
 tern-org:FederalGovernmentOrganization
@@ -680,43 +734,9 @@ tern-org:orcID
   rdfs:seeAlso <https://orcid.org/> ;
   rdfs:subPropertyOf schema:identifier ;
 .
-
-org:Site a owl:Class, rdfs:Class;
-    rdfs:label "Site"@en;
-    rdfs:comment """An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site."""@en;
-.
-org:hasSite a owl:ObjectProperty, rdf:Property;
-    rdfs:label "has site"@en;
-    rdfs:domain org:Organization, schema:Organization ;
-    rdfs:range  org:Site;
-    rdfs:comment """Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`."""@en;
-.
-org:siteOf a owl:ObjectProperty, rdf:Property;
-    rdfs:label "site of"@en;
-    rdfs:domain org:Site;
-    rdfs:range  org:Organization, schema:Organization;
-    rdfs:comment """Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`."""@en;
-.
-org:hasSite owl:inverseOf org:siteOf . 
-
-org:siteOf owl:inverseOf org:hasSite . 
-
-org:hasPrimarySite a owl:ObjectProperty, rdf:Property;
-    rdfs:label "primary Site"@en;
-    rdfs:domain org:Organization, schema:Organization ;
-    rdfs:range  org:Site;
-    rdfs:subPropertyOf org:hasSite;
-    rdfs:comment """Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters."""@en;  
-.
-org:basedAt a owl:ObjectProperty, rdf:Property;
-    rdfs:label "based At"@en;
-    rdfs:domain foaf:Person, schema:Person ;
-    rdfs:range  org:Site;  
-    rdfs:comment """Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites."""@en;
-.
-org:siteAddress a owl:ObjectProperty, rdf:Property;
-    rdfs:label "site Address"@en;
-    rdfs:domain org:Site;
-    rdfs:range schema:PostalAddress ;
-    rdfs:comment """Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. """@en;
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
+  a schema:Organization ;
+  schema:alternateName "TERN" ;
+  schema:name "Terrestrial Ecoystem Research Network" ;
+  schema:url <https://www.tern.org.au/> ;
 .

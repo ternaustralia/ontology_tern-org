@@ -86,20 +86,6 @@ schema:acquiredFrom a rdf:Property,
     rdfs:domain schema:OwnershipInfo ;
     rdfs:range schema:Organization .
 
-schema:address a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "address" ;
-    schema:domainIncludes schema:GeoCoordinates,
-        schema:GeoShape,
-        schema:Organization,
-        schema:Person,
-        schema:Place ;
-    schema:rangeIncludes schema:PostalAddress,
-        schema:Text ;
-    rdfs:comment "Physical address of the item." ;
-    rdfs:domain prov:Agent ;
-    rdfs:range schema:PostalAddress .
-
 schema:affiliation a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "affiliation" ;
@@ -314,7 +300,7 @@ tern-org: a owl:Ontology ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1> ;
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.6> ;
     owl:versionInfo "Draft" .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;

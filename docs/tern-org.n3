@@ -294,14 +294,14 @@ tern-org: a owl:Ontology ;
             schema:email "e.chuc@uq.edu.au" ;
             schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
             schema:name "Edmond Chuc" ] ;
-    dct:modified "2019-11-26"^^xsd:date ;
+    dct:modified "2020-01-10"^^xsd:date ;
     dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     vann:preferredNamespacePrefix "tern-org" ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
     owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.6> ;
-    owl:versionInfo "Draft" .
+    owl:versionInfo "0.0.6" .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;
     rdfs:label "Federal Government Organization" ;

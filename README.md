@@ -20,6 +20,12 @@ docker run --rm --name tbc-shacl-cleaner -e SHACL_FILE="tern-org.shapes.ttl" -v 
 ```
 
 
+## Making modifications
+
+- Bump the version number in the ontology, the version information, and the modified date. 
+- Enter the new changes into `CHANGELOG.md` following the conventions of semantic versioning. 
+
+
 ## Contact
 
 **Edmond Chuc**  

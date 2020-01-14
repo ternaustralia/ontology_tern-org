@@ -84,7 +84,7 @@ schema:OwnershipInfo
   dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
   rdfs:comment "A structured value providing information about when a certain organization or person owned a certain product." ;
   rdfs:label "OwnershipInfo" ;
-  rdfs:subClassOf schema:StructuredValue ;
+  rdfs:subClassOf schema:Thing ;
 .
 schema:Person
   a owl:Class ;
@@ -539,6 +539,7 @@ org:Site
   a owl:Class ;
   rdfs:comment "An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site."@en ;
   rdfs:label "Site"@en ;
+  rdfs:subClassOf schema:Thing ;
 .
 org:basedAt
   a rdf:Property ;
@@ -652,15 +653,15 @@ tern-org:
       schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
       schema:name "Edmond Chuc" ;
     ] ;
-  dct:modified "2020-01-10"^^xsd:date ;
+  dct:modified "2020-01-14"^^xsd:date ;
   dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
   vann:preferredNamespacePrefix "tern-org" ;
   vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.6> ;
-  owl:versionInfo "0.0.6" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.7> ;
+  owl:versionInfo "0.0.7" ;
 .
 tern-org:FederalGovernmentOrganization
   a owl:Class ;
@@ -672,6 +673,13 @@ tern-org:InternationalOrganization
   a owl:Class ;
   rdfs:comment "International organizations." ;
   rdfs:label "International Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+tern-org:Manufacturer
+  a owl:Class ;
+  rdfs:comment "a producer or fabricator of something." ;
+  rdfs:label "Manufacturer" ;
+  rdfs:seeAlso <https://www.oed.com/view/Entry/113772?redirectedFrom=manufacturer#eid> ;
   rdfs:subClassOf schema:Organization ;
 .
 tern-org:NCRISProject

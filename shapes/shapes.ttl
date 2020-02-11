@@ -1,0 +1,437 @@
+# baseURI: https://w3id.org/tern/shapes/
+# imports: http://datashapes.org/dash
+# imports: https://w3id.org/tern/ontologies/org/
+
+@prefix : <https://w3id.org/tern/shapes/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <https://w3id.org/tern/ontologies/org/> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:ChangeEvent
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Change event" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:closed true ;
+  sh:ignoredProperties (
+      rdf:type
+    ) ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/description> ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#originalOrganization> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:name "original organization" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#resultingOrganization> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:name "resulting organization" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <http://www.w3.org/ns/org#ChangeEvent> ;
+.
+:Organization
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "org" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:closed true ;
+  sh:ignoredProperties (
+      rdf:type
+    ) ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/created> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "created" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/modified> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "modified" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/alternateName> ;
+      sh:name "alternate name" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/description> ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/dissolutionDate> ;
+      sh:datatype xsd:date ;
+      sh:maxCount 1 ;
+      sh:name "dissolution date" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/email> ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/foundingDate> ;
+      sh:datatype xsd:date ;
+      sh:maxCount 1 ;
+      sh:name "founding date" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/member> ;
+      sh:class <http://www.w3.org/ns/prov#Agent> ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/memberOf> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:name "member of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/name> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/parentOrganization> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:name "parent organization" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/sameAs> ;
+      sh:name "same as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/subOrganization> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:name "sub organization" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/taxID> ;
+      sh:maxCount 1 ;
+      sh:name "tax ID" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/telephone> ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/url> ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#changedBy> ;
+      sh:class <http://www.w3.org/ns/org#ChangeEvent> ;
+      sh:name "changed by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#hasPrimarySite> ;
+      sh:class <http://www.w3.org/ns/org#Site> ;
+      sh:maxCount 1 ;
+      sh:name "has primary site" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#hasSite> ;
+      sh:class <http://www.w3.org/ns/org#Site> ;
+      sh:name "has site" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#resultedFrom> ;
+      sh:class <http://www.w3.org/ns/org#ChangeEvent> ;
+      sh:maxCount 1 ;
+      sh:name "resulted from" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/org/agorID> ;
+      sh:maxCount 1 ;
+      sh:name "agor" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:targetClass <http://schema.org/Organization> ;
+.
+:Person
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "person" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:closed true ;
+  sh:ignoredProperties (
+      rdf:type
+      owl:sameAs
+    ) ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/created> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "date created" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/modified> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "date modified" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/affiliation> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/description> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/email> ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/familyName> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "family name" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/givenName> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "given name" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/honorificPrefix> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:name "honorific prefix" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/jobTitle> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:name "job title" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/sameAs> ;
+      sh:name "same as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/telephone> ;
+      sh:datatype xsd:string ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/url> ;
+      sh:name "URL" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#basedAt> ;
+      sh:class <http://www.w3.org/ns/org#Site> ;
+      sh:name "based at" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/org/orcID> ;
+      sh:description "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors." ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <http://schema.org/Person> ;
+.
+:PostalAddress
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Postal address" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:closed true ;
+  sh:ignoredProperties (
+      rdf:type
+    ) ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/addressCountry> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "address country" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/addressLocality> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "address locality" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/addressRegion> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "address region" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/postOfficeBoxNumber> ;
+      sh:maxCount 1 ;
+      sh:name "post office box number" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/postalCode> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "postal code" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/streetAddress> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "street address" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/org/fullAddressLine> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "full address line" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:targetClass <http://schema.org/PostalAddress> ;
+.
+:Site
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "org site" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:closed true ;
+  sh:ignoredProperties (
+      rdf:type
+    ) ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#siteAddress> ;
+      sh:class <http://schema.org/PostalAddress> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "site address" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/org#siteOf> ;
+      sh:class <http://schema.org/Organization> ;
+      sh:minCount 1 ;
+      sh:name "site of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <http://www.w3.org/ns/org#Site> ;
+.

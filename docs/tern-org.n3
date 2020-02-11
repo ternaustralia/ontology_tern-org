@@ -55,6 +55,11 @@ schema:EducationalOrganization a owl:Class ;
     rdfs:comment "An educational organization." ;
     rdfs:subClassOf schema:Organization .
 
+schema:FundingAgency a owl:Class ;
+    rdfs:label "Funding Agency" ;
+    rdfs:comment "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc." ;
+    rdfs:subClassOf schema:Organization .
+
 schema:FundingScheme a owl:Class ;
     rdfs:label "Funding Scheme" ;
     rdfs:comment "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." ;
@@ -295,14 +300,14 @@ tern-org: a owl:Ontology ;
             schema:email "e.chuc@uq.edu.au" ;
             schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
             schema:name "Edmond Chuc" ] ;
-    dct:modified "2020-01-14"^^xsd:date ;
+    dct:modified "2020-02-12"^^xsd:date ;
     dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     vann:preferredNamespacePrefix "tern-org" ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.7> ;
-    owl:versionInfo "0.0.7" .
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.8> ;
+    owl:versionInfo "0.0.8" .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;
     rdfs:label "Federal Government Organization" ;

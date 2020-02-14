@@ -669,6 +669,12 @@ tern-org:
   owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.8> ;
   owl:versionInfo "0.0.8" ;
 .
+tern-org:PartnerOrganization
+  a owl:Class ;
+  rdfs:comment "Local partner organization." ;
+  rdfs:label "Partner Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
 tern-org:FederalGovernmentOrganization
   a owl:Class ;
   rdfs:comment "Federal government organizations and agencies." ;

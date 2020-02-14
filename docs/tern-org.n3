@@ -331,6 +331,11 @@ tern-org:NCRISProject a owl:Class ;
     rdfs:seeAlso <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> ;
     rdfs:subClassOf schema:Project .
 
+tern-org:PartnerOrganization a owl:Class ;
+    rdfs:label "Partner Organization" ;
+    rdfs:comment "Local partner organization." ;
+    rdfs:subClassOf schema:Organization .
+
 tern-org:RegionalGovernmentOrganization a owl:Class ;
     rdfs:label "Regional Government Organization" ;
     rdfs:comment "Regional and local governments." ;

@@ -289,6 +289,13 @@
     ] ;
   sh:property [
       a sh:PropertyShape ;
+      sh:path <http://schema.org/name> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
       sh:path <http://schema.org/sameAs> ;
       sh:name "same as" ;
       sh:nodeKind sh:IRI ;

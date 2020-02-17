@@ -300,14 +300,14 @@ tern-org: a owl:Ontology ;
             schema:email "e.chuc@uq.edu.au" ;
             schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
             schema:name "Edmond Chuc" ] ;
-    dct:modified "2020-02-12"^^xsd:date ;
+    dct:modified "2020-02-17"^^xsd:date ;
     dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     vann:preferredNamespacePrefix "tern-org" ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.8> ;
-    owl:versionInfo "0.0.8" .
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.9> ;
+    owl:versionInfo "0.0.9" .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;
     rdfs:label "Federal Government Organization" ;
@@ -483,6 +483,10 @@ tern-org:fullAddressLine a owl:AnnotationProperty ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf rdfs:label .
 
+tern-org:isDissolved a rdf:Property ;
+    rdfs:label "is dissolved" ;
+    rdfs:range xsd:boolean .
+
 schema:member a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "member" ;
@@ -653,6 +657,9 @@ schema:Organization a owl:Class ;
     rdfs:label "Organization" ;
     rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty tern-org:isDissolved ],
+        [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:name ],
         prov:Agent ;

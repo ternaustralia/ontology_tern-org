@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.9] - 2020-02-17
+### Added
+- Added tern-org:isDissolved to explicitly identify if an organization has been dissolved. Filtering organizations with schema:dissolutionDate and org:changedBy was not explicit enough as sometimes these information may not be available/applicable. 
+
 ## [0.0.8] - 2020-02-12
 ### Added
 - schema:FundingAgency.

@@ -212,6 +212,13 @@
       sh:name "agor" ;
       sh:nodeKind sh:Literal ;
     ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/org/isDissolved> ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
   sh:targetClass <http://schema.org/Organization> ;
 .
 :Person

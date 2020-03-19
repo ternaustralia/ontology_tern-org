@@ -6,6 +6,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -154,6 +155,34 @@ schema:Project
   rdfs:label "Project" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:Role
+  a owl:Class ;
+  rdfs:comment """Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.<br/><br/>
+
+See also <a href=\"http://blog.schema.org/2014/06/introducing-role.html\">blog post</a>.""" ;
+  rdfs:label "Role" ;
+  rdfs:subClassOf schema:Thing ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom schema:Role ;
+      owl:onProperty tern-org:predecessor ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom schema:Role ;
+      owl:onProperty tern-org:successor ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:startDate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:endDate ;
+    ] ;
+.
 schema:Thing
   a owl:Class ;
   rdfs:comment "The most generic type of item." ;
@@ -251,6 +280,18 @@ schema:email
   rdfs:domain prov:Agent ;
   rdfs:label "email" ;
   rdfs:range xsd:string ;
+.
+schema:endDate
+  a rdf:Property ;
+  schema:domainIncludes schema:CreativeWorkSeason ;
+  schema:domainIncludes schema:CreativeWorkSeries ;
+  schema:domainIncludes schema:DatedMoneySpecification ;
+  schema:domainIncludes schema:Event ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Date ;
+  schema:rangeIncludes schema:DateTime ;
+  rdfs:comment "The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." ;
+  rdfs:label "endDate" ;
 .
 schema:foundingDate
   a rdf:Property ;
@@ -451,6 +492,18 @@ schema:sponsor
   rdfs:domain prov:Agent ;
   rdfs:label "sponsor" ;
   rdfs:range prov:Agent ;
+.
+schema:startDate
+  a rdf:Property ;
+  schema:domainIncludes schema:CreativeWorkSeason ;
+  schema:domainIncludes schema:CreativeWorkSeries ;
+  schema:domainIncludes schema:DatedMoneySpecification ;
+  schema:domainIncludes schema:Event ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Date ;
+  schema:rangeIncludes schema:DateTime ;
+  rdfs:comment "The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." ;
+  rdfs:label "startDate" ;
 .
 schema:streetAddress
   a rdf:Property ;
@@ -658,21 +711,55 @@ tern-org:
   a owl:Ontology ;
   dct:created "2019-11-23"^^xsd:date ;
   dct:creator [
-      a schema:Person ;
       schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
       schema:email "e.chuc@uq.edu.au" ;
       schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
       schema:name "Edmond Chuc" ;
     ] ;
-  dct:modified "2020-02-17"^^xsd:date ;
+  dct:modified "2020-03-19"^^xsd:date ;
   dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
   vann:preferredNamespacePrefix "tern-org" ;
   vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.9> ;
-  owl:versionInfo "0.0.9" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.10> ;
+  owl:versionInfo "0.0.10" ;
+  prov:wasGeneratedBy [
+    a doap:Project ;
+    a prov:Activity ;
+    doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ;
+  ] ;
+.
+tern-org:CollaborativeInvestigatorRole
+  a owl:Class ;
+  rdfs:label "Collaborative investigator role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:collaboratorInvestigator ;
+    ] ;
+.
+tern-org:CollaboratorOrganizationRole
+  a owl:Class ;
+  rdfs:label "Collaborator organization role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:collaboratorOrganization ;
+    ] ;
+.
+tern-org:DataManagerRole
+  a owl:Class ;
+  rdfs:label "Data manager role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:dataManager ;
+    ] ;
 .
 tern-org:FederalGovernmentOrganization
   a owl:Class ;
@@ -680,11 +767,31 @@ tern-org:FederalGovernmentOrganization
   rdfs:label "Federal Government Organization" ;
   rdfs:subClassOf schema:GovernmentOrganization ;
 .
+tern-org:FundingOrganizationRole
+  a owl:Class ;
+  rdfs:label "Funding organization role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty schema:funder ;
+    ] ;
+.
 tern-org:InternationalOrganization
   a owl:Class ;
   rdfs:comment "International organizations." ;
   rdfs:label "International Organization" ;
   rdfs:subClassOf schema:Organization ;
+.
+tern-org:LandOwnerRole
+  a owl:Class ;
+  rdfs:label "Land owner role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:landOwner ;
+    ] ;
 .
 tern-org:Manufacturer
   a owl:Class ;
@@ -706,6 +813,16 @@ tern-org:PartnerOrganization
   rdfs:label "Partner Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
+tern-org:PrincipalInvestigatorRole
+  a owl:Class ;
+  rdfs:label "Principal investigator role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:principalInvestigator ;
+    ] ;
+.
 tern-org:RegionalGovernmentOrganization
   a owl:Class ;
   rdfs:comment "Regional and local governments." ;
@@ -717,6 +834,16 @@ tern-org:StateGovernmentOrganization
   rdfs:comment "State governments." ;
   rdfs:label "State Government Organization" ;
   rdfs:subClassOf schema:GovernmentOrganization ;
+.
+tern-org:TechnicianRole
+  a owl:Class ;
+  rdfs:label "Technician role" ;
+  rdfs:subClassOf schema:Role ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty tern-org:technician ;
+    ] ;
 .
 tern-org:addressLine1
   a rdf:Property ;
@@ -743,6 +870,24 @@ tern-org:agorID
   rdfs:seeAlso <https://data.gov.au/data/dataset/australian-government-organisations-register> ;
   rdfs:subPropertyOf schema:identifier ;
 .
+tern-org:collaboratorInvestigator
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:label "Collaborator investigator" ;
+.
+tern-org:collaboratorOrganization
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Organization ;
+  rdfs:label "Collaborator organization" ;
+.
+tern-org:dataManager
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:label "Data manager" ;
+.
 tern-org:fullAddressLine
   a owl:AnnotationProperty ;
   rdfs:comment "The full address or canonical address of the postal address in a single line." ;
@@ -756,6 +901,13 @@ tern-org:isDissolved
   rdfs:label "is dissolved" ;
   rdfs:range xsd:boolean ;
 .
+tern-org:landOwner
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Organization ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:label "Land owner" ;
+.
 tern-org:orcID
   a rdf:Property ;
   rdfs:comment "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors." ;
@@ -764,8 +916,33 @@ tern-org:orcID
   rdfs:seeAlso <https://orcid.org/> ;
   rdfs:subPropertyOf schema:identifier ;
 .
+tern-org:predecessor
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Role ;
+  rdfs:comment "The predecessor to the current `schema:Role`." ;
+  rdfs:label "Predecessor" ;
+.
+tern-org:principalInvestigator
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:label "Principal investigator" ;
+.
+tern-org:successor
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Role ;
+  rdfs:comment "The successor to the current `schema:Role`." ;
+  rdfs:label "Successor" ;
+.
+tern-org:technician
+  a rdf:Property ;
+  schema:domainIncludes schema:Role ;
+  schema:rangeIncludes schema:Person ;
+  rdfs:label "Technician" ;
+.
 <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
-  a schema:Organization ;
   schema:alternateName "TERN" ;
   schema:name "Terrestrial Ecoystem Research Network" ;
   schema:url <https://www.tern.org.au/> ;

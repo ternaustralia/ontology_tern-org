@@ -2,6 +2,8 @@
 
 Documentation online: https://ternaustralia.github.io/ontology_tern-org/
 
+Changelog: [CHANGELOG.md](CHANGELOG.md)
+
 
 ## Building the documentation
 

@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.10] - 2020-03-19
+### Added
+- schema:Role and its subclasses
+    - tern-org:CollaborativeInvestigatorRole
+    - tern-org:CollaborativeOrganizerRole
+    - tern-org:DataManagerRole
+    - tern-org:FundingOrganizationRole
+    - tern-org:LandOwnerRole
+    - tern-org:PrincipalInvestigatorRole
+    - tern-org:TechnicianRole
+- tern-org:successor
+- tern-org:predecessor
+- tern-org:landOwner
+- tern-org:collaboratorOrganization
+- tern-org:principalInvestigator
+- tern-org:technician
+- tern-org:dataManager
+- tern-org: collaboratorInvestigator
+- schema:startDate
+- schema:endDate
+
 ## [0.0.9] - 2020-02-17
 ### Added
 - Added tern-org:isDissolved to explicitly identify if an organization has been dissolved. Filtering organizations with schema:dissolutionDate and org:changedBy was not explicit enough as sometimes these information may not be available/applicable. 

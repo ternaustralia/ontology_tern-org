@@ -340,8 +340,9 @@ tern-org: a owl:Ontology ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.13> ;
-    owl:versionInfo "0.0.13" ;
+    owl:imports prov: ;
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.14> ;
+    owl:versionInfo "0.0.14" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .

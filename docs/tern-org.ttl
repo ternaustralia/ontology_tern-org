@@ -37,6 +37,12 @@ schema:EducationalOrganization
   rdfs:label "Educational Organization" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:Event
+  a owl:Class ;
+  rdfs:comment "An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the <a class=\"localLink\" href=\"http://schema.org/offers\">offers</a> property. Repeated events may be structured as separate Event objects." ;
+  rdfs:label "Event" ;
+  rdfs:subClassOf schema:Thing ;
+.
 schema:FundingAgency
   a owl:Class ;
   rdfs:comment "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc." ;
@@ -48,6 +54,19 @@ schema:FundingScheme
   rdfs:comment "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." ;
   rdfs:label "Funding Scheme" ;
   rdfs:subClassOf schema:Organization ;
+.
+schema:GeoCoordinates
+  a rdfs:Class ;
+  rdfs:comment "The geographic coordinates of a place or event." ;
+  rdfs:label "GeoCoordinates" ;
+  rdfs:subClassOf schema:StructuredValue ;
+.
+schema:GeoShape
+  a rdfs:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+  rdfs:comment "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points." ;
+  rdfs:label "GeoShape" ;
+  rdfs:subClassOf schema:StructuredValue ;
 .
 schema:GovernmentOrganization
   a owl:Class ;
@@ -105,6 +124,12 @@ schema:Person
   rdfs:label "Person" ;
   rdfs:subClassOf prov:Agent ;
   owl:equivalentClass foaf:Person ;
+.
+schema:Place
+  a rdfs:Class ;
+  rdfs:comment "Entities that have a somewhat fixed, physical extension." ;
+  rdfs:label "Place" ;
+  rdfs:subClassOf schema:Thing ;
 .
 schema:PostalAddress
   a owl:Class ;
@@ -270,6 +295,15 @@ schema:dissolutionDate
   rdfs:label "dissolutionDate" ;
   rdfs:range xsd:date ;
 .
+schema:elevation
+  a rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:domainIncludes schema:GeoShape ;
+  schema:rangeIncludes schema:Number ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." ;
+  rdfs:label "elevation" ;
+.
 schema:email
   a rdf:Property ;
   schema:domainIncludes schema:ContactPoint ;
@@ -317,6 +351,14 @@ schema:funder
   rdfs:range prov:Agent ;
   rdfs:subPropertyOf schema:sponsor ;
 .
+schema:geo
+  a rdf:Property ;
+  schema:domainIncludes schema:Place ;
+  schema:rangeIncludes schema:GeoCoordinates ;
+  schema:rangeIncludes schema:GeoShape ;
+  rdfs:comment "The geo coordinates of the place." ;
+  rdfs:label "geo" ;
+.
 schema:honorificPrefix
   a rdf:Property ;
   schema:domainIncludes schema:Person ;
@@ -356,6 +398,33 @@ schema:jobTitle
   rdfs:domain schema:Person ;
   rdfs:label "Job title" ;
   rdfs:range xsd:string ;
+.
+schema:latitude
+  a rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:rangeIncludes schema:Number ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." ;
+  rdfs:label "latitude" ;
+.
+schema:location
+  a rdf:Property ;
+  schema:domainIncludes schema:Action ;
+  schema:domainIncludes schema:Event ;
+  schema:domainIncludes schema:Organization ;
+  schema:rangeIncludes schema:Place ;
+  schema:rangeIncludes schema:PostalAddress ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The location of for example where the event is happening, an organization is located, or where an action takes place." ;
+  rdfs:label "location" ;
+.
+schema:longitude
+  a rdf:Property ;
+  schema:domainIncludes schema:GeoCoordinates ;
+  schema:rangeIncludes schema:Number ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." ;
+  rdfs:label "longitude" ;
 .
 schema:member
   a rdf:Property ;
@@ -723,8 +792,8 @@ tern-org:
   rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
   rdfs:label "TERN Organisations Ontology" ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.11> ;
-  owl:versionInfo "0.0.11" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.12> ;
+  owl:versionInfo "0.0.12" ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;

@@ -15,6 +15,22 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+schema:GeoCoordinates a rdfs:Class ;
+    rdfs:label "GeoCoordinates" ;
+    rdfs:comment "The geographic coordinates of a place or event." ;
+    rdfs:subClassOf schema:StructuredValue .
+
+schema:GeoShape a rdfs:Class ;
+    rdfs:label "GeoShape" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points." ;
+    rdfs:subClassOf schema:StructuredValue .
+
+schema:Place a rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "Entities that have a somewhat fixed, physical extension." ;
+    rdfs:subClassOf schema:Thing .
+
 org:ChangeEvent a rdfs:Class,
         owl:Class ;
     rdfs:label "Change Event"@en ;
@@ -119,6 +135,14 @@ schema:dissolutionDate a rdf:Property ;
     rdfs:domain schema:Organization ;
     rdfs:range xsd:date .
 
+schema:elevation a rdf:Property ;
+    rdfs:label "elevation" ;
+    schema:domainIncludes schema:GeoCoordinates,
+        schema:GeoShape ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." .
+
 schema:email a rdf:Property ;
     rdfs:label "email" ;
     schema:domainIncludes schema:ContactPoint,
@@ -136,6 +160,13 @@ schema:foundingDate a rdf:Property ;
     rdfs:comment "The date that this organization was founded." ;
     rdfs:domain schema:Organization ;
     rdfs:range xsd:date .
+
+schema:geo a rdf:Property ;
+    rdfs:label "geo" ;
+    schema:domainIncludes schema:Place ;
+    schema:rangeIncludes schema:GeoCoordinates,
+        schema:GeoShape ;
+    rdfs:comment "The geo coordinates of the place." .
 
 schema:honorificPrefix a rdf:Property ;
     rdfs:label "honorificPrefix" ;
@@ -162,6 +193,30 @@ schema:jobTitle a rdf:Property ;
     rdfs:comment "The job title of the person (for example, Financial Manager)." ;
     rdfs:domain schema:Person ;
     rdfs:range xsd:string .
+
+schema:latitude a rdf:Property ;
+    rdfs:label "latitude" ;
+    schema:domainIncludes schema:GeoCoordinates ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
+
+schema:location a rdf:Property ;
+    rdfs:label "location" ;
+    schema:domainIncludes schema:Action,
+        schema:Event,
+        schema:Organization ;
+    schema:rangeIncludes schema:Place,
+        schema:PostalAddress,
+        schema:Text ;
+    rdfs:comment "The location of for example where the event is happening, an organization is located, or where an action takes place." .
+
+schema:longitude a rdf:Property ;
+    rdfs:label "longitude" ;
+    schema:domainIncludes schema:GeoCoordinates ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
 
 schema:model a rdf:Property ;
     rdfs:label "model" ;
@@ -292,8 +347,8 @@ tern-org: a owl:Ontology ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.11> ;
-    owl:versionInfo "0.0.11" ;
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.12> ;
+    owl:versionInfo "0.0.12" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
@@ -726,6 +781,11 @@ schema:Product a owl:Class ;
     rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
     rdfs:subClassOf schema:Thing .
 
+schema:Event a owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the <a class=\"localLink\" href=\"http://schema.org/offers\">offers</a> property. Repeated events may be structured as separate Event objects." ;
+    rdfs:subClassOf schema:Thing .
+
 schema:OwnershipInfo a owl:Class ;
     rdfs:label "OwnershipInfo" ;
     dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
@@ -767,11 +827,6 @@ schema:PostalAddress a owl:Class ;
             owl:onProperty tern-org:fullAddressLine ],
         schema:Thing .
 
-schema:Thing a owl:Class ;
-    rdfs:label "Thing" ;
-    rdfs:comment "The most generic type of item." ;
-    rdfs:subClassOf owl:Thing .
-
 schema:Role a owl:Class ;
     rdfs:label "Role" ;
     rdfs:comment """Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.<br/><br/>
@@ -790,6 +845,11 @@ See also <a href="http://blog.schema.org/2014/06/introducing-role.html">blog pos
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:endDate ],
         schema:Thing .
+
+schema:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "The most generic type of item." ;
+    rdfs:subClassOf owl:Thing .
 
 schema:Person a owl:Class ;
     rdfs:label "Person" ;

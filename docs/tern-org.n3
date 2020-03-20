@@ -18,13 +18,28 @@
 schema:GeoCoordinates a rdfs:Class ;
     rdfs:label "GeoCoordinates" ;
     rdfs:comment "The geographic coordinates of a place or event." ;
-    rdfs:subClassOf schema:StructuredValue .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:elevation ;
+            owl:someValuesFrom xsd:decimal ],
+        [ a owl:Restriction ;
+            owl:onProperty schema:latitude ;
+            owl:someValuesFrom xsd:decimal ],
+        [ a owl:Restriction ;
+            owl:onProperty schema:longitude ;
+            owl:someValuesFrom xsd:decimal ],
+        schema:StructuredValue .
 
 schema:GeoShape a rdfs:Class ;
     rdfs:label "GeoShape" ;
     dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
     rdfs:comment "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points." ;
-    rdfs:subClassOf schema:StructuredValue .
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:elevation ;
+            owl:someValuesFrom xsd:decimal ],
+        [ a owl:Restriction ;
+            owl:onProperty schema:line ;
+            owl:someValuesFrom xsd:string ],
+        schema:StructuredValue .
 
 schema:Place a rdfs:Class ;
     rdfs:label "Place" ;
@@ -135,14 +150,6 @@ schema:dissolutionDate a rdf:Property ;
     rdfs:domain schema:Organization ;
     rdfs:range xsd:date .
 
-schema:elevation a rdf:Property ;
-    rdfs:label "elevation" ;
-    schema:domainIncludes schema:GeoCoordinates,
-        schema:GeoShape ;
-    schema:rangeIncludes schema:Number,
-        schema:Text ;
-    rdfs:comment "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." .
-
 schema:email a rdf:Property ;
     rdfs:label "email" ;
     schema:domainIncludes schema:ContactPoint,
@@ -194,13 +201,6 @@ schema:jobTitle a rdf:Property ;
     rdfs:domain schema:Person ;
     rdfs:range xsd:string .
 
-schema:latitude a rdf:Property ;
-    rdfs:label "latitude" ;
-    schema:domainIncludes schema:GeoCoordinates ;
-    schema:rangeIncludes schema:Number,
-        schema:Text ;
-    rdfs:comment "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
-
 schema:location a rdf:Property ;
     rdfs:label "location" ;
     schema:domainIncludes schema:Action,
@@ -210,13 +210,6 @@ schema:location a rdf:Property ;
         schema:PostalAddress,
         schema:Text ;
     rdfs:comment "The location of for example where the event is happening, an organization is located, or where an action takes place." .
-
-schema:longitude a rdf:Property ;
-    rdfs:label "longitude" ;
-    schema:domainIncludes schema:GeoCoordinates ;
-    schema:rangeIncludes schema:Number,
-        schema:Text ;
-    rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
 
 schema:model a rdf:Property ;
     rdfs:label "model" ;
@@ -347,8 +340,8 @@ tern-org: a owl:Ontology ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.12> ;
-    owl:versionInfo "0.0.12" ;
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.13> ;
+    owl:versionInfo "0.0.13" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
@@ -541,6 +534,26 @@ schema:funder a rdf:Property ;
     rdfs:range prov:Agent ;
     rdfs:subPropertyOf schema:sponsor .
 
+schema:latitude a rdf:Property ;
+    rdfs:label "latitude" ;
+    schema:domainIncludes schema:GeoCoordinates ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
+
+schema:line a rdf:Property ;
+    rdfs:label "line" ;
+    schema:domainIncludes schema:GeoShape ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space." .
+
+schema:longitude a rdf:Property ;
+    rdfs:label "longitude" ;
+    schema:domainIncludes schema:GeoCoordinates ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
+
 schema:postalCode a rdf:Property ;
     rdfs:label "postalCode" ;
     schema:domainIncludes schema:GeoCoordinates,
@@ -668,6 +681,14 @@ tern-org:technician a rdf:Property ;
     rdfs:label "Technician" ;
     schema:domainIncludes schema:Role ;
     schema:rangeIncludes schema:Person .
+
+schema:elevation a rdf:Property ;
+    rdfs:label "elevation" ;
+    schema:domainIncludes schema:GeoCoordinates,
+        schema:GeoShape ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." .
 
 schema:member a rdf:Property,
         owl:ObjectProperty ;

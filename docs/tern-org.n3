@@ -286,14 +286,14 @@ tern-org: a owl:Ontology ;
             schema:email "e.chuc@uq.edu.au" ;
             schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
             schema:name "Edmond Chuc" ] ;
-    dct:modified "2020-03-19"^^xsd:date ;
+    dct:modified "2020-03-20"^^xsd:date ;
     dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     vann:preferredNamespacePrefix "tern-org" ;
     vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
     rdfs:comment "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " ;
     rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
-    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.10> ;
-    owl:versionInfo "0.0.10" ;
+    owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.11> ;
+    owl:versionInfo "0.0.11" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
@@ -317,6 +317,13 @@ tern-org:DataManagerRole a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty tern-org:dataManager ],
+        schema:Role .
+
+tern-org:DroneOperator a owl:Class ;
+    rdfs:label "Drone operator" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty tern-org:droneOperator ],
         schema:Role .
 
 tern-org:FederalGovernmentOrganization a owl:Class ;
@@ -565,6 +572,9 @@ tern-org:dataManager a rdf:Property ;
     schema:domainIncludes schema:Role ;
     schema:rangeIncludes schema:Person .
 
+tern-org:droneOperator a rdf:Property ;
+    rdfs:label "drone operator" .
+
 tern-org:fullAddressLine a owl:AnnotationProperty ;
     rdfs:label "Full Address Line" ;
     rdfs:comment "The full address or canonical address of the postal address in a single line." ;
@@ -757,6 +767,11 @@ schema:PostalAddress a owl:Class ;
             owl:onProperty tern-org:fullAddressLine ],
         schema:Thing .
 
+schema:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "The most generic type of item." ;
+    rdfs:subClassOf owl:Thing .
+
 schema:Role a owl:Class ;
     rdfs:label "Role" ;
     rdfs:comment """Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.<br/><br/>
@@ -775,11 +790,6 @@ See also <a href="http://blog.schema.org/2014/06/introducing-role.html">blog pos
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty schema:endDate ],
         schema:Thing .
-
-schema:Thing a owl:Class ;
-    rdfs:label "Thing" ;
-    rdfs:comment "The most generic type of item." ;
-    rdfs:subClassOf owl:Thing .
 
 schema:Person a owl:Class ;
     rdfs:label "Person" ;

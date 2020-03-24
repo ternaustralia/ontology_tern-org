@@ -206,6 +206,13 @@ schema:Project
   rdfs:label "Project" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:QuantitativeValue
+  a rdfs:Class ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> ;
+  rdfs:comment "A point value or interval for product characteristics and other purposes." ;
+  rdfs:label "QuantitativeValue" ;
+  rdfs:subClassOf schema:StructuredValue ;
+.
 schema:Role
   a owl:Class ;
   rdfs:comment """Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.<br/><br/>
@@ -459,6 +466,17 @@ schema:longitude
   rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." ;
   rdfs:label "longitude" ;
 .
+schema:maxValue
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:MonetaryAmount ;
+  schema:domainIncludes schema:PropertyValue ;
+  schema:domainIncludes schema:PropertyValueSpecification ;
+  schema:domainIncludes schema:QuantitativeValue ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The upper value of some characteristic or property." ;
+  rdfs:label "maxValue" ;
+.
 schema:member
   a rdf:Property ;
   a owl:ObjectProperty ;
@@ -486,6 +504,17 @@ schema:memberOf
   rdfs:label "memberOf" ;
   rdfs:range schema:Organization ;
   owl:inverseOf schema:member ;
+.
+schema:minValue
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:MonetaryAmount ;
+  schema:domainIncludes schema:PropertyValue ;
+  schema:domainIncludes schema:PropertyValueSpecification ;
+  schema:domainIncludes schema:QuantitativeValue ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The lower value of some characteristic or property." ;
+  rdfs:label "minValue" ;
 .
 schema:model
   a rdf:Property ;
@@ -664,6 +693,18 @@ schema:typeOfGood
   rdfs:label "typeOfGood" ;
   rdfs:range schema:Product ;
 .
+schema:unitCode
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:PropertyValue ;
+  schema:domainIncludes schema:QuantitativeValue ;
+  schema:domainIncludes schema:TypeAndQuantityNode ;
+  schema:domainIncludes schema:UnitPriceSpecification ;
+  schema:rangeIncludes schema:Text ;
+  schema:rangeIncludes schema:URL ;
+  rdfs:comment "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon." ;
+  rdfs:label "unitCode" ;
+.
 schema:url
   a rdf:Property ;
   schema:domainIncludes schema:Thing ;
@@ -671,6 +712,27 @@ schema:url
   rdfs:comment "URL of the item." ;
   rdfs:domain schema:Thing ;
   rdfs:label "url" ;
+.
+schema:value
+  a rdf:Property ;
+  dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+  schema:domainIncludes schema:MonetaryAmount ;
+  schema:domainIncludes schema:PropertyValue ;
+  schema:domainIncludes schema:QuantitativeValue ;
+  schema:rangeIncludes schema:Boolean ;
+  schema:rangeIncludes schema:Number ;
+  schema:rangeIncludes schema:StructuredValue ;
+  schema:rangeIncludes schema:Text ;
+  rdfs:comment """The value of the quantitative value or property value node.<br/><br/>
+
+<ul>
+<li>For <a class=\"localLink\" href=\"http://schema.org/QuantitativeValue\">QuantitativeValue</a> and <a class=\"localLink\" href=\"http://schema.org/MonetaryAmount\">MonetaryAmount</a>, the recommended type for values is 'Number'.</li>
+<li>For <a class=\"localLink\" href=\"http://schema.org/PropertyValue\">PropertyValue</a>, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+<li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+""" ;
+  rdfs:label "value" ;
 .
 org:ChangeEvent
   a rdfs:Class ;
@@ -811,7 +873,7 @@ prov:Agent
 .
 tern-org:
   a owl:Ontology ;
-  dct:created "2019-11-23"^^xsd:date ;
+  dct:created "2019-11-24"^^xsd:date ;
   dct:creator [
       schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
       schema:email "e.chuc@uq.edu.au" ;
@@ -826,8 +888,8 @@ tern-org:
   rdfs:label "TERN Organisations Ontology" ;
   rdfs:seeAlso <https://github.com/ternaustralia/ontology_tern-org> ;
   owl:imports prov: ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.14> ;
-  owl:versionInfo "0.0.14" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.15> ;
+  owl:versionInfo "0.0.15" ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
@@ -935,6 +997,11 @@ tern-org:PrincipalInvestigatorRole
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty tern-org:principalInvestigator ;
     ] ;
+.
+tern-org:ProjectManagerRole
+  a owl:Class ;
+  rdfs:label "Project manager role" ;
+  rdfs:subClassOf schema:Role ;
 .
 tern-org:RegionalGovernmentOrganization
   a owl:Class ;
@@ -1045,6 +1112,10 @@ tern-org:principalInvestigator
   schema:domainIncludes schema:Role ;
   schema:rangeIncludes schema:Person ;
   rdfs:label "Principal investigator" ;
+.
+tern-org:projectManager
+  a rdf:Property ;
+  rdfs:label "project manager" ;
 .
 tern-org:successor
   a rdf:Property ;

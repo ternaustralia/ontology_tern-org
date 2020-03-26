@@ -893,7 +893,7 @@ tern-org:
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
-      doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ;
+      doap:repository <https://github.com/ternaustralia/ontology_tern-org> ;
     ] ;
 .
 tern-org:CollaborativeInvestigatorRole

@@ -402,7 +402,7 @@ tern-org: a owl:Ontology ;
     owl:versionInfo "0.0.15" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
-            doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
+            doap:repository <https://github.com/ternaustralia/ontology_tern-org> ] .
 
 tern-org:CollaborativeInvestigatorRole a owl:Class ;
     rdfs:label "Collaborative investigator role" ;

@@ -10,6 +10,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tern-shapes: <https://w3id.org/tern/shapes/tern/> .
 @prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -20,7 +21,7 @@
     owl:imports <http://datashapes.org/dash>,
         tern-org: .
 
-schema:Person a sh:NodeShape ;
+tern-shapes:schema-Person a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:path schema:jobTitle ],
@@ -34,7 +35,7 @@ schema:Person a sh:NodeShape ;
             sh:path schema:honorificPrefix ] ;
     sh:targetClass schema:Person .
 
-schema:Thing a sh:NodeShape ;
+tern-shapes:schema-Thing a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:path schema:alternateName ],
@@ -56,7 +57,7 @@ schema:Thing a sh:NodeShape ;
             sh:path schema:url ] ;
     sh:targetClass schema:Thing .
 
-org:ChangeEvent a sh:NodeShape ;
+tern-shapes:org-ChangeEvent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
@@ -75,7 +76,7 @@ org:ChangeEvent a sh:NodeShape ;
             sh:path org:resultingOrganization ] ;
     sh:targetClass org:ChangeEvent .
 
-schema:OwnershipInfo a sh:NodeShape ;
+tern-shapes:schema-OwnershipInfo a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class schema:Organization ;
             sh:path schema:acquiredFrom ],
@@ -90,7 +91,7 @@ schema:OwnershipInfo a sh:NodeShape ;
             sh:path schema:typeOfGood ] ;
     sh:targetClass schema:OwnershipInfo .
 
-schema:PostalAddress a sh:NodeShape ;
+tern-shapes:schema-PostalAddress a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
@@ -132,7 +133,7 @@ schema:PostalAddress a sh:NodeShape ;
             sh:path tern-org:fullAddressLine ] ;
     sh:targetClass schema:PostalAddress .
 
-prov:Agent a sh:NodeShape ;
+tern-shapes:prov-Agent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class schema:PostalAddress ;
             sh:path schema:address ],
@@ -156,7 +157,7 @@ prov:Agent a sh:NodeShape ;
             sh:path schema:telephone ] ;
     sh:targetClass prov:Agent .
 
-schema:Organization a sh:NodeShape ;
+tern-shapes:schema-Organization a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:path schema:dissolutionDate ],
@@ -184,7 +185,7 @@ schema:Organization a sh:NodeShape ;
             sh:path tern-org:agorID ] ;
     sh:targetClass schema:Organization .
 
-tern-org:Agent a sh:NodeShape ;
+tern-shapes:tern-org-Agent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:path schema:email ],
@@ -205,7 +206,7 @@ tern-org:Agent a sh:NodeShape ;
             sh:path tern-org:hasRole ] ;
     sh:targetClass tern-org:Agent .
 
-tern-org:AustralianGovernmentOrganization a sh:NodeShape ;
+tern-shapes:tern-org-AustralianGovernmentOrganization a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
@@ -213,7 +214,7 @@ tern-org:AustralianGovernmentOrganization a sh:NodeShape ;
             sh:path tern-org:agorID ] ;
     sh:targetClass tern-org:AustralianGovernmentOrganization .
 
-tern-org:ChangeEvent a sh:NodeShape ;
+tern-shapes:tern-org-ChangeEvent a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class tern-org:Organization ;
             sh:path org:originalOrganization ],
@@ -222,7 +223,7 @@ tern-org:ChangeEvent a sh:NodeShape ;
             sh:path org:resultingOrganization ] ;
     sh:targetClass tern-org:ChangeEvent .
 
-tern-org:Organization a sh:NodeShape ;
+tern-shapes:tern-org-Organization a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class tern-org:Agent ;
             sh:path schema:member ],
@@ -264,7 +265,7 @@ tern-org:Organization a sh:NodeShape ;
             sh:path tern-org:isDissolved ] ;
     sh:targetClass tern-org:Organization .
 
-tern-org:OwnershipInfo a sh:NodeShape ;
+tern-shapes:tern-org-OwnershipInfo a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:path schema:ownedFrom ],
@@ -279,7 +280,7 @@ tern-org:OwnershipInfo a sh:NodeShape ;
             sh:path schema:typeOfGood ] ;
     sh:targetClass tern-org:OwnershipInfo .
 
-tern-org:Person a sh:NodeShape ;
+tern-shapes:tern-org-Person a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:path schema:honorificPrefix ],
@@ -294,7 +295,7 @@ tern-org:Person a sh:NodeShape ;
             sh:path org:basedAt ] ;
     sh:targetClass tern-org:Person .
 
-tern-org:PostalAddress a sh:NodeShape ;
+tern-shapes:tern-org-PostalAddress a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
@@ -327,7 +328,7 @@ tern-org:PostalAddress a sh:NodeShape ;
             sh:path schema:streetAddress ] ;
     sh:targetClass tern-org:PostalAddress .
 
-tern-org:Role a sh:NodeShape ;
+tern-shapes:tern-org-Role a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class tern-org:Role ;
             sh:path tern-org:hasPredecessor ],
@@ -359,7 +360,7 @@ tern-org:Role a sh:NodeShape ;
             sh:path schema:startDate ] ;
     sh:targetClass tern-org:Role .
 
-tern-org:Site a sh:NodeShape ;
+tern-shapes:tern-org-Site a sh:NodeShape ;
     sh:property [ a sh:PropertyShape ;
             sh:class tern-org:Organization ;
             sh:path org:hasPrimarySite ],

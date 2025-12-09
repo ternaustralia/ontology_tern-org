@@ -3,6 +3,7 @@ PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -19,28 +20,41 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 tern-shapes:org-ChangeEvent
     a sh:NodeShape ;
+    rdfs:label "ORG ChangeEvent shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Change description" ;
+            sh:description "Provide at least one schema:description literal for the change event." ;
+            sh:message "Add a schema:description literal to describe the change event." ;
             sh:datatype xsd:string ;
-            sh:minCount 1 ;
+            sh:maxCount 1 ;
             sh:path schema:description
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Change name" ;
+            sh:description "Provide at least one schema:name literal for the change event." ;
+            sh:message "Add a schema:name literal for the change event." ;
             sh:datatype xsd:string ;
-            sh:minCount 1 ;
+            sh:maxCount 1 ;
             sh:path schema:name
         ] ,
         [
             a sh:PropertyShape ;
-            sh:class org:Organization ;
+            sh:name "Original organization" ;
+            sh:description "Point to at least one schema:Organization that was changed." ;
+            sh:message "Link the change event to the original schema:Organization." ;
+            sh:class schema:Organization ;
             sh:minCount 1 ;
             sh:path org:originalOrganization
         ] ,
         [
             a sh:PropertyShape ;
-            sh:class org:Organization ;
+            sh:name "Resulting organization" ;
+            sh:description "Point to at least one schema:Organization that resulted from the change." ;
+            sh:message "Link the change event to the resulting schema:Organization." ;
+            sh:class schema:Organization ;
             sh:minCount 1 ;
             sh:path org:resultingOrganization
         ] ;
@@ -49,39 +63,61 @@ tern-shapes:org-ChangeEvent
 
 tern-shapes:prov-Agent
     a sh:NodeShape ;
+    rdfs:label "PROV Agent shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Postal address" ;
+            sh:description "Values of schema:address must be schema:PostalAddress nodes linked to the agent." ;
+            sh:message "Link schema:address to a schema:PostalAddress node." ;
             sh:class schema:PostalAddress ;
             sh:path schema:address
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Email" ;
+            sh:description "Email values must be xsd:string literals when schema:email is used." ;
+            sh:message "Use an xsd:string literal for schema:email." ;
             sh:datatype xsd:string ;
             sh:path schema:email
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Funder" ;
+            sh:description "Schema:funder values must be prov:Agent resources." ;
+            sh:message "Link schema:funder to a prov:Agent resource." ;
             sh:class prov:Agent ;
             sh:path schema:funder
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Member of" ;
+            sh:description "Schema:memberOf values must point to schema:Organization resources." ;
+            sh:message "Link schema:memberOf to a schema:Organization." ;
             sh:class schema:Organization ;
             sh:path schema:memberOf
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Ownerships" ;
+            sh:description "Schema:owns must reference schema:OwnershipInfo nodes describing the holdings." ;
+            sh:message "Link schema:owns to schema:OwnershipInfo nodes." ;
             sh:class schema:OwnershipInfo ;
             sh:path schema:owns
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Sponsor" ;
+            sh:description "Schema:sponsor values must be prov:Agent resources." ;
+            sh:message "Link schema:sponsor to a prov:Agent resource." ;
             sh:class prov:Agent ;
             sh:path schema:sponsor
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Telephone" ;
+            sh:description "Schema:telephone values must be xsd:string literals." ;
+            sh:message "Use an xsd:string literal for schema:telephone." ;
             sh:datatype xsd:string ;
             sh:path schema:telephone
         ] ;
@@ -90,71 +126,175 @@ tern-shapes:prov-Agent
 
 tern-shapes:schema-Organization
     a sh:NodeShape ;
+    rdfs:label "Schema Organization shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Created date" ;
+            sh:description "Record exactly one dct:created literal for each organization resource." ;
+            sh:message "Provide exactly one dct:created literal." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:created
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Modified date" ;
+            sh:description "At most one dct:modified literal may be supplied." ;
+            sh:message "Provide at most one dct:modified literal." ;
+            sh:maxCount 1 ;
+            sh:path dct:modified
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Dissolution date" ;
+            sh:description "Schema:dissolutionDate values must be xsd:date literals when provided." ;
+            sh:message "Use an xsd:date literal for schema:dissolutionDate." ;
             sh:datatype xsd:date ;
             sh:path schema:dissolutionDate
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Founding date" ;
+            sh:description "Schema:foundingDate values must be xsd:date literals when provided." ;
+            sh:message "Use an xsd:date literal for schema:foundingDate." ;
             sh:datatype xsd:date ;
             sh:path schema:foundingDate
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Members" ;
+            sh:description "Schema:member must point to prov:Agent resources." ;
+            sh:message "Link schema:member to prov:Agent resources." ;
             sh:class prov:Agent ;
             sh:path schema:member
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Organization name" ;
+            sh:description "Exactly one schema:name literal is required." ;
+            sh:message "Provide exactly one schema:name literal for the organization." ;
             sh:datatype xsd:string ;
+            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:name
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Parent organization" ;
+            sh:description "Schema:parentOrganization values must be schema:Organization resources." ;
+            sh:message "Link schema:parentOrganization to a schema:Organization." ;
             sh:class schema:Organization ;
             sh:path schema:parentOrganization
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Sub organization" ;
+            sh:description "Schema:subOrganization values must be schema:Organization resources." ;
+            sh:message "Link schema:subOrganization to a schema:Organization." ;
             sh:class schema:Organization ;
             sh:path schema:subOrganization
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Sites" ;
+            sh:description "Provide at least one org:hasSite link to an org:Site or tern-org:Site." ;
+            sh:message "Add at least one org:hasSite value that is an org:Site or tern-org:Site." ;
+            sh:minCount 1 ;
+            sh:path org:hasSite ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class org:Site
+                    ]
+                    [
+                        sh:class tern-org:Site
+                    ]
+                )
+            ]
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Primary site" ;
+            sh:description "Exactly one org:hasPrimarySite must be supplied and it must be an org:Site or tern-org:Site." ;
+            sh:message "Provide exactly one org:hasPrimarySite that is an org:Site or tern-org:Site." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path org:hasPrimarySite ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class org:Site
+                    ]
+                    [
+                        sh:class tern-org:Site
+                    ]
+                )
+            ]
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Tax ID" ;
+            sh:description "Schema:taxID values must be xsd:string literals." ;
+            sh:message "Provide schema:taxID as an xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:path schema:taxID
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "AGOR ID" ;
+            sh:description "Schema:agorID values must be xsd:string literals." ;
+            sh:message "Provide tern-org:agorID as an xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:path tern-org:agorID
+        ] ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "Values of org:hasPrimarySite must also be present via org:hasSite." ;
+            sh:select """
+                PREFIX org: <http://www.w3.org/ns/org#>
+                SELECT $this WHERE {
+                    $this org:hasPrimarySite ?site .
+                    FILTER NOT EXISTS { $this org:hasSite ?site }
+                }
+            """
         ] ;
     sh:targetClass schema:Organization ;
 .
 
 tern-shapes:schema-OwnershipInfo
     a sh:NodeShape ;
+    rdfs:label "Schema OwnershipInfo shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Acquired from" ;
+            sh:description "Schema:acquiredFrom must reference a schema:Organization." ;
+            sh:message "Link schema:acquiredFrom to a schema:Organization." ;
             sh:class schema:Organization ;
             sh:path schema:acquiredFrom
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Owned from date" ;
+            sh:description "Schema:ownedFrom values must be xsd:date literals." ;
+            sh:message "Provide schema:ownedFrom as an xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:path schema:ownedFrom
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Owned through date" ;
+            sh:description "Schema:ownedThrough values must be xsd:date literals." ;
+            sh:message "Provide schema:ownedThrough as an xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:path schema:ownedThrough
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Type of good" ;
+            sh:description "Schema:typeOfGood must reference schema:Product resources." ;
+            sh:message "Link schema:typeOfGood to schema:Product nodes." ;
             sh:class schema:Product ;
             sh:path schema:typeOfGood
         ] ;
@@ -163,34 +303,148 @@ tern-shapes:schema-OwnershipInfo
 
 tern-shapes:schema-Person
     a sh:NodeShape ;
+    rdfs:label "Schema Person shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Created date" ;
+            sh:description "Record exactly one dct:created literal for each person." ;
+            sh:message "Provide exactly one dct:created literal." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:created
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Modified date" ;
+            sh:description "At most one dct:modified literal may be supplied for a person." ;
+            sh:message "Provide at most one dct:modified literal." ;
+            sh:maxCount 1 ;
+            sh:path dct:modified
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Preferred name" ;
+            sh:description "Exactly one schema:name literal is required for the person." ;
+            sh:message "Provide exactly one schema:name literal." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Given name" ;
+            sh:description "Provide at least one schema:givenName literal." ;
+            sh:message "Add at least one schema:givenName literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:givenName
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Family name" ;
+            sh:description "Provide at least one schema:familyName literal." ;
+            sh:message "Add at least one schema:familyName literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:familyName
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Email" ;
+            sh:description "Provide at least one schema:email xsd:string literal." ;
+            sh:message "Add at least one schema:email literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:email
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Affiliations" ;
+            sh:description "Provide at least one schema:affiliation pointing to schema:Organization or tern-org:Organization." ;
+            sh:message "Link schema:affiliation to schema:Organization or tern-org:Organization resources." ;
+            sh:minCount 1 ;
+            sh:path schema:affiliation ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class schema:Organization
+                    ]
+                    [
+                        sh:class tern-org:Organization
+                    ]
+                )
+            ]
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Based at sites" ;
+            sh:description "Provide at least one org:basedAt link to org:Site or tern-org:Site." ;
+            sh:message "Link org:basedAt to org:Site or tern-org:Site nodes." ;
+            sh:minCount 1 ;
+            sh:path org:basedAt ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class org:Site
+                    ]
+                    [
+                        sh:class tern-org:Site
+                    ]
+                )
+            ]
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Job title" ;
+            sh:description "Schema:jobTitle values must be xsd:string literals." ;
+            sh:message "Provide job titles as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:jobTitle
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "ORCID" ;
+            sh:description "tern-org:orcID captures the person’s ORCID identifier." ;
+            sh:message "Provide a tern-org:orcID identifier." ;
             sh:path tern-org:orcID
         ] ,
         [
             a sh:PropertyShape ;
-            sh:class schema:Organization ;
-            sh:path schema:affiliation
-        ] ,
-        [
-            a sh:PropertyShape ;
+            sh:name "Honorific prefix" ;
+            sh:description "Schema:honorificPrefix values must be xsd:string literals." ;
+            sh:message "Provide honorific prefixes as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:honorificPrefix
+        ] ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "Each org:basedAt site must belong to one of the organizations referenced via schema:affiliation." ;
+            sh:select """
+                PREFIX org: <http://www.w3.org/ns/org#>
+                PREFIX schema: <http://schema.org/>
+                SELECT $this WHERE {
+                    $this org:basedAt ?site .
+                    FILTER NOT EXISTS {
+                        $this schema:affiliation ?org .
+                        ?org org:hasSite ?site .
+                    }
+                }
+            """
         ] ;
     sh:targetClass schema:Person ;
 .
 
 tern-shapes:schema-PostalAddress
     a sh:NodeShape ;
+    rdfs:label "Schema PostalAddress shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Address country" ;
+            sh:description "Exactly one schema:addressCountry xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressCountry literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -198,6 +452,9 @@ tern-shapes:schema-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address locality" ;
+            sh:description "Exactly one schema:addressLocality xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressLocality literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -205,6 +462,9 @@ tern-shapes:schema-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address region" ;
+            sh:description "Exactly one schema:addressRegion xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressRegion literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -212,11 +472,17 @@ tern-shapes:schema-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "PO box" ;
+            sh:description "schema:postOfficeBoxNumber, when present, must be an xsd:string literal." ;
+            sh:message "Provide schema:postOfficeBoxNumber as an xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:path schema:postOfficeBoxNumber
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Postal code" ;
+            sh:description "Exactly one schema:postalCode xsd:positiveInteger literal is required." ;
+            sh:message "Provide exactly one schema:postalCode positive integer literal." ;
             sh:datatype xsd:positiveInteger ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -224,6 +490,9 @@ tern-shapes:schema-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Street address" ;
+            sh:description "Exactly one schema:streetAddress xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:streetAddress literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -231,19 +500,40 @@ tern-shapes:schema-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address line 1" ;
+            sh:description "tern-org:addressLine1 values must be xsd:string literals." ;
+            sh:message "Provide tern-org:addressLine1 as xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:path tern-org:addressLine1
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address line 2" ;
+            sh:description "tern-org:addressLine2 values must be xsd:string literals." ;
+            sh:message "Provide tern-org:addressLine2 as xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:path tern-org:addressLine2
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Full address label" ;
+            sh:description "Provide exactly one rdfs:label literal identical to tern-org:fullAddressLine." ;
+            sh:message "Provide exactly one rdfs:label literal equal to tern-org:fullAddressLine." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
+            sh:path rdfs:label ;
+            sh:equals tern-org:fullAddressLine
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Full address line" ;
+            sh:description "Provide exactly one tern-org:fullAddressLine literal identical to rdfs:label." ;
+            sh:message "Provide exactly one tern-org:fullAddressLine literal equal to rdfs:label." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:equals rdfs:label ;
             sh:path tern-org:fullAddressLine
         ] ;
     sh:targetClass schema:PostalAddress ;
@@ -251,37 +541,59 @@ tern-shapes:schema-PostalAddress
 
 tern-shapes:schema-Thing
     a sh:NodeShape ;
+    rdfs:label "Schema Thing shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Same as" ;
+            sh:description "schema:sameAs links can point to equivalent resources." ;
+            sh:message "Provide optional schema:sameAs links when needed." ;
             sh:path schema:sameAs
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "URL" ;
+            sh:description "schema:url links to representative URLs for the thing." ;
+            sh:message "Provide schema:url values when relevant." ;
             sh:path schema:url
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Alternate name" ;
+            sh:description "schema:alternateName values must be xsd:string literals." ;
+            sh:message "Provide alternate names as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:alternateName
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Description" ;
+            sh:description "schema:description values must be xsd:string literals." ;
+            sh:message "Provide descriptions as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:description
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Identifier" ;
+            sh:description "schema:identifier values must be xsd:string literals." ;
+            sh:message "Provide identifiers as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:identifier
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Image" ;
+            sh:description "schema:image values must be xsd:anyURI literals." ;
+            sh:message "Provide schema:image as xsd:anyURI literals." ;
             sh:datatype xsd:anyURI ;
             sh:path schema:image
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Name" ;
+            sh:description "schema:name values must be xsd:string literals." ;
+            sh:message "Provide names as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:name
         ] ;
@@ -290,34 +602,53 @@ tern-shapes:schema-Thing
 
 tern-shapes:tern-org-Agent
     a sh:NodeShape ;
+    rdfs:label "TERN Agent shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Email" ;
+            sh:description "schema:email values must be xsd:string literals." ;
+            sh:message "Provide schema:email as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:email
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Telephone" ;
+            sh:description "schema:telephone values must be xsd:string literals." ;
+            sh:message "Provide schema:telephone as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:telephone
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Funder" ;
+            sh:description "schema:funder links must point to tern-org:Agent resources." ;
+            sh:message "Link schema:funder to tern-org:Agent nodes." ;
             sh:class tern-org:Agent ;
             sh:path schema:funder
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Member of" ;
+            sh:description "schema:memberOf links must point to tern-org:Organization resources." ;
+            sh:message "Link schema:memberOf to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path schema:memberOf
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Ownerships" ;
+            sh:description "schema:owns must reference tern-org:OwnershipInfo nodes." ;
+            sh:message "Link schema:owns to tern-org:OwnershipInfo nodes." ;
             sh:class tern-org:OwnershipInfo ;
             sh:path schema:owns
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Roles" ;
+            sh:description "tern-org:hasRole links must point to tern-org:Role nodes." ;
+            sh:message "Link tern-org:hasRole to tern-org:Role nodes." ;
             sh:class tern-org:Role ;
             sh:path tern-org:hasRole
         ] ;
@@ -326,8 +657,12 @@ tern-shapes:tern-org-Agent
 
 tern-shapes:tern-org-AustralianGovernmentOrganization
     a sh:NodeShape ;
+    rdfs:label "TERN Australian Government Organization shape" ;
     sh:property [
             a sh:PropertyShape ;
+            sh:name "AGOR ID" ;
+            sh:description "Exactly one tern-org:agorID xsd:string literal must be provided." ;
+            sh:message "Provide exactly one tern-org:agorID literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -338,14 +673,21 @@ tern-shapes:tern-org-AustralianGovernmentOrganization
 
 tern-shapes:tern-org-ChangeEvent
     a sh:NodeShape ;
+    rdfs:label "TERN ChangeEvent shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Original organization" ;
+            sh:description "org:originalOrganization must point to tern-org:Organization resources." ;
+            sh:message "Link org:originalOrganization to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path org:originalOrganization
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Resulting organization" ;
+            sh:description "org:resultingOrganization must point to tern-org:Organization resources." ;
+            sh:message "Link org:resultingOrganization to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path org:resultingOrganization
         ] ;
@@ -354,91 +696,178 @@ tern-shapes:tern-org-ChangeEvent
 
 tern-shapes:tern-org-Organization
     a sh:NodeShape ;
+    rdfs:label "TERN Organization shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Created date" ;
+            sh:description "Record exactly one dct:created literal for each TERN organization." ;
+            sh:message "Provide exactly one dct:created literal." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:created
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Modified date" ;
+            sh:description "At most one dct:modified literal may be supplied for a TERN organization." ;
+            sh:message "Provide at most one dct:modified literal." ;
+            sh:maxCount 1 ;
+            sh:path dct:modified
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Members" ;
+            sh:description "schema:member values must be tern-org:Agent resources." ;
+            sh:message "Link schema:member to tern-org:Agent nodes." ;
             sh:class tern-org:Agent ;
             sh:path schema:member
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Changed by" ;
+            sh:description "org:changedBy must reference tern-org:ChangeEvent nodes." ;
+            sh:message "Link org:changedBy to tern-org:ChangeEvent nodes." ;
             sh:class tern-org:ChangeEvent ;
             sh:path org:changedBy
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Resulted from" ;
+            sh:description "org:resultedFrom must reference tern-org:ChangeEvent nodes." ;
+            sh:message "Link org:resultedFrom to tern-org:ChangeEvent nodes." ;
             sh:class tern-org:ChangeEvent ;
             sh:path org:resultedFrom
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Parent organization" ;
+            sh:description "schema:parentOrganization must reference tern-org:Organization nodes." ;
+            sh:message "Link schema:parentOrganization to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path schema:parentOrganization
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Sub organization" ;
+            sh:description "schema:subOrganization must reference tern-org:Organization nodes." ;
+            sh:message "Link schema:subOrganization to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path schema:subOrganization
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Sites" ;
+            sh:description "Provide at least one org:hasSite link to a tern-org:Site." ;
+            sh:message "Add at least one org:hasSite value pointing to a tern-org:Site." ;
             sh:class tern-org:Site ;
+            sh:minCount 1 ;
             sh:path org:hasSite
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Primary site" ;
+            sh:description "Exactly one org:hasPrimarySite must point to a tern-org:Site." ;
+            sh:message "Provide exactly one org:hasPrimarySite pointing to a tern-org:Site." ;
+            sh:class tern-org:Site ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path org:hasPrimarySite
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Dissolution date" ;
+            sh:description "schema:dissolutionDate values must be xsd:date literals and at most one is allowed." ;
+            sh:message "Provide schema:dissolutionDate as at most one xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
             sh:path schema:dissolutionDate
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Founding date" ;
+            sh:description "schema:foundingDate values must be xsd:date literals and at most one is allowed." ;
+            sh:message "Provide schema:foundingDate as at most one xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
             sh:path schema:foundingDate
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Tax ID" ;
+            sh:description "schema:taxID values must be xsd:string literals and at most one is allowed." ;
+            sh:message "Provide schema:taxID as at most one xsd:string literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:path schema:taxID
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Organization name" ;
+            sh:description "Exactly one schema:name literal is required for the organization." ;
+            sh:message "Provide exactly one schema:name literal." ;
             sh:datatype xsd:string ;
+            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:name
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Is dissolved flag" ;
+            sh:description "tern-org:isDissolved must be exactly one xsd:boolean literal." ;
+            sh:message "Provide exactly one tern-org:isDissolved xsd:boolean literal." ;
             sh:datatype xsd:boolean ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path tern-org:isDissolved
+        ] ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "Values of org:hasPrimarySite must also be present via org:hasSite." ;
+            sh:select """
+                PREFIX org: <http://www.w3.org/ns/org#>
+                SELECT $this WHERE {
+                    $this org:hasPrimarySite ?site .
+                    FILTER NOT EXISTS { $this org:hasSite ?site }
+                }
+            """
         ] ;
     sh:targetClass tern-org:Organization ;
 .
 
 tern-shapes:tern-org-OwnershipInfo
     a sh:NodeShape ;
+    rdfs:label "TERN OwnershipInfo shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Owned from date" ;
+            sh:description "schema:ownedFrom values must be xsd:date literals." ;
+            sh:message "Provide schema:ownedFrom as an xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:path schema:ownedFrom
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Owned through date" ;
+            sh:description "schema:ownedThrough values must be xsd:date literals." ;
+            sh:message "Provide schema:ownedThrough as an xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:path schema:ownedThrough
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Acquired from" ;
+            sh:description "schema:acquiredFrom must reference tern-org:Agent resources." ;
+            sh:message "Link schema:acquiredFrom to tern-org:Agent nodes." ;
             sh:class tern-org:Agent ;
             sh:path schema:acquiredFrom
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Type of good" ;
+            sh:description "Provide at least one schema:typeOfGood value describing the asset." ;
+            sh:message "Provide at least one schema:typeOfGood value." ;
             sh:minCount 1 ;
             sh:path schema:typeOfGood
         ] ;
@@ -447,35 +876,123 @@ tern-shapes:tern-org-OwnershipInfo
 
 tern-shapes:tern-org-Person
     a sh:NodeShape ;
+    rdfs:label "TERN Person shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Created date" ;
+            sh:description "Record exactly one dct:created literal for each TERN person." ;
+            sh:message "Provide exactly one dct:created literal." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dct:created
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Modified date" ;
+            sh:description "At most one dct:modified literal may be supplied for a TERN person." ;
+            sh:message "Provide at most one dct:modified literal." ;
+            sh:maxCount 1 ;
+            sh:path dct:modified
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Preferred name" ;
+            sh:description "Exactly one schema:name literal is required." ;
+            sh:message "Provide exactly one schema:name literal." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Given name" ;
+            sh:description "Provide at least one schema:givenName literal." ;
+            sh:message "Add at least one schema:givenName literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:givenName
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Family name" ;
+            sh:description "Provide at least one schema:familyName literal." ;
+            sh:message "Add at least one schema:familyName literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:familyName
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Email" ;
+            sh:description "Provide at least one schema:email xsd:string literal." ;
+            sh:message "Add at least one schema:email literal." ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:email
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Affiliations" ;
+            sh:description "Provide at least one schema:affiliation pointing to a tern-org:Organization." ;
+            sh:message "Link schema:affiliation to tern-org:Organization nodes." ;
+            sh:class tern-org:Organization ;
+            sh:minCount 1 ;
+            sh:path schema:affiliation
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Based at sites" ;
+            sh:description "Provide at least one org:basedAt pointing to a tern-org:Site." ;
+            sh:message "Link org:basedAt to tern-org:Site nodes." ;
+            sh:class tern-org:Site ;
+            sh:minCount 1 ;
+            sh:path org:basedAt
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Honorific prefix" ;
+            sh:description "schema:honorificPrefix values must be xsd:string literals." ;
+            sh:message "Provide schema:honorificPrefix as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:honorificPrefix
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Job title" ;
+            sh:description "schema:jobTitle values must be xsd:string literals." ;
+            sh:message "Provide schema:jobTitle as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:jobTitle
-        ] ,
-        [
-            a sh:PropertyShape ;
-            sh:class tern-org:Organization ;
-            sh:path schema:affiliation
-        ] ,
-        [
-            a sh:PropertyShape ;
-            sh:class tern-org:Site ;
-            sh:path org:basedAt
+        ] ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "Each org:basedAt site must belong to one of the organizations referenced via schema:affiliation." ;
+            sh:select """
+                PREFIX org: <http://www.w3.org/ns/org#>
+                PREFIX schema: <http://schema.org/>
+                SELECT $this WHERE {
+                    $this org:basedAt ?site .
+                    FILTER NOT EXISTS {
+                        $this schema:affiliation ?org .
+                        ?org org:hasSite ?site .
+                    }
+                }
+            """
         ] ;
     sh:targetClass tern-org:Person ;
 .
 
 tern-shapes:tern-org-PostalAddress
     a sh:NodeShape ;
+    rdfs:label "TERN PostalAddress shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Address country" ;
+            sh:description "Exactly one schema:addressCountry xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressCountry literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -483,13 +1000,31 @@ tern-shapes:tern-org-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Full address line" ;
+            sh:description "Provide exactly one tern-org:fullAddressLine literal identical to rdfs:label." ;
+            sh:message "Provide exactly one tern-org:fullAddressLine literal equal to rdfs:label." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
+            sh:equals rdfs:label ;
             sh:path tern-org:fullAddressLine
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Full address label" ;
+            sh:description "Provide exactly one rdfs:label literal identical to tern-org:fullAddressLine." ;
+            sh:message "Provide exactly one rdfs:label literal equal to tern-org:fullAddressLine." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ;
+            sh:equals tern-org:fullAddressLine
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Postal code" ;
+            sh:description "Exactly one schema:postalCode xsd:positiveInteger literal is required." ;
+            sh:message "Provide exactly one schema:postalCode positive integer literal." ;
             sh:datatype xsd:positiveInteger ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -497,6 +1032,9 @@ tern-shapes:tern-org-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address locality" ;
+            sh:description "Exactly one schema:addressLocality xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressLocality literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -504,6 +1042,9 @@ tern-shapes:tern-org-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Address region" ;
+            sh:description "Exactly one schema:addressRegion xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:addressRegion literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -511,6 +1052,9 @@ tern-shapes:tern-org-PostalAddress
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Street address" ;
+            sh:description "Exactly one schema:streetAddress xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:streetAddress literal." ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -521,30 +1065,46 @@ tern-shapes:tern-org-PostalAddress
 
 tern-shapes:tern-org-Role
     a sh:NodeShape ;
+    rdfs:label "TERN Role shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Predecessor role" ;
+            sh:description "tern-org:hasPredecessor must point to tern-org:Role nodes." ;
+            sh:message "Link tern-org:hasPredecessor to tern-org:Role nodes." ;
             sh:class tern-org:Role ;
             sh:path tern-org:hasPredecessor
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Successor role" ;
+            sh:description "tern-org:hasSuccessor must point to tern-org:Role nodes." ;
+            sh:message "Link tern-org:hasSuccessor to tern-org:Role nodes." ;
             sh:class tern-org:Role ;
             sh:path tern-org:hasSuccessor
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "End date" ;
+            sh:description "schema:endDate values must be xsd:date literals and at most one is allowed." ;
+            sh:message "Provide schema:endDate as at most one xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
             sh:path schema:endDate
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Applies on" ;
+            sh:description "Provide at least one tern-org:appliesOn target." ;
+            sh:message "Add at least one tern-org:appliesOn value." ;
             sh:minCount 1 ;
             sh:path tern-org:appliesOn
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Role type" ;
+            sh:description "Exactly one dct:type must reference a skos:Concept." ;
+            sh:message "Provide exactly one dct:type linking to a skos:Concept." ;
             sh:class skos:Concept ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -552,6 +1112,9 @@ tern-shapes:tern-org-Role
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Qualified value" ;
+            sh:description "Exactly one rdf:value must reference either a tern-org:Person or tern-org:Organization." ;
+            sh:message "Provide exactly one rdf:value that is a tern-org:Person or tern-org:Organization." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:node [
@@ -568,6 +1131,9 @@ tern-shapes:tern-org-Role
         ] ,
         [
             a sh:PropertyShape ;
+            sh:name "Start date" ;
+            sh:description "schema:startDate values must be xsd:date literals and exactly one is required." ;
+            sh:message "Provide exactly one schema:startDate xsd:date literal." ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -576,24 +1142,98 @@ tern-shapes:tern-org-Role
     sh:targetClass tern-org:Role ;
 .
 
-tern-shapes:tern-org-Site
+tern-shapes:org-Site
     a sh:NodeShape ;
+    rdfs:label "ORG Site shape" ;
     sh:property
         [
             a sh:PropertyShape ;
+            sh:name "Hosting organizations" ;
+            sh:description "Provide at least one org:siteOf pointing to schema:Organization or tern-org:Organization." ;
+            sh:message "Link org:siteOf to schema:Organization or tern-org:Organization nodes." ;
+            sh:minCount 1 ;
+            sh:path org:siteOf ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class schema:Organization
+                    ]
+                    [
+                        sh:class tern-org:Organization
+                    ]
+                )
+            ]
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Site address" ;
+            sh:description "Provide exactly one org:siteAddress pointing to schema:PostalAddress or tern-org:PostalAddress." ;
+            sh:message "Link org:siteAddress to schema:PostalAddress or tern-org:PostalAddress nodes." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path org:siteAddress ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class schema:PostalAddress
+                    ]
+                    [
+                        sh:class tern-org:PostalAddress
+                    ]
+                )
+            ]
+        ] ;
+    sh:targetClass org:Site ;
+.
+
+tern-shapes:tern-org-Site
+    a sh:NodeShape ;
+    rdfs:label "TERN Site shape" ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:name "Primary site for organization" ;
+            sh:description "org:hasPrimarySite links from this site must reference tern-org:Organization resources." ;
+            sh:message "Link org:hasPrimarySite to tern-org:Organization nodes." ;
             sh:class tern-org:Organization ;
             sh:path org:hasPrimarySite
         ] ,
         [
             a sh:PropertyShape ;
-            sh:class tern-org:Organization ;
-            sh:path org:siteOf
+            sh:name "Hosting organizations" ;
+            sh:description "Provide at least one org:siteOf pointing to schema:Organization or tern-org:Organization." ;
+            sh:message "Link org:siteOf to schema:Organization or tern-org:Organization nodes." ;
+            sh:minCount 1 ;
+            sh:path org:siteOf ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class schema:Organization
+                    ]
+                    [
+                        sh:class tern-org:Organization
+                    ]
+                )
+            ]
         ] ,
         [
             a sh:PropertyShape ;
-            sh:class tern-org:PostalAddress ;
-            sh:path org:siteAddress
+            sh:name "Site address" ;
+            sh:description "Provide exactly one org:siteAddress pointing to schema:PostalAddress or tern-org:PostalAddress." ;
+            sh:message "Link org:siteAddress to schema:PostalAddress or tern-org:PostalAddress nodes." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path org:siteAddress ;
+            sh:node [
+                sh:or (
+                    [
+                        sh:class schema:PostalAddress
+                    ]
+                    [
+                        sh:class tern-org:PostalAddress
+                    ]
+                )
+            ]
         ] ;
     sh:targetClass tern-org:Site ;
 .
-

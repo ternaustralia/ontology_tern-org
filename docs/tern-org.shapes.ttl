@@ -1,373 +1,599 @@
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tern-shapes: <https://w3id.org/tern/shapes/tern/> .
-@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tern-org: <https://w3id.org/tern/ontologies/org/>
+PREFIX tern-shapes: <https://w3id.org/tern/shapes/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/tern/ontologies/org/.shapes> a owl:Ontology ;
-    owl:imports <http://datashapes.org/dash>,
-        tern-org: .
+<https://w3id.org/tern/ontologies/org/.shapes>
+    a owl:Ontology ;
+    owl:imports
+        <http://datashapes.org/dash> ,
+        tern-org: ;
+.
 
-tern-shapes:schema-Person a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:jobTitle ],
-        [ a sh:PropertyShape ;
-            sh:path tern-org:orcID ],
-        [ a sh:PropertyShape ;
-            sh:class schema:Organization ;
-            sh:path schema:affiliation ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:honorificPrefix ] ;
-    sh:targetClass schema:Person .
-
-tern-shapes:schema-Thing a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:alternateName ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:description ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:identifier ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:anyURI ;
-            sh:path schema:image ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:name ],
-        [ a sh:PropertyShape ;
-            sh:path schema:sameAs ],
-        [ a sh:PropertyShape ;
-            sh:path schema:url ] ;
-    sh:targetClass schema:Thing .
-
-tern-shapes:org-ChangeEvent a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:org-ChangeEvent
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path schema:description ],
-        [ a sh:PropertyShape ;
+            sh:path schema:description
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path schema:name ],
-        [ a sh:PropertyShape ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class org:Organization ;
             sh:minCount 1 ;
-            sh:path org:originalOrganization ],
-        [ a sh:PropertyShape ;
+            sh:path org:originalOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class org:Organization ;
             sh:minCount 1 ;
-            sh:path org:resultingOrganization ] ;
-    sh:targetClass org:ChangeEvent .
+            sh:path org:resultingOrganization
+        ] ;
+    sh:targetClass org:ChangeEvent ;
+.
 
-tern-shapes:schema-OwnershipInfo a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:prov-Agent
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:class schema:PostalAddress ;
+            sh:path schema:address
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:email
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class prov:Agent ;
+            sh:path schema:funder
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class schema:Organization ;
-            sh:path schema:acquiredFrom ],
-        [ a sh:PropertyShape ;
+            sh:path schema:memberOf
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class schema:OwnershipInfo ;
+            sh:path schema:owns
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class prov:Agent ;
+            sh:path schema:sponsor
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:telephone
+        ] ;
+    sh:targetClass prov:Agent ;
+.
+
+tern-shapes:schema-Organization
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
-            sh:path schema:ownedFrom ],
-        [ a sh:PropertyShape ;
+            sh:path schema:dissolutionDate
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
-            sh:path schema:ownedThrough ],
-        [ a sh:PropertyShape ;
+            sh:path schema:foundingDate
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class prov:Agent ;
+            sh:path schema:member
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:parentOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:subOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:taxID
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path tern-org:agorID
+        ] ;
+    sh:targetClass schema:Organization ;
+.
+
+tern-shapes:schema-OwnershipInfo
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:acquiredFrom
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:ownedFrom
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:date ;
+            sh:path schema:ownedThrough
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class schema:Product ;
-            sh:path schema:typeOfGood ] ;
-    sh:targetClass schema:OwnershipInfo .
+            sh:path schema:typeOfGood
+        ] ;
+    sh:targetClass schema:OwnershipInfo ;
+.
 
-tern-shapes:schema-PostalAddress a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:schema-Person
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:jobTitle
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:path tern-org:orcID
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:class schema:Organization ;
+            sh:path schema:affiliation
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:honorificPrefix
+        ] ;
+    sh:targetClass schema:Person ;
+.
+
+tern-shapes:schema-PostalAddress
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressCountry ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressCountry
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressLocality ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressLocality
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressRegion ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressRegion
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:postOfficeBoxNumber ],
-        [ a sh:PropertyShape ;
+            sh:path schema:postOfficeBoxNumber
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:positiveInteger ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:postalCode ],
-        [ a sh:PropertyShape ;
+            sh:path schema:postalCode
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:streetAddress ],
-        [ a sh:PropertyShape ;
+            sh:path schema:streetAddress
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path tern-org:addressLine1 ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:addressLine1
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path tern-org:addressLine2 ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:addressLine2
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path tern-org:fullAddressLine ] ;
-    sh:targetClass schema:PostalAddress .
+            sh:path tern-org:fullAddressLine
+        ] ;
+    sh:targetClass schema:PostalAddress ;
+.
 
-tern-shapes:prov-Agent a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:class schema:PostalAddress ;
-            sh:path schema:address ],
-        [ a sh:PropertyShape ;
+tern-shapes:schema-Thing
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:path schema:sameAs
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:path schema:url
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:email ],
-        [ a sh:PropertyShape ;
-            sh:class prov:Agent ;
-            sh:path schema:funder ],
-        [ a sh:PropertyShape ;
-            sh:class schema:Organization ;
-            sh:path schema:memberOf ],
-        [ a sh:PropertyShape ;
-            sh:class schema:OwnershipInfo ;
-            sh:path schema:owns ],
-        [ a sh:PropertyShape ;
-            sh:class prov:Agent ;
-            sh:path schema:sponsor ],
-        [ a sh:PropertyShape ;
+            sh:path schema:alternateName
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:telephone ] ;
-    sh:targetClass prov:Agent .
+            sh:path schema:description
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:identifier
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:anyURI ;
+            sh:path schema:image
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:path schema:name
+        ] ;
+    sh:targetClass schema:Thing ;
+.
 
-tern-shapes:schema-Organization a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:date ;
-            sh:path schema:dissolutionDate ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:date ;
-            sh:path schema:foundingDate ],
-        [ a sh:PropertyShape ;
-            sh:class prov:Agent ;
-            sh:path schema:member ],
-        [ a sh:PropertyShape ;
+tern-shapes:tern-org-Agent
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path schema:name ],
-        [ a sh:PropertyShape ;
-            sh:class schema:Organization ;
-            sh:path schema:parentOrganization ],
-        [ a sh:PropertyShape ;
-            sh:class schema:Organization ;
-            sh:path schema:subOrganization ],
-        [ a sh:PropertyShape ;
+            sh:path schema:email
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:taxID ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path tern-org:agorID ] ;
-    sh:targetClass schema:Organization .
-
-tern-shapes:tern-org-Agent a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:email ],
-        [ a sh:PropertyShape ;
-            sh:datatype xsd:string ;
-            sh:path schema:telephone ],
-        [ a sh:PropertyShape ;
+            sh:path schema:telephone
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Agent ;
-            sh:path schema:funder ],
-        [ a sh:PropertyShape ;
+            sh:path schema:funder
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path schema:memberOf ],
-        [ a sh:PropertyShape ;
+            sh:path schema:memberOf
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:OwnershipInfo ;
-            sh:path schema:owns ],
-        [ a sh:PropertyShape ;
+            sh:path schema:owns
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Role ;
-            sh:path tern-org:hasRole ] ;
-    sh:targetClass tern-org:Agent .
+            sh:path tern-org:hasRole
+        ] ;
+    sh:targetClass tern-org:Agent ;
+.
 
-tern-shapes:tern-org-AustralianGovernmentOrganization a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-AustralianGovernmentOrganization
+    a sh:NodeShape ;
+    sh:property [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path tern-org:agorID ] ;
-    sh:targetClass tern-org:AustralianGovernmentOrganization .
+            sh:path tern-org:agorID
+        ] ;
+    sh:targetClass tern-org:AustralianGovernmentOrganization ;
+.
 
-tern-shapes:tern-org-ChangeEvent a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-ChangeEvent
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path org:originalOrganization ],
-        [ a sh:PropertyShape ;
+            sh:path org:originalOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path org:resultingOrganization ] ;
-    sh:targetClass tern-org:ChangeEvent .
+            sh:path org:resultingOrganization
+        ] ;
+    sh:targetClass tern-org:ChangeEvent ;
+.
 
-tern-shapes:tern-org-Organization a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-Organization
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Agent ;
-            sh:path schema:member ],
-        [ a sh:PropertyShape ;
+            sh:path schema:member
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:ChangeEvent ;
-            sh:path org:changedBy ],
-        [ a sh:PropertyShape ;
+            sh:path org:changedBy
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:ChangeEvent ;
-            sh:path org:resultedFrom ],
-        [ a sh:PropertyShape ;
+            sh:path org:resultedFrom
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path schema:parentOrganization ],
-        [ a sh:PropertyShape ;
+            sh:path schema:parentOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path schema:subOrganization ],
-        [ a sh:PropertyShape ;
+            sh:path schema:subOrganization
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Site ;
-            sh:path org:hasSite ],
-        [ a sh:PropertyShape ;
+            sh:path org:hasSite
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
-            sh:path schema:dissolutionDate ],
-        [ a sh:PropertyShape ;
+            sh:path schema:dissolutionDate
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
-            sh:path schema:foundingDate ],
-        [ a sh:PropertyShape ;
+            sh:path schema:foundingDate
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:path schema:taxID ],
-        [ a sh:PropertyShape ;
+            sh:path schema:taxID
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
-            sh:path schema:name ],
-        [ a sh:PropertyShape ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:boolean ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path tern-org:isDissolved ] ;
-    sh:targetClass tern-org:Organization .
+            sh:path tern-org:isDissolved
+        ] ;
+    sh:targetClass tern-org:Organization ;
+.
 
-tern-shapes:tern-org-OwnershipInfo a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-OwnershipInfo
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
-            sh:path schema:ownedFrom ],
-        [ a sh:PropertyShape ;
+            sh:path schema:ownedFrom
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
-            sh:path schema:ownedThrough ],
-        [ a sh:PropertyShape ;
+            sh:path schema:ownedThrough
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Agent ;
-            sh:path schema:acquiredFrom ],
-        [ a sh:PropertyShape ;
+            sh:path schema:acquiredFrom
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:minCount 1 ;
-            sh:path schema:typeOfGood ] ;
-    sh:targetClass tern-org:OwnershipInfo .
+            sh:path schema:typeOfGood
+        ] ;
+    sh:targetClass tern-org:OwnershipInfo ;
+.
 
-tern-shapes:tern-org-Person a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-Person
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:honorificPrefix ],
-        [ a sh:PropertyShape ;
+            sh:path schema:honorificPrefix
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
-            sh:path schema:jobTitle ],
-        [ a sh:PropertyShape ;
+            sh:path schema:jobTitle
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path schema:affiliation ],
-        [ a sh:PropertyShape ;
+            sh:path schema:affiliation
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Site ;
-            sh:path org:basedAt ] ;
-    sh:targetClass tern-org:Person .
+            sh:path org:basedAt
+        ] ;
+    sh:targetClass tern-org:Person ;
+.
 
-tern-shapes:tern-org-PostalAddress a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-PostalAddress
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressCountry ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressCountry
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path tern-org:fullAddressLine ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:fullAddressLine
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:positiveInteger ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:postalCode ],
-        [ a sh:PropertyShape ;
+            sh:path schema:postalCode
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressLocality ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressLocality
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:addressRegion ],
-        [ a sh:PropertyShape ;
+            sh:path schema:addressRegion
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:streetAddress ] ;
-    sh:targetClass tern-org:PostalAddress .
+            sh:path schema:streetAddress
+        ] ;
+    sh:targetClass tern-org:PostalAddress ;
+.
 
-tern-shapes:tern-org-Role a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-Role
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Role ;
-            sh:path tern-org:hasPredecessor ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:hasPredecessor
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Role ;
-            sh:path tern-org:hasSuccessor ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:hasSuccessor
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
-            sh:path schema:endDate ],
-        [ a sh:PropertyShape ;
+            sh:path schema:endDate
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:minCount 1 ;
-            sh:path tern-org:appliesOn ],
-        [ a sh:PropertyShape ;
+            sh:path tern-org:appliesOn
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class skos:Concept ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path dct:type ],
-        [ a sh:PropertyShape ;
+            sh:path dct:type
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path rdf:value ;
-            sh:node [ sh:or ( [ sh:class tern-org:Person ]
-                            [ sh:class tern-org:Organization ] ) ] ],
-        [ a sh:PropertyShape ;
+            sh:node [
+                    sh:or (
+                            [
+                                sh:class tern-org:Person
+                            ]
+                            [
+                                sh:class tern-org:Organization
+                            ]
+                        )
+                ] ;
+            sh:path rdf:value
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:datatype xsd:date ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:startDate ] ;
-    sh:targetClass tern-org:Role .
+            sh:path schema:startDate
+        ] ;
+    sh:targetClass tern-org:Role ;
+.
 
-tern-shapes:tern-org-Site a sh:NodeShape ;
-    sh:property [ a sh:PropertyShape ;
+tern-shapes:tern-org-Site
+    a sh:NodeShape ;
+    sh:property
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path org:hasPrimarySite ],
-        [ a sh:PropertyShape ;
+            sh:path org:hasPrimarySite
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:Organization ;
-            sh:path org:siteOf ],
-        [ a sh:PropertyShape ;
+            sh:path org:siteOf
+        ] ,
+        [
+            a sh:PropertyShape ;
             sh:class tern-org:PostalAddress ;
-            sh:path org:siteAddress ] ;
-    sh:targetClass tern-org:Site .
+            sh:path org:siteAddress
+        ] ;
+    sh:targetClass tern-org:Site ;
+.
+

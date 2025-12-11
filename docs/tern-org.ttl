@@ -85,36 +85,6 @@ tern-org:Agent
   a owl:Class ;
   rdfs:label "Agent" ;
   rdfs:subClassOf prov:Agent ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty schema:email ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty schema:telephone ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Agent ;
-      owl:onProperty schema:funder ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty schema:memberOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:OwnershipInfo ;
-      owl:onProperty schema:owns ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Role ;
-      owl:onProperty tern-org:hasRole ;
-    ] ;
 .
 tern-org:AustralianFederalGovernmentOrganization
   a owl:Class ;
@@ -126,12 +96,6 @@ tern-org:AustralianGovernmentOrganization
   a owl:Class ;
   rdfs:label "Australian government organization" ;
   rdfs:subClassOf tern-org:GovernmentOrganization ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass xsd:string ;
-      owl:onProperty tern-org:agorID ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 tern-org:AustralianRegionalGovernmentOrganization
   a owl:Class ;
@@ -149,16 +113,6 @@ tern-org:ChangeEvent
   a owl:Class ;
   rdfs:label "Change event" ;
   rdfs:subClassOf org:ChangeEvent ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty org:originalOrganization ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty org:resultingOrganization ;
-    ] ;
 .
 tern-org:Consortium
   a owl:Class ;
@@ -235,91 +189,11 @@ tern-org:Organization
   rdfs:subClassOf org:Organization ;
   rdfs:subClassOf prov:Organization ;
   rdfs:subClassOf tern-org:Agent ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Agent ;
-      owl:onProperty schema:member ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:ChangeEvent ;
-      owl:onProperty org:changedBy ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:ChangeEvent ;
-      owl:onProperty org:resultedFrom ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty schema:parentOrganization ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty schema:subOrganization ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Site ;
-      owl:onProperty org:hasSite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:date ;
-      owl:onProperty schema:dissolutionDate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:date ;
-      owl:onProperty schema:foundingDate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty schema:taxID ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass xsd:string ;
-      owl:onProperty schema:name ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass xsd:boolean ;
-      owl:onProperty tern-org:isDissolved ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 tern-org:OwnershipInfo
   a owl:Class ;
   rdfs:label "Ownership info" ;
   rdfs:subClassOf schema:OwnershipInfo ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:date ;
-      owl:onProperty schema:ownedFrom ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:date ;
-      owl:onProperty schema:ownedThrough ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Agent ;
-      owl:onProperty schema:acquiredFrom ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty schema:typeOfGood ;
-    ] ;
 .
 tern-org:PartnerOrganization
   a owl:Class ;
@@ -333,67 +207,11 @@ tern-org:Person
   rdfs:subClassOf schema:Person ;
   rdfs:subClassOf prov:Person ;
   rdfs:subClassOf tern-org:Agent ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty schema:honorificPrefix ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty schema:jobTitle ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty schema:affiliation ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Site ;
-      owl:onProperty org:basedAt ;
-    ] ;
 .
 tern-org:PostalAddress
   a owl:Class ;
   rdfs:label "Postal address" ;
   rdfs:subClassOf schema:PostalAddress ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass xsd:string ;
-      owl:onProperty schema:addressCountry ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass xsd:string ;
-      owl:onProperty tern-org:fullAddressLine ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange xsd:positiveInteger ;
-      owl:onProperty schema:postalCode ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty schema:addressLocality ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty schema:addressRegion ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty schema:streetAddress ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 tern-org:Project
   a owl:Class ;
@@ -405,52 +223,6 @@ tern-org:Role
   a owl:Class ;
   rdfs:label "Role" ;
   rdfs:subClassOf schema:Role ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Role ;
-      owl:onProperty tern-org:hasPredecessor ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Role ;
-      owl:onProperty tern-org:hasSuccessor ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:date ;
-      owl:onProperty schema:endDate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass owl:Thing ;
-      owl:onProperty tern-org:appliesOn ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass skos:Concept ;
-      owl:onProperty dct:type ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass [
-          a owl:Class ;
-          owl:unionOf (
-              tern-org:Person
-              tern-org:Organization
-            ) ;
-        ] ;
-      owl:onProperty rdf:value ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange xsd:date ;
-      owl:onProperty schema:startDate ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
   skos:definition "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html)." ;
   skos:example """@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
 @prefix tern: <https://w3id.org/tern/ontologies/tern/> .
@@ -476,21 +248,6 @@ tern-org:Site
   a owl:Class ;
   rdfs:label "Site" ;
   rdfs:subClassOf org:Site ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty org:hasPrimarySite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:Organization ;
-      owl:onProperty org:siteOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom tern-org:PostalAddress ;
-      owl:onProperty org:siteAddress ;
-    ] ;
 .
 tern-org:addressLine1
   a rdf:Property ;

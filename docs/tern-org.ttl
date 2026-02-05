@@ -156,6 +156,12 @@ tern-org:InternationalOrganization
   rdfs:label "International Organization" ;
   rdfs:subClassOf tern-org:Organization ;
 .
+tern-org:IndigenousCommunity
+  a owl:Class ;
+  rdfs:comment "Indigenous communities." ;
+  rdfs:label "Indigenous Community" ;
+  rdfs:subClassOf tern-org:Organization ;
+.
 tern-org:LocalBusiness
   a owl:Class ;
   rdfs:label "Local business" ;

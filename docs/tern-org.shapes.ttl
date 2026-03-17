@@ -1086,9 +1086,16 @@ tern-shapes:tern-org-Role
         [
             a sh:PropertyShape ;
             sh:name "End date" ;
-            sh:description "schema:endDate values must be xsd:date literals and at most one is allowed." ;
-            sh:message "Provide schema:endDate as at most one xsd:date literal." ;
-            sh:datatype xsd:date ;
+            sh:description "schema:endDate values must be xsd:date or xsd:gYear literals and at most one is allowed." ;
+            sh:message "Provide schema:endDate as at most one xsd:date or xsd:gYear literal." ;
+            sh:or (
+                [
+                    sh:datatype xsd:date
+                ]
+                [
+                    sh:datatype xsd:gYear
+                ]
+            ) ;
             sh:maxCount 1 ;
             sh:path schema:endDate
         ] ,
@@ -1132,12 +1139,38 @@ tern-shapes:tern-org-Role
         [
             a sh:PropertyShape ;
             sh:name "Start date" ;
-            sh:description "schema:startDate values must be xsd:date literals and exactly one is required." ;
-            sh:message "Provide exactly one schema:startDate xsd:date literal." ;
-            sh:datatype xsd:date ;
+            sh:description "schema:startDate values must be xsd:date or xsd:gYear literals and exactly one is required." ;
+            sh:message "Provide exactly one schema:startDate as an xsd:date or xsd:gYear literal." ;
+            sh:or (
+                [
+                    sh:datatype xsd:date
+                ]
+                [
+                    sh:datatype xsd:gYear
+                ]
+            ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:startDate
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Role name" ;
+            sh:description "Exactly one schema:name xsd:string literal is required." ;
+            sh:message "Provide exactly one schema:name literal for the role." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:name
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Role description" ;
+            sh:description "schema:description values must be xsd:string literals and at most one is allowed." ;
+            sh:message "Provide schema:description as at most one xsd:string literal." ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:path schema:description
         ] ;
     sh:targetClass tern-org:Role ;
 .

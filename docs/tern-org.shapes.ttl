@@ -7,6 +7,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX tern-org: <https://w3id.org/tern/ontologies/org/>
 PREFIX tern-shapes: <https://w3id.org/tern/shapes/tern/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -820,6 +821,30 @@ tern-shapes:tern-org-Organization
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path tern-org:isDissolved
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Email" ;
+            sh:description "schema:email values must be xsd:string literals." ;
+            sh:message "Provide schema:email as xsd:string literals." ;
+            sh:datatype xsd:string ;
+            sh:path schema:email
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Telephone" ;
+            sh:description "schema:telephone values must be xsd:string literals." ;
+            sh:message "Provide schema:telephone as xsd:string literals." ;
+            sh:datatype xsd:string ;
+            sh:path schema:telephone
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Date sent" ;
+            sh:description "schema:dateSent values must be xsd:dateTime literals." ;
+            sh:message "Provide schema:dateSent as xsd:dateTime literals." ;
+            sh:datatype xsd:dateTime ;
+            sh:path schema:dateSent
         ] ;
     sh:sparql [
             a sh:SPARQLConstraint ;
@@ -965,6 +990,23 @@ tern-shapes:tern-org-Person
             sh:message "Provide schema:jobTitle as xsd:string literals." ;
             sh:datatype xsd:string ;
             sh:path schema:jobTitle
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Telephone" ;
+            sh:description "schema:telephone values must be xsd:string literals." ;
+            sh:message "Provide schema:telephone as xsd:string literals." ;
+            sh:datatype xsd:string ;
+            sh:path schema:telephone
+        ] ,
+        [
+            a sh:PropertyShape ;
+            sh:name "Has attribute" ;
+            sh:description "tern:hasAttribute links to a tern:Attribute blank node or IRI." ;
+            sh:message "Link tern:hasAttribute values to tern:Attribute nodes." ;
+            sh:class tern:Attribute ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path tern:hasAttribute
         ] ;
     sh:sparql [
             a sh:SPARQLConstraint ;

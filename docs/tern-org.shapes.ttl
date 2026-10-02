@@ -263,6 +263,46 @@ tern-shapes:schema-Organization
     sh:targetClass schema:Organization ;
 .
 
+tern-shapes:schema-Project
+    a sh:NodeShape ;
+    rdfs:label "Schema Project shape" ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:name "Funder" ;
+            sh:message "Project has no schema:funder." ;
+            sh:class prov:Agent ;
+            sh:minCount 1 ;
+            sh:path schema:funder ;
+            sh:severity sh:Warning
+        ] ;
+    sh:targetClass schema:Project ;
+.
+
+tern-shapes:tern-org-DeprecatedClass
+    a sh:NodeShape ;
+    rdfs:label "Deprecated tern-org class shape" ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            sh:name "Deprecated type" ;
+            sh:message "Uses a deprecated class." ;
+            sh:not [
+                    sh:in (
+                            tern-org:InternationalOrganization
+                            tern-org:NCRISProject
+                            tern-org:Project
+                        )
+                ] ;
+            sh:path rdf:type ;
+            sh:severity sh:Warning
+        ] ;
+    sh:targetClass
+        tern-org:InternationalOrganization ,
+        tern-org:NCRISProject ,
+        tern-org:Project ;
+.
+
 tern-shapes:schema-OwnershipInfo
     a sh:NodeShape ;
     rdfs:label "Schema OwnershipInfo shape" ;

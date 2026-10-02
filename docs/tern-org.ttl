@@ -34,11 +34,29 @@ schema:Consortium
   rdfs:label "Consortium" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:Cooperative
+  a owl:Class ;
+  rdfs:comment "An organization that is a joint project of multiple organizations or persons." ;
+  rdfs:label "Cooperative" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:Corporation
+  a owl:Class ;
+  rdfs:comment "A business corporation." ;
+  rdfs:label "Corporation" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:EducationalOrganization
+  a owl:Class ;
+  rdfs:comment "An educational organization." ;
+  rdfs:label "Educational Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
 schema:FundingAgency
   a owl:Class ;
   rdfs:comment "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc." ;
   rdfs:label "Funding Agency" ;
-  rdfs:subClassOf schema:Organization ;
+  rdfs:subClassOf schema:Project ;
 .
 schema:FundingScheme
   a owl:Class ;
@@ -46,11 +64,86 @@ schema:FundingScheme
   rdfs:label "Funding Scheme" ;
   rdfs:subClassOf schema:Organization ;
 .
+schema:GovernmentOrganization
+  a owl:Class ;
+  rdfs:comment "A governmental organization or agency." ;
+  rdfs:label "Government Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:LocalBusiness
+  a owl:Class ;
+  rdfs:comment "A particular physical business or branch of an organization." ;
+  rdfs:label "Local Business" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:MedicalOrganization
+  a owl:Class ;
+  rdfs:comment "A medical organization (physical or not), such as hospital, institution or clinic." ;
+  rdfs:label "Medical Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:NGO
+  a owl:Class ;
+  rdfs:comment "A non-governmental organization." ;
+  rdfs:label "Non-governmental Organization (NGO)" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:Organization
+  a owl:Class ;
+  rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+  rdfs:label "Organization" ;
+.
 schema:Project
   a owl:Class ;
   rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
   rdfs:label "Project" ;
   rdfs:subClassOf schema:Organization ;
+.
+schema:ResearchOrganization
+  a owl:Class ;
+  rdfs:comment "A Research Organization (e.g. scientific institute, research company)." ;
+  rdfs:label "Research Organization" ;
+  rdfs:subClassOf schema:Organization ;
+.
+schema:areaServed
+  a rdf:Property ;
+  rdfs:comment "The geographic area where a service or offered item is provided." ;
+  rdfs:label "area served" ;
+.
+schema:dissolutionDate
+  a rdf:Property ;
+  rdfs:comment "The date that this organization was dissolved." ;
+  rdfs:label "dissolution date" ;
+.
+schema:endDate
+  a rdf:Property ;
+  rdfs:comment "The end date and time of the item (in ISO 8601 date format)." ;
+  rdfs:label "end date" ;
+.
+schema:foundingDate
+  a rdf:Property ;
+  rdfs:comment "The date that this organization was founded." ;
+  rdfs:label "founding date" ;
+.
+schema:funder
+  a rdf:Property ;
+  rdfs:comment "A person or organization that supports (sponsors) something through some kind of financial contribution." ;
+  rdfs:label "funder" ;
+.
+schema:member
+  a rdf:Property ;
+  rdfs:comment "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." ;
+  rdfs:label "member" ;
+.
+schema:memberOf
+  a rdf:Property ;
+  rdfs:comment "An Organization (or ProgramMembership) to which this Person or Organization belongs." ;
+  rdfs:label "member of" ;
+.
+schema:startDate
+  a rdf:Property ;
+  rdfs:comment "The start date and time of the item (in ISO 8601 date format)." ;
+  rdfs:label "start date" ;
 .
 tern-org:
   a owl:Ontology ;
@@ -61,7 +154,7 @@ tern-org:
       schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
       schema:name "Edmond Chuc" ;
     ] ;
-  dct:modified "2020-03-20"^^xsd:date ;
+  dct:modified "2026-10-02"^^xsd:date ;
   dct:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
   vann:preferredNamespacePrefix "tern-org" ;
   vann:preferredNamespaceUri "https://w3id.org/tern/ontologies/org/" ;
@@ -73,8 +166,8 @@ tern-org:
   owl:imports skos: ;
   owl:imports org: ;
   owl:imports prov: ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.0.15> ;
-  owl:versionInfo "0.0.15" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1.0> ;
+  owl:versionInfo "0.1.0" ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
@@ -85,29 +178,38 @@ tern-org:Agent
   a owl:Class ;
   rdfs:label "Agent" ;
   rdfs:subClassOf prov:Agent ;
+  skos:scopeNote "Common superclass of tern-org:Person and tern-org:Organization, aligned with PROV-O." ;
 .
 tern-org:AustralianFederalGovernmentOrganization
   a owl:Class ;
+  dct:isReplacedBy tern-org:FederalGovernmentOrganization ;
   rdfs:comment "Federal government organizations and agencies." ;
-  rdfs:label "Federal Government Organization" ;
+  rdfs:label "Federal Government Organization (deprecated)" ;
   rdfs:subClassOf tern-org:AustralianGovernmentOrganization ;
+  owl:deprecated true ;
 .
 tern-org:AustralianGovernmentOrganization
   a owl:Class ;
-  rdfs:label "Australian government organization" ;
+  dct:isReplacedBy schema:GovernmentOrganization ;
+  rdfs:label "Australian government organization (deprecated)" ;
   rdfs:subClassOf tern-org:GovernmentOrganization ;
+  owl:deprecated true ;
 .
 tern-org:AustralianRegionalGovernmentOrganization
   a owl:Class ;
+  dct:isReplacedBy tern-org:RegionalGovernmentOrganization ;
   rdfs:comment "Regional and local governments." ;
-  rdfs:label "Regional Government Organization" ;
+  rdfs:label "Regional Government Organization (deprecated)" ;
   rdfs:subClassOf tern-org:AustralianGovernmentOrganization ;
+  owl:deprecated true ;
 .
 tern-org:AustralianStateGovernmentOrganization
   a owl:Class ;
+  dct:isReplacedBy tern-org:StateGovernmentOrganization ;
   rdfs:comment "State governments." ;
-  rdfs:label "State Government Organization" ;
+  rdfs:label "State Government Organization (deprecated)" ;
   rdfs:subClassOf tern-org:AustralianGovernmentOrganization ;
+  owl:deprecated true ;
 .
 tern-org:ChangeEvent
   a owl:Class ;
@@ -116,45 +218,65 @@ tern-org:ChangeEvent
 .
 tern-org:Consortium
   a owl:Class ;
-  rdfs:label "Consortium" ;
+  dct:isReplacedBy schema:Consortium ;
+  rdfs:label "Consortium (deprecated)" ;
   rdfs:subClassOf schema:Consortium ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:Corporation
   a owl:Class ;
-  rdfs:label "Corporation" ;
+  dct:isReplacedBy schema:Corporation ;
+  rdfs:label "Corporation (deprecated)" ;
   rdfs:subClassOf schema:Corporation ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:EducationalOrganization
   a owl:Class ;
-  rdfs:label "Educational organization" ;
+  dct:isReplacedBy schema:EducationalOrganization ;
+  rdfs:label "Educational organization (deprecated)" ;
   rdfs:subClassOf schema:EducationalOrganization ;
+  rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
+.
+tern-org:FederalGovernmentOrganization
+  a owl:Class ;
+  rdfs:comment "Australian federal government organisations." ;
+  rdfs:label "Federal Government Organization" ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
   rdfs:subClassOf tern-org:Organization ;
 .
 tern-org:FundingAgency
   a owl:Class ;
-  rdfs:label "Funding agency" ;
+  dct:isReplacedBy schema:FundingAgency ;
+  rdfs:label "Funding agency (deprecated)" ;
   rdfs:subClassOf schema:FundingAgency ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:FundingScheme
   a owl:Class ;
-  rdfs:label "Funding scheme" ;
+  dct:isReplacedBy schema:FundingScheme ;
+  rdfs:label "Funding scheme (deprecated)" ;
   rdfs:subClassOf schema:FundingScheme ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:GovernmentOrganization
   a owl:Class ;
-  rdfs:label "Government organization" ;
+  dct:isReplacedBy schema:GovernmentOrganization ;
+  rdfs:label "Government organization (deprecated)" ;
   rdfs:subClassOf schema:GovernmentOrganization ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:InternationalOrganization
   a owl:Class ;
   rdfs:comment "International organizations." ;
-  rdfs:label "International Organization" ;
+  rdfs:label "International Organization (deprecated)" ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:IndigenousCommunity
   a owl:Class ;
@@ -164,9 +286,11 @@ tern-org:IndigenousCommunity
 .
 tern-org:LocalBusiness
   a owl:Class ;
-  rdfs:label "Local business" ;
+  dct:isReplacedBy schema:LocalBusiness ;
+  rdfs:label "Local business (deprecated)" ;
   rdfs:subClassOf schema:LocalBusiness ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:Manufacturer
   a owl:Class ;
@@ -177,16 +301,20 @@ tern-org:Manufacturer
 .
 tern-org:MedicalOrganization
   a owl:Class ;
-  rdfs:label "Medical organization" ;
+  dct:isReplacedBy schema:MedicalOrganization ;
+  rdfs:label "Medical organization (deprecated)" ;
   rdfs:subClassOf schema:MedicalOrganization ;
   rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
 .
 tern-org:NCRISProject
   a owl:Class ;
+  dct:isReplacedBy schema:Project ;
   rdfs:comment "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." ;
-  rdfs:label "NCRIS Project" ;
+  rdfs:label "NCRIS Project (deprecated)" ;
   rdfs:seeAlso <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> ;
   rdfs:subClassOf tern-org:Project ;
+  owl:deprecated true ;
 .
 tern-org:Organization
   a owl:Class ;
@@ -221,8 +349,17 @@ tern-org:PostalAddress
 .
 tern-org:Project
   a owl:Class ;
-  rdfs:label "Project" ;
+  dct:isReplacedBy schema:Project ;
+  rdfs:label "Project (deprecated)" ;
   rdfs:subClassOf schema:Project ;
+  rdfs:subClassOf tern-org:Organization ;
+  owl:deprecated true ;
+.
+tern-org:RegionalGovernmentOrganization
+  a owl:Class ;
+  rdfs:comment "Australian regional and local government organisations." ;
+  rdfs:label "Regional Government Organization" ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
   rdfs:subClassOf tern-org:Organization ;
 .
 tern-org:Role
@@ -248,12 +385,40 @@ tern-org:Role
 
 <Site1> a tern:Site ;
 	tern-org:hasRef <Role1> .""" ;
+  skos:example """Funder role with a start date.
+
+@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<Project1> a schema:Project ;
+	schema:funder <Funder1> ;
+	tern-org:hasRef <Role2> .
+
+<Role2> a tern-org:Role ;
+	dcterms:type <http://linked.data.gov.au/def/tern-cv/c03f42d5-619e-41d3-819f-67b48f5452f3> ;
+	rdf:value <Funder1> ;
+	tern-org:appliesOn <Project1> ;
+	schema:startDate \"2023-07-01\"^^xsd:date ;
+	schema:name \"Funder - Funder1 - 2023-07-01\" .
+
+<Funder1> a schema:Organization ;
+	tern-org:hasRole <Role2> .""" ;
   skos:scopeNote "Use the [dcterms:type](http://purl.org/dc/terms/type) property to link the type of [Role](#Role) to a controlled vocabulary term. E.g. One of the values from [TERN's Roles](http://linked.data.gov.au/def/tern-cv/67feb077-32da-4044-8e89-bddc21ef58ed)." ;
 .
 tern-org:Site
   a owl:Class ;
   rdfs:label "Site" ;
   rdfs:subClassOf org:Site ;
+.
+tern-org:StateGovernmentOrganization
+  a owl:Class ;
+  rdfs:comment "Australian state and territory government organisations." ;
+  rdfs:label "State Government Organization" ;
+  rdfs:subClassOf schema:GovernmentOrganization ;
+  rdfs:subClassOf tern-org:Organization ;
 .
 tern-org:addressLine1
   a rdf:Property ;

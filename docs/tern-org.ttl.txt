@@ -1,111 +1,150 @@
 @startuml
 title TERN Organisations Ontology
-"tern-org:GovernmentOrganization" <|-- "tern-org:AustralianGovernmentOrganization"
-"prov:Agent" <|-- "tern-org:Agent"
+"schema:Project" <|-- "schema:FundingAgency"
+"schema:Organization" <|-- "schema:FundingScheme"
+"schema:LocalBusiness" <|-- "tern-org:LocalBusiness"
+"tern-org:Organization" <|-- "tern-org:LocalBusiness"
+"schema:PostalAddress" <|-- "tern-org:PostalAddress"
+"tern-org:Project" <|-- "tern-org:NCRISProject"
+"tern-org:Agent" <|-- "tern-org:Organization"
+"org:Organization" <|-- "tern-org:Organization"
+"prov:Organization" <|-- "tern-org:Organization"
+"schema:Organization" <|-- "tern-org:Organization"
+"schema:Organization" <|-- "schema:MedicalOrganization"
+"schema:Organization" <|-- "schema:Project"
+"schema:GovernmentOrganization" <|-- "tern-org:RegionalGovernmentOrganization"
+"tern-org:Organization" <|-- "tern-org:RegionalGovernmentOrganization"
+"schema:Organization" <|-- "schema:EducationalOrganization"
+"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianRegionalGovernmentOrganization"
 "org:FormalOrganization" <|-- "gr:BusinessEntity"
 "tern-org:Organization" <|-- "tern-org:EducationalOrganization"
 "schema:EducationalOrganization" <|-- "tern-org:EducationalOrganization"
-"tern-org:Organization" <|-- "tern-org:Consortium"
-"schema:Consortium" <|-- "tern-org:Consortium"
-"org:Site" <|-- "tern-org:Site"
-"schema:Corporation" <|-- "tern-org:Corporation"
-"tern-org:Organization" <|-- "tern-org:Corporation"
-"tern-org:Organization" <|-- "tern-org:Project"
-"schema:Project" <|-- "tern-org:Project"
-"tern-org:Project" <|-- "tern-org:NCRISProject"
-"prov:Organization" <|-- "tern-org:Organization"
-"tern-org:Agent" <|-- "tern-org:Organization"
-"schema:Organization" <|-- "tern-org:Organization"
-"org:Organization" <|-- "tern-org:Organization"
-"schema:Organization" <|-- "schema:FundingAgency"
-"schema:GovernmentOrganization" <|-- "tern-org:GovernmentOrganization"
-"tern-org:Organization" <|-- "tern-org:GovernmentOrganization"
+"tern-org:Organization" <|-- "tern-org:PartnerOrganization"
 "tern-org:Organization" <|-- "tern-org:Manufacturer"
-"tern-org:Organization" <|-- "tern-org:FundingScheme"
-"schema:FundingScheme" <|-- "tern-org:FundingScheme"
-"schema:Organization" <|-- "schema:FundingScheme"
-"tern-org:Organization" <|-- "tern-org:InternationalOrganization"
-"schema:MedicalOrganization" <|-- "tern-org:MedicalOrganization"
-"tern-org:Organization" <|-- "tern-org:MedicalOrganization"
-"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianStateGovernmentOrganization"
-"schema:LocalBusiness" <|-- "tern-org:LocalBusiness"
-"tern-org:Organization" <|-- "tern-org:LocalBusiness"
-"schema:Organization" <|-- "schema:Project"
-"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianRegionalGovernmentOrganization"
 "org:ChangeEvent" <|-- "tern-org:ChangeEvent"
-"schema:PostalAddress" <|-- "tern-org:PostalAddress"
-"schema:Role" <|-- "tern-org:Role"
 "tern-org:Agent" <|-- "tern-org:Person"
 "schema:Person" <|-- "tern-org:Person"
 "prov:Person" <|-- "tern-org:Person"
-"tern-org:Organization" <|-- "tern-org:PartnerOrganization"
-"schema:OwnershipInfo" <|-- "tern-org:OwnershipInfo"
-"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianFederalGovernmentOrganization"
+"schema:Organization" <|-- "schema:Cooperative"
+"tern-org:Organization" <|-- "tern-org:Corporation"
+"schema:Corporation" <|-- "tern-org:Corporation"
+"schema:Organization" <|-- "schema:Corporation"
+"schema:Organization" <|-- "schema:ResearchOrganization"
+"prov:Agent" <|-- "tern-org:Agent"
+"tern-org:Organization" <|-- "tern-org:InternationalOrganization"
+"tern-org:Organization" <|-- "tern-org:IndigenousCommunity"
+"org:Site" <|-- "tern-org:Site"
+"tern-org:Organization" <|-- "tern-org:Project"
+"schema:Project" <|-- "tern-org:Project"
+"schema:FundingScheme" <|-- "tern-org:FundingScheme"
+"tern-org:Organization" <|-- "tern-org:FundingScheme"
+"tern-org:Organization" <|-- "tern-org:Consortium"
+"schema:Consortium" <|-- "tern-org:Consortium"
+"schema:Role" <|-- "tern-org:Role"
 "schema:Organization" <|-- "schema:Consortium"
+"schema:MedicalOrganization" <|-- "tern-org:MedicalOrganization"
+"tern-org:Organization" <|-- "tern-org:MedicalOrganization"
+"tern-org:GovernmentOrganization" <|-- "tern-org:AustralianGovernmentOrganization"
+"schema:Organization" <|-- "schema:NGO"
+"schema:GovernmentOrganization" <|-- "tern-org:FederalGovernmentOrganization"
+"tern-org:Organization" <|-- "tern-org:FederalGovernmentOrganization"
+"schema:GovernmentOrganization" <|-- "tern-org:StateGovernmentOrganization"
+"tern-org:Organization" <|-- "tern-org:StateGovernmentOrganization"
+"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianStateGovernmentOrganization"
+"schema:GovernmentOrganization" <|-- "tern-org:GovernmentOrganization"
+"tern-org:Organization" <|-- "tern-org:GovernmentOrganization"
 "tern-org:Organization" <|-- "tern-org:FundingAgency"
 "schema:FundingAgency" <|-- "tern-org:FundingAgency"
-Class "tern-org:AustralianGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization]] {
+"schema:OwnershipInfo" <|-- "tern-org:OwnershipInfo"
+"tern-org:AustralianGovernmentOrganization" <|-- "tern-org:AustralianFederalGovernmentOrganization"
+"schema:Organization" <|-- "schema:GovernmentOrganization"
+"schema:Organization" <|-- "schema:LocalBusiness"
+Class "schema:FundingAgency" [[http://schema.org/FundingAgency]] {
 }
-Class "tern-org:Agent" [[https://w3id.org/tern/ontologies/org/Agent]] {
+Class "schema:FundingScheme" [[http://schema.org/FundingScheme]] {
 }
-Class "gr:BusinessEntity" [[http://purl.org/goodrelations/v1#BusinessEntity]] {
+Class "tern-org:LocalBusiness" [[https://w3id.org/tern/ontologies/org/LocalBusiness]] {
 }
-Class "tern-org:EducationalOrganization" [[https://w3id.org/tern/ontologies/org/EducationalOrganization]] {
+Class "schema:Organization" [[http://schema.org/Organization]] {
 }
-Class "tern-org:Consortium" [[https://w3id.org/tern/ontologies/org/Consortium]] {
-}
-Class "tern-org:Site" [[https://w3id.org/tern/ontologies/org/Site]] {
-}
-Class "tern-org:Corporation" [[https://w3id.org/tern/ontologies/org/Corporation]] {
-}
-Class "tern-org:Project" [[https://w3id.org/tern/ontologies/org/Project]] {
+Class "tern-org:PostalAddress" [[https://w3id.org/tern/ontologies/org/PostalAddress]] {
 }
 Class "tern-org:NCRISProject" [[https://w3id.org/tern/ontologies/org/NCRISProject]] {
 }
 Class "tern-org:Organization" [[https://w3id.org/tern/ontologies/org/Organization]] {
 [[https://w3id.org/tern/ontologies/org/isDissolved tern-org:isDissolved]] : [[http://www.w3.org/2001/XMLSchema#boolean xsd:boolean]]
 }
-Class "schema:FundingAgency" [[http://schema.org/FundingAgency]] {
-}
-Class "tern-org:GovernmentOrganization" [[https://w3id.org/tern/ontologies/org/GovernmentOrganization]] {
-}
-Class "tern-org:Manufacturer" [[https://w3id.org/tern/ontologies/org/Manufacturer]] {
-}
-Class "tern-org:FundingScheme" [[https://w3id.org/tern/ontologies/org/FundingScheme]] {
-}
-Class "schema:FundingScheme" [[http://schema.org/FundingScheme]] {
-}
-Class "tern-org:InternationalOrganization" [[https://w3id.org/tern/ontologies/org/InternationalOrganization]] {
-}
-Class "tern-org:MedicalOrganization" [[https://w3id.org/tern/ontologies/org/MedicalOrganization]] {
-}
-Class "tern-org:AustralianStateGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization]] {
-}
-Class "tern-org:LocalBusiness" [[https://w3id.org/tern/ontologies/org/LocalBusiness]] {
+Class "schema:MedicalOrganization" [[http://schema.org/MedicalOrganization]] {
 }
 Class "schema:Project" [[http://schema.org/Project]] {
 }
+Class "tern-org:RegionalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization]] {
+}
+Class "schema:EducationalOrganization" [[http://schema.org/EducationalOrganization]] {
+}
 Class "tern-org:AustralianRegionalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization]] {
+}
+Class "gr:BusinessEntity" [[http://purl.org/goodrelations/v1#BusinessEntity]] {
+}
+Class "tern-org:EducationalOrganization" [[https://w3id.org/tern/ontologies/org/EducationalOrganization]] {
+}
+Class "tern-org:PartnerOrganization" [[https://w3id.org/tern/ontologies/org/PartnerOrganization]] {
+}
+Class "tern-org:Manufacturer" [[https://w3id.org/tern/ontologies/org/Manufacturer]] {
 }
 Class "tern-org:ChangeEvent" [[https://w3id.org/tern/ontologies/org/ChangeEvent]] {
 }
-Class "tern-org:PostalAddress" [[https://w3id.org/tern/ontologies/org/PostalAddress]] {
+Class "tern-org:Person" [[https://w3id.org/tern/ontologies/org/Person]] {
+}
+Class "schema:Cooperative" [[http://schema.org/Cooperative]] {
+}
+Class "tern-org:Corporation" [[https://w3id.org/tern/ontologies/org/Corporation]] {
+}
+Class "schema:Corporation" [[http://schema.org/Corporation]] {
+}
+Class "schema:ResearchOrganization" [[http://schema.org/ResearchOrganization]] {
+}
+Class "tern-org:Agent" [[https://w3id.org/tern/ontologies/org/Agent]] {
+}
+Class "tern-org:InternationalOrganization" [[https://w3id.org/tern/ontologies/org/InternationalOrganization]] {
+}
+Class "tern-org:IndigenousCommunity" [[https://w3id.org/tern/ontologies/org/IndigenousCommunity]] {
+}
+Class "tern-org:Site" [[https://w3id.org/tern/ontologies/org/Site]] {
+}
+Class "tern-org:Project" [[https://w3id.org/tern/ontologies/org/Project]] {
+}
+Class "tern-org:FundingScheme" [[https://w3id.org/tern/ontologies/org/FundingScheme]] {
+}
+Class "tern-org:Consortium" [[https://w3id.org/tern/ontologies/org/Consortium]] {
 }
 Class "tern-org:Role" [[https://w3id.org/tern/ontologies/org/Role]] {
 }
-Class "tern-org:ub1bL437C19" [[ub1bL437C19]] {
+Class "schema:Consortium" [[http://schema.org/Consortium]] {
 }
-Class "tern-org:Person" [[https://w3id.org/tern/ontologies/org/Person]] {
+Class "tern-org:MedicalOrganization" [[https://w3id.org/tern/ontologies/org/MedicalOrganization]] {
 }
-Class "tern-org:PartnerOrganization" [[https://w3id.org/tern/ontologies/org/PartnerOrganization]] {
+Class "tern-org:AustralianGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization]] {
+}
+Class "schema:NGO" [[http://schema.org/NGO]] {
+}
+Class "tern-org:FederalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization]] {
+}
+Class "tern-org:StateGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/StateGovernmentOrganization]] {
+}
+Class "tern-org:AustralianStateGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization]] {
+}
+Class "tern-org:GovernmentOrganization" [[https://w3id.org/tern/ontologies/org/GovernmentOrganization]] {
+}
+Class "tern-org:FundingAgency" [[https://w3id.org/tern/ontologies/org/FundingAgency]] {
 }
 Class "tern-org:OwnershipInfo" [[https://w3id.org/tern/ontologies/org/OwnershipInfo]] {
 }
 Class "tern-org:AustralianFederalGovernmentOrganization" [[https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization]] {
 }
-Class "schema:Consortium" [[http://schema.org/Consortium]] {
+Class "schema:GovernmentOrganization" [[http://schema.org/GovernmentOrganization]] {
 }
-Class "tern-org:FundingAgency" [[https://w3id.org/tern/ontologies/org/FundingAgency]] {
+Class "schema:LocalBusiness" [[http://schema.org/LocalBusiness]] {
 }
 header
 Creator: Edmond Chuc (e.chuc@uq.edu.au) 

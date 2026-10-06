@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2026-10-02
+### Added
+- schema.org organisation classes, with the schema.org hierarchy.
+- `tern-org:FederalGovernmentOrganization`, `StateGovernmentOrganization`, `RegionalGovernmentOrganization`.
+- Properties `schema:funder`, `member`, `memberOf`, `areaServed`, `foundingDate`, `dissolutionDate`, `startDate`, `endDate`.
+- Funder role example on `tern-org:Role`.
+- Warning shapes: project without a funder, deprecated classes.
+
+### Changed
+- `schema:FundingAgency` is a subclass of `schema:Project`, as in schema.org.
+- Regenerated `docs/`.
+
+### Deprecated
+- `tern-org:InternationalOrganization`, `NCRISProject`, `Project`.
+- `tern-org:AustralianGovernmentOrganization` and its subclasses.
+- tern-org copies of schema.org classes.
+
 ## [0.0.16] - 2020-09-07
 - Created classes in the tern-org namespace rather than previously using schema.org directly.
 

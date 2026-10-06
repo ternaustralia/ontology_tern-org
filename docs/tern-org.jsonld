@@ -1,863 +1,22 @@
 [
   {
-    "@id": "https://w3id.org/tern/ontologies/org/hasSuccessor",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "successor"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "Link to the successor of the current [Role](#Role)."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/ChangeEvent",
+    "@id": "https://w3id.org/tern/ontologies/org/Agent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Change event"
+        "@value": "Agent"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/ns/org#ChangeEvent"
-      },
-      {
-        "@id": "_:ub1bL151C19"
-      },
-      {
-        "@id": "_:ub1bL156C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL151C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#originalOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL156C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#resultingOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/FundingScheme",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding scheme"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      },
-      {
-        "@id": "http://schema.org/FundingScheme"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/Role",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Role"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL412C19"
-      },
-      {
-        "@id": "_:ub1bL423C19"
-      },
-      {
-        "@id": "_:ub1bL447C19"
-      },
-      {
-        "@id": "http://schema.org/Role"
-      },
-      {
-        "@id": "_:ub1bL407C19"
-      },
-      {
-        "@id": "_:ub1bL417C19"
-      },
-      {
-        "@id": "_:ub1bL435C19"
-      },
-      {
-        "@id": "_:ub1bL429C19"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html)."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@value": "@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix tern: <https://w3id.org/tern/ontologies/tern/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Person1> a tern-org:Person ;\n\ttern-org:hasRole <Role1> .\n\n<Role1> a tern-org:Role ;\n\tdcterms:type <Investigator> ;\n\trdf:value <Person1> ;\n\tschema:startDate \"2020-08-24\"^^xsd:date ;\n\ttern-org:appliesOn <Site1> .\n\n<Site1> a tern:Site ;\n\ttern-org:hasRef <Role1> ."
+        "@id": "http://www.w3.org/ns/prov#Agent"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
-        "@value": "Use the [dcterms:type](http://purl.org/dc/terms/type) property to link the type of [Role](#Role) to a controlled vocabulary term. E.g. One of the values from [TERN's Roles](http://linked.data.gov.au/def/tern-cv/67feb077-32da-4044-8e89-bddc21ef58ed)."
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL412C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Role"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/hasSuccessor"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL423C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/appliesOn"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL447C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/startDate"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL407C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Role"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/hasPredecessor"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL417C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/endDate"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL435C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "_:ub1bL437C19"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL437C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/tern/ontologies/org/Person"
-          },
-          {
-            "@id": "https://w3id.org/tern/ontologies/org/Organization"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL429C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/type"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/FundingAgency",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding Agency"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/hasPredecessor",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "hasPredecessor"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "Link to the predecessor of the current [Role](#Role)."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Federal government organizations and agencies."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Federal Government Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/GovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Government organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/GovernmentOrganization"
-      },
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/NCRISProject",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "NCRIS Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Project"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "State governments."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "State Government Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/orcID",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Open Researcher and Contributer ID (ORCID)"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://orcid.org/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://schema.org/identifier"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Regional and local governments."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Regional Government Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/isDissolved",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "is dissolved"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "Express if an [Organization](#Organization) has been dissolved or not with a [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66",
-    "http://schema.org/alternateName": [
-      {
-        "@value": "TERN"
-      }
-    ],
-    "http://schema.org/name": [
-      {
-        "@value": "Terrestrial Ecoystem Research Network"
-      }
-    ],
-    "http://schema.org/url": [
-      {
-        "@id": "https://www.tern.org.au/"
-      }
-    ]
-  },
-  {
-    "@id": "http://schema.org/Project",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/hasRole",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "has role"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "Link an [Agent](#Agent) to a [Role](#Role)."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/Organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL285C19"
-      },
-      {
-        "@id": "_:ub1bL252C19"
-      },
-      {
-        "@id": "_:ub1bL279C19"
-      },
-      {
-        "@id": "_:ub1bL291C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/org#Organization"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#Organization"
-      },
-      {
-        "@id": "_:ub1bL237C19"
-      },
-      {
-        "@id": "_:ub1bL262C19"
-      },
-      {
-        "@id": "http://schema.org/Organization"
-      },
-      {
-        "@id": "_:ub1bL267C19"
-      },
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Agent"
-      },
-      {
-        "@id": "_:ub1bL242C19"
-      },
-      {
-        "@id": "_:ub1bL257C19"
-      },
-      {
-        "@id": "_:ub1bL247C19"
-      },
-      {
-        "@id": "_:ub1bL273C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL285C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL252C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/parentOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL279C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/taxID"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL291C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/isDissolved"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL237C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Agent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/member"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL262C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#hasSite"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL267C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/dissolutionDate"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL242C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#changedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL257C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/subOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL247C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/ChangeEvent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#resultedFrom"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL273C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/foundingDate"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/PartnerOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Local partner organization."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Partner Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/FundingAgency",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding agency"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/FundingAgency"
-      },
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+        "@value": "Common superclass of tern-org:Person and tern-org:Organization, aligned with PROV-O."
       }
     ]
   },
@@ -866,36 +25,27 @@
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://purl.org/dc/terms/isReplacedBy": [
       {
         "@id": "http://schema.org/Project"
-      },
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
       }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/Consortium",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Consortium"
+        "@value": "Project (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://schema.org/Consortium"
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
       },
       {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+        "@id": "http://schema.org/Project"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
       }
     ]
   },
@@ -921,13 +71,71 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/Corporation",
+    "@id": "http://schema.org/memberOf",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An Organization (or ProgramMembership) to which this Person or Organization belongs."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "member of"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/ChangeEvent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Corporation"
+        "@value": "Change event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/org#ChangeEvent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/IndigenousCommunity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Indigenous communities."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Indigenous Community"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/Corporation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/Corporation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Corporation (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -937,21 +145,26 @@
       {
         "@id": "https://w3id.org/tern/ontologies/org/Organization"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
     ]
   },
   {
-    "@id": "http://schema.org/Consortium",
+    "@id": "http://schema.org/GovernmentOrganization",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A Consortium is a membership Organization whose members are typically Organizations."
+        "@value": "A governmental organization or agency."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Consortium"
+        "@value": "Government Organization"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -961,462 +174,414 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/EducationalOrganization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Educational organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://schema.org/EducationalOrganization"
-      },
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/goodrelations/v1#BusinessEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Business entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/org#FormalOrganization"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/Manufacturer",
+    "@id": "http://schema.org/Corporation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "a producer or fabricator of something."
+        "@value": "A business corporation."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Manufacturer"
+        "@value": "Corporation"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://www.oed.com/view/Entry/113772?redirectedFrom=manufacturer#eid"
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/MedicalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/MedicalOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Medical organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/MedicalOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/FundingAgency",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/FundingAgency"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding agency (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/FundingAgency"
+      },
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/InternationalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "International organizations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "International Organization (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/tern/ontologies/org/Organization"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/appliesOn",
+    "@id": "http://schema.org/EducationalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An educational organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Educational Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Organization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An organization such as a school, NGO, corporation, club, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Cooperative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An organization that is a joint project of multiple organizations or persons."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Cooperative"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/ResearchOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Research Organization (e.g. scientific institute, research company)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Research Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Federal government organizations and agencies."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Federal Government Organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/FundingAgency",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding Agency"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Project"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/StateGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Australian state and territory government organisations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "State Government Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/endDate",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The end date and time of the item (in ISO 8601 date format)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "end date"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/dissolutionDate",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The date that this organization was dissolved."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "dissolution date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/hasRef",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "applies on"
+        "@value": "has reference"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/hasRef"
+        "@id": "https://w3id.org/tern/ontologies/org/appliesOn"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
-        "@value": "The qualified individual applies on the target class. Inverse of [hasRef](#hasRef)."
+        "@value": "The inverse of [appliesOn](#appliesOn)."
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/LocalBusiness",
+    "@id": "http://schema.org/foundingDate",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The date that this organization was founded."
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Local business"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      },
-      {
-        "@id": "http://schema.org/LocalBusiness"
+        "@value": "founding date"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/",
+    "@id": "https://w3id.org/tern/ontologies/org/NCRISProject",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://purl.org/dc/terms/isReplacedBy": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-11-24"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@id": "_:ub1bL57C15"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-03-20"
-      }
-    ],
-    "http://purl.org/dc/terms/publisher": [
-      {
-        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "tern-org"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
-      {
-        "@value": "https://w3id.org/tern/ontologies/org/"
+        "@id": "http://schema.org/Project"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. "
+        "@value": "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "TERN Organisations Ontology"
+        "@value": "NCRIS Project (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "https://github.com/ternaustralia/ontology_tern-org"
+        "@id": "https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris"
       }
     ],
-    "http://www.w3.org/2002/07/owl#imports": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/ns/prov#"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/"
-      },
-      {
-        "@id": "http://www.w3.org/ns/org#"
-      },
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#"
-      },
-      {
-        "@id": "http://topbraid.org/schema/"
+        "@id": "https://w3id.org/tern/ontologies/org/Project"
       }
     ],
-    "http://www.w3.org/2002/07/owl#versionIRI": [
+    "http://www.w3.org/2002/07/owl#deprecated": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/0.0.15"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-        "@value": "0.0.15"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:ub1bL77C23"
+        "@value": true
       }
     ]
   },
   {
-    "@id": "_:ub1bL77C23",
+    "@id": "https://w3id.org/tern/ontologies/org/EducationalOrganization",
     "@type": [
-      "http://www.w3.org/ns/prov#Activity",
-      "http://usefulinc.com/ns/doap#Project"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://usefulinc.com/ns/doap#repository": [
+    "http://purl.org/dc/terms/isReplacedBy": [
       {
-        "@id": "https://github.com/ternaustralia/ontology_tern-org"
+        "@id": "http://schema.org/EducationalOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Educational organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/EducationalOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
       }
     ]
   },
   {
-    "@id": "_:ub1bL57C15",
-    "http://schema.org/affiliation": [
+    "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66",
+    "http://schema.org/alternateName": [
       {
-        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
-      }
-    ],
-    "http://schema.org/email": [
-      {
-        "@value": "e.chuc@uq.edu.au"
-      }
-    ],
-    "http://schema.org/identifier": [
-      {
-        "@value": "https://orcid.org/0000-0002-6047-9864"
+        "@value": "TERN"
       }
     ],
     "http://schema.org/name": [
       {
-        "@value": "Edmond Chuc"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/Site",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Site"
+        "@value": "Terrestrial Ecosystem Research Network"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://schema.org/url": [
       {
-        "@id": "http://www.w3.org/ns/org#Site"
-      },
-      {
-        "@id": "_:ub1bL488C19"
-      },
-      {
-        "@id": "_:ub1bL483C19"
-      },
-      {
-        "@id": "_:ub1bL478C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL488C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#siteAddress"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL483C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#siteOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL478C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#hasPrimarySite"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/PostalAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Postal address"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL384C19"
-      },
-      {
-        "@id": "_:ub1bL372C19"
-      },
-      {
-        "@id": "_:ub1bL390C19"
-      },
-      {
-        "@id": "http://schema.org/PostalAddress"
-      },
-      {
-        "@id": "_:ub1bL378C19"
-      },
-      {
-        "@id": "_:ub1bL366C19"
-      },
-      {
-        "@id": "_:ub1bL360C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL384C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressRegion"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL372C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/postalCode"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL390C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/streetAddress"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL378C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressLocality"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL366C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL360C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/addressCountry"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@id": "https://www.tern.org.au/"
       }
     ]
   },
@@ -1442,106 +607,173 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/OwnershipInfo",
+    "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Full Address Line"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The full address or canonical address of the postal address in a single line."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/hasRole",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "has role"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Link an [Agent](#Agent) to a [Role](#Role)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/Role",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Ownership info"
+        "@value": "Role"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:ub1bL312C19"
+        "@id": "http://schema.org/Role"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@value": "@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix tern: <https://w3id.org/tern/ontologies/tern/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Person1> a tern-org:Person ;\n\ttern-org:hasRole <Role1> .\n\n<Role1> a tern-org:Role ;\n\tdcterms:type <Investigator> ;\n\trdf:value <Person1> ;\n\tschema:startDate \"2020-08-24\"^^xsd:date ;\n\ttern-org:appliesOn <Site1> .\n\n<Site1> a tern:Site ;\n\ttern-org:hasRef <Role1> ."
       },
       {
-        "@id": "_:ub1bL317C19"
-      },
+        "@value": "Funder role with a start date.\n\n@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Project1> a schema:Project ;\n\tschema:funder <Funder1> ;\n\ttern-org:hasRef <Role2> .\n\n<Role2> a tern-org:Role ;\n\tdcterms:type <http://linked.data.gov.au/def/tern-cv/c03f42d5-619e-41d3-819f-67b48f5452f3> ;\n\trdf:value <Funder1> ;\n\ttern-org:appliesOn <Project1> ;\n\tschema:startDate \"2023-07-01\"^^xsd:date ;\n\tschema:name \"Funder - Funder1 - 2023-07-01\" .\n\n<Funder1> a schema:Organization ;\n\ttern-org:hasRole <Role2> ."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
-        "@id": "http://schema.org/OwnershipInfo"
-      },
-      {
-        "@id": "_:ub1bL307C19"
-      },
-      {
-        "@id": "_:ub1bL302C19"
+        "@value": "Use the [dcterms:type](http://purl.org/dc/terms/type) property to link the type of [Role](#Role) to a controlled vocabulary term. E.g. One of the values from [TERN's Roles](http://linked.data.gov.au/def/tern-cv/67feb077-32da-4044-8e89-bddc21ef58ed)."
       }
     ]
   },
   {
-    "@id": "_:ub1bL312C19",
+    "@id": "https://w3id.org/tern/ontologies/org/addressLine2",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/Agent"
+        "@id": "https://w3id.org/tern/ontologies/org/PostalAddress"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@id": "http://schema.org/acquiredFrom"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL317C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@value": "address Line 2"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2004/02/skos/core#definition": [
       {
-        "@id": "http://schema.org/typeOfGood"
+        "@value": "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank."
       }
     ]
   },
   {
-    "@id": "_:ub1bL307C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/ownedThrough"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL302C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/ownedFrom"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/MedicalOrganization",
+    "@id": "https://w3id.org/tern/ontologies/org/PostalAddress",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Medical organization"
+        "@value": "Postal address"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/PostalAddress"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/hasPredecessor",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "hasPredecessor"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Link to the predecessor of the current [Role](#Role)."
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/LocalBusiness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A particular physical business or branch of an organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Local Business"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Australian federal government organisations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Federal Government Organization"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -1549,7 +781,64 @@
         "@id": "https://w3id.org/tern/ontologies/org/Organization"
       },
       {
-        "@id": "http://schema.org/MedicalOrganization"
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Australian government organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/StateGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "State governments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "State Government Organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
       }
     ]
   },
@@ -1595,43 +884,234 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization",
+    "@id": "https://w3id.org/tern/ontologies/org/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-11-24"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:ub1bL150C15"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-10-02"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "tern-org"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/tern/ontologies/org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TERN Organisations Ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://github.com/ternaustralia/ontology_tern-org"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#"
+      },
+      {
+        "@id": "http://www.w3.org/ns/org#"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/"
+      },
+      {
+        "@id": "http://topbraid.org/schema/"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/0.1.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.1.0"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:ub1bL170C23"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL170C23",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity",
+      "http://usefulinc.com/ns/doap#Project"
+    ],
+    "http://usefulinc.com/ns/doap#repository": [
+      {
+        "@id": "https://github.com/ternaustralia/ontology_tern-org"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL150C15",
+    "http://schema.org/affiliation": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "e.chuc@uq.edu.au"
+      }
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@value": "https://orcid.org/0000-0002-6047-9864"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Edmond Chuc"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/Project",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/PartnerOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Local partner organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Partner Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/FundingScheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/FundingScheme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding scheme (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/FundingScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/goodrelations/v1#BusinessEntity",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Australian government organization"
+        "@value": "Business entity"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/GovernmentOrganization"
-      },
-      {
-        "@id": "_:ub1bL128C19"
+        "@id": "http://www.w3.org/ns/org#FormalOrganization"
       }
     ]
   },
   {
-    "@id": "_:ub1bL128C19",
+    "@id": "https://w3id.org/tern/ontologies/org/Organization",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#onClass": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@value": "Organization"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/agorID"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+        "@id": "http://www.w3.org/ns/prov#Organization"
+      },
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@id": "http://www.w3.org/ns/org#Organization"
+      },
+      {
+        "@id": "http://schema.org/Organization"
+      },
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Agent"
       }
     ]
   },
@@ -1647,313 +1127,434 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:ub1bL350C19"
-      },
-      {
         "@id": "http://www.w3.org/ns/prov#Person"
-      },
-      {
-        "@id": "_:ub1bL345C19"
-      },
-      {
-        "@id": "_:ub1bL335C19"
-      },
-      {
-        "@id": "http://schema.org/Person"
       },
       {
         "@id": "https://w3id.org/tern/ontologies/org/Agent"
       },
       {
-        "@id": "_:ub1bL340C19"
+        "@id": "http://schema.org/Person"
       }
     ]
   },
   {
-    "@id": "_:ub1bL350C19",
+    "@id": "http://schema.org/startDate",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/org#basedAt"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL345C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/affiliation"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL335C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/honorificPrefix"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL340C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/jobTitle"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tern/ontologies/org/fullAddressLine",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://schema.org/PostalAddress"
+        "@value": "The start date and time of the item (in ISO 8601 date format)."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Full Address Line"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "The full address or canonical address of the postal address in a single line."
+        "@value": "start date"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/InternationalOrganization",
+    "@id": "http://schema.org/Consortium",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "International organizations."
+        "@value": "A Consortium is a membership Organization whose members are typically Organizations."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "International Organization"
+        "@value": "Consortium"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/GovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Government organization (deprecated)"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/hasRef",
+    "@id": "http://schema.org/member",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "has reference"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/appliesOn"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "The inverse of [appliesOn](#appliesOn)."
+        "@value": "member"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/addressLine2",
+    "@id": "https://w3id.org/tern/ontologies/org/orcID",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/PostalAddress"
+        "@id": "https://w3id.org/tern/ontologies/org/Person"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "address Line 2"
+        "@value": "Open Researcher and Contributer ID (ORCID)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://orcid.org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://schema.org/identifier"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
-        "@value": "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank."
+        "@value": "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors."
       }
     ]
   },
   {
-    "@id": "https://w3id.org/tern/ontologies/org/Agent",
+    "@id": "https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Regional and local governments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Regional Government Organization (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/Manufacturer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "a producer or fabricator of something."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Manufacturer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://www.oed.com/view/Entry/113772?redirectedFrom=manufacturer#eid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/hasSuccessor",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "successor"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Link to the successor of the current [Role](#Role)."
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/funder",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A person or organization that supports (sponsors) something through some kind of financial contribution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "funder"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/NGO",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A non-governmental organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Non-governmental Organization (NGO)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/Consortium",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isReplacedBy": [
+      {
+        "@id": "http://schema.org/Consortium"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Consortium (deprecated)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Consortium"
+      },
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/areaServed",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The geographic area where a service or offered item is provided."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "area served"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/isDissolved",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "is dissolved"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Express if an [Organization](#Organization) has been dissolved or not with a [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/Site",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Agent"
+        "@value": "Site"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:ub1bL92C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#Agent"
-      },
-      {
-        "@id": "_:ub1bL107C19"
-      },
-      {
-        "@id": "_:ub1bL97C19"
-      },
-      {
-        "@id": "_:ub1bL112C19"
-      },
-      {
-        "@id": "_:ub1bL87C19"
-      },
-      {
-        "@id": "_:ub1bL102C19"
+        "@id": "http://www.w3.org/ns/org#Site"
       }
     ]
   },
   {
-    "@id": "_:ub1bL92C19",
+    "@id": "https://w3id.org/tern/ontologies/org/OwnershipInfo",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@value": "Ownership info"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://schema.org/telephone"
+        "@id": "http://schema.org/OwnershipInfo"
       }
     ]
   },
   {
-    "@id": "_:ub1bL107C19",
+    "@id": "https://w3id.org/tern/ontologies/org/LocalBusiness",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://purl.org/dc/terms/isReplacedBy": [
       {
-        "@id": "https://w3id.org/tern/ontologies/org/OwnershipInfo"
+        "@id": "http://schema.org/LocalBusiness"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@id": "http://schema.org/owns"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL97C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Agent"
+        "@value": "Local business (deprecated)"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/funder"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL112C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/Role"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/tern/ontologies/org/hasRole"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL87C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://schema.org/email"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL102C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/LocalBusiness"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2002/07/owl#deprecated": [
       {
-        "@id": "http://schema.org/memberOf"
+        "@value": true
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Australian regional and local government organisations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Regional Government Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Organization"
+      },
+      {
+        "@id": "http://schema.org/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "http://schema.org/MedicalOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A medical organization (physical or not), such as hospital, institution or clinic."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Medical Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/ontologies/org/appliesOn",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "applies on"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/hasRef"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The qualified individual applies on the target class. Inverse of [hasRef](#hasRef)."
       }
     ]
   }

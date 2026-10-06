@@ -1,398 +1,308 @@
-<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Regional and local governments." .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL307C19 .
-<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL483C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#siteOf> .
-_:ub1bL57C15 <http://schema.org/name> "Edmond Chuc" .
-_:ub1bL335C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/honorificPrefix> .
-_:ub1bL478C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#label> "successor" .
-<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LocalBusiness> .
-<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tern/ontologies/org/appliesOn> .
-<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
-_:ub1bL429C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL291C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/isDissolved> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
-<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2004/02/skos/core#definition> "The qualified individual applies on the target class. Inverse of [hasRef](#hasRef)." .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#label> "Open Researcher and Contributer ID (ORCID)" .
-_:ub1bL128C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Agent> .
-_:ub1bL291C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:ub1bL483C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/alternateName> "TERN" .
-_:ub1bL435C19 <http://www.w3.org/2002/07/owl#onClass> _:ub1bL437C19 .
-<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#ChangeEvent> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
-<http://schema.org/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL242C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#changedBy> .
-_:ub1bL378C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Ownership info" .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL372C19 .
-_:ub1bL350C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." .
-<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL151C19 .
-_:fe7b7a9b65d324457b2494e70ab9fe5ccb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tern/ontologies/org/Organization> .
-<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#FormalOrganization> .
-_:ub1bL237C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/member> .
-<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL107C19 .
-<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL97C19 .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Role> .
-_:ub1bL92C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL247C19 .
-<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
-<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL412C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Agency" .
-_:ub1bL317C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/2004/02/skos/core#definition> "Link to the successor of the current [Role](#Role)." .
-<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Federal government organizations and agencies." .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2004/02/skos/core#definition> "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Person> .
-_:ub1bL252C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/parentOrganization> .
-_:ub1bL128C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL417C19 .
-_:ub1bL92C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL390C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL112C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL262C19 .
-<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL360C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Federal Government Organization" .
-<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL257C19 .
-<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tern-org" .
-_:ub1bL267C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/dissolutionDate> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL102C19 .
-<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL340C19 .
-<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Funding agency" .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL291C19 .
-_:ub1bL57C15 <http://schema.org/email> "e.chuc@uq.edu.au" .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2004/02/skos/core#definition> "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors." .
-_:ub1bL107C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/OwnershipInfo> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL447C19 .
-<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Educational organization" .
-<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL237C19 .
-<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL488C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#siteAddress> .
-_:ub1bL252C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/> .
-<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.oed.com/view/Entry/113772?redirectedFrom=manufacturer#eid> .
-_:ub1bL273C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
-_:ub1bL267C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL350C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Site> .
-<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL107C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL252C19 .
-_:ub1bL360C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL279C19 .
-<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
-<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#comment> "A Consortium is a membership Organization whose members are typically Organizations." .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Project> .
-_:ub1bL247C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/ChangeEvent> .
-<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL483C19 .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "International Organization" .
-_:ub1bL435C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> .
-_:ub1bL417C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/ns/prov#wasGeneratedBy> _:ub1bL77C23 .
-<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
-_:ub1bL77C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Project> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL273C19 .
-<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/2004/02/skos/core#definition> "Link to the predecessor of the current [Role](#Role)." .
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/name> "Terrestrial Ecoystem Research Network" .
-_:ub1bL87C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/OwnershipInfo> .
-_:ub1bL285C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL478C19 .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/tern/ontologies/org/" .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL435C19 .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#scopeNote> "Use the [dcterms:type](http://purl.org/dc/terms/type) property to link the type of [Role](#Role) to a controlled vocabulary term. E.g. One of the values from [TERN's Roles](http://linked.data.gov.au/def/tern-cv/67feb077-32da-4044-8e89-bddc21ef58ed)." .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2004/02/skos/core#definition> "The full address or canonical address of the postal address in a single line." .
-<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL97C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Agent> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL345C19 .
-_:ub1bL267C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL437C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://topbraid.org/schema/> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL407C19 .
-_:ub1bL77C23 <http://usefulinc.com/ns/doap#repository> <https://github.com/ternaustralia/ontology_tern-org> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Agent> .
-_:ub1bL412C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/hasSuccessor> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL112C19 .
-_:ub1bL366C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL407C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Role> .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Site> .
-_:ub1bL151C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL412C19 .
-<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-_:ub1bL447C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/startDate> .
-_:fe7b7a9b65d324457b2494e70ab9fe5ccb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tern/ontologies/org/Person> .
-_:ub1bL302C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL447C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL262C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#hasSite> .
-_:ub1bL423C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL57C15 <http://schema.org/identifier> "https://orcid.org/0000-0002-6047-9864" .
-_:ub1bL87C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Regional Government Organization" .
-_:ub1bL340C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#label> "Local business" .
-<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/MedicalOrganization> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
-_:ub1bL112C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/hasRole> .
-<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Australian government organization" .
-_:ub1bL366C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL87C19 .
-<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role" .
-_:ub1bL128C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL312C19 .
-_:ub1bL156C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal address" .
-_:fe7b7a9b65d324457b2494e70ab9fe5ccb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fe7b7a9b65d324457b2494e70ab9fe5ccb2 .
-<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-_:ub1bL478C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/url> <https://www.tern.org.au/> .
-_:ub1bL372C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL429C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
-<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tern/ontologies/org/hasRef> .
-_:ub1bL307C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL366C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#label> "Full Address Line" .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2004/02/skos/core#definition> "The Australian Government Organisations Register ID" .
-_:ub1bL242C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL87C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/email> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL317C19 .
-_:ub1bL390C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/streetAddress> .
-<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
-_:ub1bL483C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL447C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL345C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL312C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Agent> .
-<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2004/02/skos/core#definition> "First line of the non-locality/state/postcode portion of the address." .
-_:ub1bL257C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/subOrganization> .
-<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/2004/02/skos/core#definition> "Link an [Agent](#Agent) to a [Role](#Role)." .
-_:ub1bL97C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/funder> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/created> "2019-11-24"^^<http://www.w3.org/2001/XMLSchema#date> .
-_:ub1bL435C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL488C19 .
-<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/EducationalOrganization> .
-_:ub1bL372C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Change event" .
-_:ub1bL417C19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#label> "NCRIS Project" .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL378C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressLocality> .
-_:ub1bL291C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#label> "is dissolved" .
-_:ub1bL302C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/ownedFrom> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://data.gov.au/data/dataset/australian-government-organisations-register> .
-<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Partner Organization" .
-<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
-_:ub1bL345C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL423C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/appliesOn> .
-_:ub1bL279C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/taxID> .
-_:ub1bL247C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#resultedFrom> .
-_:ub1bL77C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
-_:ub1bL237C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Agent> .
-_:ub1bL156C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#resultingOrganization> .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2004/02/skos/core#definition> "The inverse of [appliesOn](#appliesOn)." .
-<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
-_:ub1bL307C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/ownedThrough> .
-_:ub1bL340C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/jobTitle> .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/PostalAddress> .
-_:ub1bL273C19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#comment> "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc." .
-<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." .
-_:ub1bL267C19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> .
-_:ub1bL435C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL317C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/typeOfGood> .
-<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL302C19 .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL335C19 .
-<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "State Government Organization" .
-<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
-<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL429C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL291C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-_:ub1bL252C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL262C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL335C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/creator> _:ub1bL57C15 .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL384C19 .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/publisher> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
-_:ub1bL107C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/owns> .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-_:ub1bL273C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/foundingDate> .
-_:ub1bL384C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL340C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL429C19 .
-_:ub1bL57C15 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
-<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "a producer or fabricator of something." .
-<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "International organizations." .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#label> "TERN Organisations Ontology" .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL285C19 .
-_:ub1bL312C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL412C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Role> .
-_:ub1bL478C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#hasPrimarySite> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-_:ub1bL360C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressCountry> .
-_:ub1bL360C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
-<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/modified> "2020-03-20"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL390C19 .
-<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/GovernmentOrganization> .
-_:ub1bL429C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/type> .
-_:ub1bL317C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL279C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL102C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
-_:ub1bL437C19 <http://www.w3.org/2002/07/owl#unionOf> _:fe7b7a9b65d324457b2494e70ab9fe5ccb1 .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL267C19 .
-<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
-<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2000/01/rdf-schema#label> "applies on" .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#comment> "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " .
-<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#comment> "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." .
-<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#label> "Corporation" .
-_:ub1bL285C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2001/XMLSchema#string> .
-_:fe7b7a9b65d324457b2494e70ab9fe5ccb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#label> "address Line 1" .
-_:ub1bL102C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/memberOf> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
-_:ub1bL366C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/fullAddressLine> .
-_:ub1bL417C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
-_:ub1bL372C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/postalCode> .
-<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL128C19 .
-<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Project> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:ub1bL384C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#definition> "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html)." .
-_:ub1bL335C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Government organization" .
-_:ub1bL285C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL285C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/name> .
-<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL102C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL128C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/agorID> .
-<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Funding scheme" .
-<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Medical organization" .
-_:ub1bL384C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/addressRegion> .
-<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Business entity" .
-_:ub1bL242C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/ChangeEvent> .
-_:ub1bL312C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/acquiredFrom> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#example> "@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix tern: <https://w3id.org/tern/ontologies/tern/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Person1> a tern-org:Person ;\n	tern-org:hasRole <Role1> .\n\n<Role1> a tern-org:Role ;\n	dcterms:type <Investigator> ;\n	rdf:value <Person1> ;\n	schema:startDate \"2020-08-24\"^^xsd:date ;\n	tern-org:appliesOn <Site1> .\n\n<Site1> a tern:Site ;\n	tern-org:hasRef <Role1> ." .
-<http://schema.org/FundingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL407C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL350C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#basedAt> .
-_:ub1bL447C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#date> .
-_:ub1bL423C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2002/07/owl#Thing> .
-<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Consortium> .
-<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL360C19 .
-<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2000/01/rdf-schema#label> "has reference" .
-_:ub1bL273C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL262C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Site> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.15" .
-<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2004/02/skos/core#definition> "Express if an [Organization](#Organization) has been dissolved or not with a [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)." .
+<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2004/02/skos/core#definition> "The inverse of [appliesOn](#appliesOn)." .
+<http://schema.org/LocalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/NGO> <http://www.w3.org/2000/01/rdf-schema#label> "Non-governmental Organization (NGO)" .
 <https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/FundingAgency> .
-<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Corporation> .
-<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL350C19 .
-_:ub1bL423C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL247C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Scheme" .
-_:ub1bL302C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
-_:ub1bL112C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Role> .
-_:ub1bL257C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL242C19 .
-_:ub1bL345C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/affiliation> .
-<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL378C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ternaustralia/ontology_tern-org> .
-<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
-_:ub1bL279C19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL156C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL92C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/telephone> .
-<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Local partner organization." .
-<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL378C19 .
-<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL366C19 .
-_:ub1bL488C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL151C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/org#originalOrganization> .
-<http://schema.org/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL97C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "State governments." .
-<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL372C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
-<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#label> "hasPredecessor" .
-<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/FundingScheme> .
-<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#label> "address Line 2" .
-<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL92C19 .
-_:ub1bL488C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/PostalAddress> .
-_:ub1bL307C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
-_:ub1bL390C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL257C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL279C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:ub1bL390C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL151C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Organization> .
-<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "Consortium" .
-<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL156C19 .
-<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Organization> .
-<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#label> "AGOR ID" .
-_:ub1bL378C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "Consortium" .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was dissolved." .
+<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
 <http://schema.org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL407C19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tern/ontologies/org/hasPredecessor> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.0.15> .
-<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL423C19 .
-_:ub1bL417C19 <http://www.w3.org/2002/07/owl#onProperty> <http://schema.org/endDate> .
+<http://schema.org/foundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Partner Organization" .
+<http://schema.org/ResearchOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical organization (physical or not), such as hospital, institution or clinic." .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/publisher> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Medical organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> .
+<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Change event" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/FundingAgency> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/FundingAgency> .
+_:ub1bL170C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Project> .
+<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tern/ontologies/org/hasRef> .
+<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#label> "is dissolved" .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#label> "Full Address Line" .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2000/01/rdf-schema#label> "address Line 1" .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "State Government Organization" .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization such as a school, NGO, corporation, club, etc." .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2004/02/skos/core#definition> "The ORCID is a nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors." .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/created> "2019-11-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/Consortium> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#example> "Funder role with a start date.\n\n@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Project1> a schema:Project ;\n	schema:funder <Funder1> ;\n	tern-org:hasRef <Role2> .\n\n<Role2> a tern-org:Role ;\n	dcterms:type <http://linked.data.gov.au/def/tern-cv/c03f42d5-619e-41d3-819f-67b48f5452f3> ;\n	rdf:value <Funder1> ;\n	tern-org:appliesOn <Project1> ;\n	schema:startDate \"2023-07-01\"^^xsd:date ;\n	schema:name \"Funder - Funder1 - 2023-07-01\" .\n\n<Funder1> a schema:Organization ;\n	tern-org:hasRole <Role2> ." .
+<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Ownership info" .
+<http://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#comment> "A Consortium is a membership Organization whose members are typically Organizations." .
+<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/IndigenousCommunity> <http://www.w3.org/2000/01/rdf-schema#label> "Indigenous Community" .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/FundingScheme> .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<http://schema.org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular physical business or branch of an organization." .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Regional and local governments." .
+<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#label> "address Line 2" .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Federal Government Organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#label> "successor" .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<http://schema.org/NGO> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#ChangeEvent> .
+<http://schema.org/Cooperative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2004/02/skos/core#definition> "Second line of the non-locality/state/postcode portion of the address. This is sometimes blank." .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/url> <https://www.tern.org.au/> .
+<http://schema.org/MedicalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Agency" .
+<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#comment> "A FundingAgency is an organization that implements one or more FundingSchemes and manages the granting process (via Grants, typically MonetaryGrants). A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc." .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A governmental organization or agency." .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2004/02/skos/core#definition> "Express if an [Organization](#Organization) has been dissolved or not with a [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)." .
+_:ub1bL150C15 <http://schema.org/name> "Edmond Chuc" .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Federal government organizations and agencies." .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Government Organization" .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/areaServed> <http://www.w3.org/2000/01/rdf-schema#label> "area served" .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Australian regional and local government organisations." .
+<http://schema.org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#label> "Local Business" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/ns/prov#wasGeneratedBy> _:ub1bL170C23 .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#label> "Corporation (deprecated)" .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Organization> .
+<http://schema.org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/2004/02/skos/core#definition> "First line of the non-locality/state/postcode portion of the address." .
+<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/tern/ontologies/org/appliesOn> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tern-org" .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#comment> "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "State governments." .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LocalBusiness> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." .
+_:ub1bL170C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.1.0> .
+<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "founding date" .
+<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+<http://schema.org/Corporation> <http://www.w3.org/2000/01/rdf-schema#label> "Corporation" .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#label> "Local business (deprecated)" .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/ResearchOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A Research Organization (e.g. scientific institute, research company)." .
+<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/FundingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#label> "end date" .
+<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/2004/02/skos/core#definition> "Link to the successor of the current [Role](#Role)." .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2004/02/skos/core#definition> "The Australian Government Organisations Register ID" .
+<http://schema.org/NGO> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-governmental organization." .
+<https://w3id.org/tern/ontologies/org/ChangeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://schema.org/Corporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Australian federal government organisations." .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Federal Government Organization" .
+<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role" .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/Project> .
+<http://schema.org/Corporation> <http://www.w3.org/2000/01/rdf-schema#comment> "A business corporation." .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL170C23 <http://usefulinc.com/ns/doap#repository> <https://github.com/ternaustralia/ontology_tern-org> .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Funding scheme (deprecated)" .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#definition> "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html)." .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://schema.org/Cooperative> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that is a joint project of multiple organizations or persons." .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> .
+<http://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date and time of the item (in ISO 8601 date format)." .
+<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2004/02/skos/core#scopeNote> "Common superclass of tern-org:Person and tern-org:Organization, aligned with PROV-O." .
+<http://schema.org/Cooperative> <http://www.w3.org/2000/01/rdf-schema#label> "Cooperative" .
+<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/rangeIncludes> <http://schema.org/Text> .
+<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.education.gov.au/national-collaborative-research-infrastructure-strategy-ncris> .
+<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/FundingScheme> .
+<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Corporation> .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "State Government Organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/IndigenousCommunity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/creator> _:ub1bL150C15 .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Project> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://schema.org/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/LocalBusiness> .
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/2004/02/skos/core#definition> "Link an [Agent](#Agent) to a [Role](#Role)." .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Agent> .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or organization that supports (sponsors) something through some kind of financial contribution." .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Regional Government Organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#comment> "A small profile of schema.org and the W3C Organisations ontology containing several classes to describe people and organisations with additional properties. " .
+<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Project> .
+<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/ResearchOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL150C15 <http://schema.org/identifier> "https://orcid.org/0000-0002-6047-9864" .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Educational organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> .
+<http://schema.org/ResearchOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Research Organization" .
 <http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
-_:ub1bL237C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL384C19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "Consortium (deprecated)" .
+<https://w3id.org/tern/ontologies/org/hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#imports> <http://topbraid.org/schema/> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://schema.org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Project> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://schema.org/domainIncludes> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#scopeNote> "Use the [dcterms:type](http://purl.org/dc/terms/type) property to link the type of [Role](#Role) to a controlled vocabulary term. E.g. One of the values from [TERN's Roles](http://linked.data.gov.au/def/tern-cv/67feb077-32da-4044-8e89-bddc21ef58ed)." .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://schema.org/GovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#label> "start date" .
+<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Agent> .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "member of" .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/EducationalOrganization> .
+<https://w3id.org/tern/ontologies/org/addressLine2> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Role> .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "International Organization (deprecated)" .
+<https://w3id.org/tern/ontologies/org/Corporation> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/Corporation> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "a producer or fabricator of something." .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#label> "NCRIS Project (deprecated)" .
+<https://w3id.org/tern/ontologies/org/AustralianRegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Educational Organization" .
+<https://w3id.org/tern/ontologies/org/addressLine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2004/02/skos/core#example> "@prefix tern-org: <https://w3id.org/tern/ontologies/org/> .\n@prefix tern: <https://w3id.org/tern/ontologies/tern/> .\n@prefix schema: <http://schema.org/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<Person1> a tern-org:Person ;\n	tern-org:hasRole <Role1> .\n\n<Role1> a tern-org:Role ;\n	dcterms:type <Investigator> ;\n	rdf:value <Person1> ;\n	schema:startDate \"2020-08-24\"^^xsd:date ;\n	tern-org:appliesOn <Site1> .\n\n<Site1> a tern:Site ;\n	tern-org:hasRef <Role1> ." .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Australian government organization (deprecated)" .
+_:ub1bL150C15 <http://schema.org/email> "e.chuc@uq.edu.au" .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Government organization (deprecated)" .
+<http://schema.org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ternaustralia/ontology_tern-org> .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Funding agency (deprecated)" .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Business entity" .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/tern/ontologies/org/" .
+<https://w3id.org/tern/ontologies/org/Project> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/Project> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2000/01/rdf-schema#label> "TERN Organisations Ontology" .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#label> "dissolution date" .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/alternateName> "TERN" .
+<http://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date and time of the item (in ISO 8601 date format)." .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Site> .
+<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<http://schema.org/NGO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Scheme" .
+<http://schema.org/Cooperative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#label> "Open Researcher and Contributer ID (ORCID)" .
+<http://schema.org/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date that this organization was founded." .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#label> "AGOR ID" .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/MedicalOrganization> .
+<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#label> "hasPredecessor" .
+<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://schema.org/areaServed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/hasPredecessor> <http://www.w3.org/2004/02/skos/core#definition> "Link to the predecessor of the current [Role](#Role)." .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/FederalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/StateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Australian state and territory government organisations." .
+<http://schema.org/Corporation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Consortium> .
+<https://w3id.org/tern/ontologies/org/LocalBusiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#FormalOrganization> .
+<https://w3id.org/tern/ontologies/org/isDissolved> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL150C15 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+<https://w3id.org/tern/ontologies/org/AustralianStateGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#label> "member" .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#label> "funder" .
+<http://schema.org/memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization (or ProgramMembership) to which this Person or Organization belongs." .
+<https://w3id.org/tern/ontologies/org/MedicalOrganization> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/MedicalOrganization> .
+<https://w3id.org/tern/ontologies/org/Manufacturer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.oed.com/view/Entry/113772?redirectedFrom=manufacturer#eid> .
+<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/PartnerOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Local partner organization." .
+<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2004/02/skos/core#definition> "The qualified individual applies on the target class. Inverse of [hasRef](#hasRef)." .
+<https://w3id.org/tern/ontologies/org/> <http://purl.org/dc/terms/modified> "2026-10-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/tern/ontologies/org/Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project (deprecated)" .
+<https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
+<http://schema.org/areaServed> <http://www.w3.org/2000/01/rdf-schema#comment> "The geographic area where a service or offered item is provided." .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tern/ontologies/org/Person> .
+<https://w3id.org/tern/ontologies/org/IndigenousCommunity> <http://www.w3.org/2000/01/rdf-schema#comment> "Indigenous communities." .
+<https://w3id.org/tern/ontologies/org/Consortium> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/agorID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://data.gov.au/data/dataset/australian-government-organisations-register> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2004/02/skos/core#definition> "The full address or canonical address of the postal address in a single line." .
+<https://w3id.org/tern/ontologies/org/hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/PostalAddress> .
+<https://w3id.org/tern/ontologies/org/IndigenousCommunity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tern/ontologies/org/Organization> .
+<https://w3id.org/tern/ontologies/org/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/fullAddressLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+<http://schema.org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "An educational organization." .
+<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<https://w3id.org/tern/ontologies/org/hasRef> <http://www.w3.org/2000/01/rdf-schema#label> "has reference" .
+<https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GovernmentOrganization> .
+<https://w3id.org/tern/ontologies/org/AustralianFederalGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/NCRISProject> <http://www.w3.org/2000/01/rdf-schema#comment> "National Collaborative Research Infrastructure Strategy (NCRIS) is a national network of world-class research infrastructure projects that support high-quality research that will drive greater innovation in the Australian research sector and the economy more broadly. Projects support strategically important research through which Australian researchers and their international partners can address key national and global challenges." .
+<https://w3id.org/tern/ontologies/org/appliesOn> <http://www.w3.org/2000/01/rdf-schema#label> "applies on" .
+<https://w3id.org/tern/ontologies/org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal address" .
+<https://w3id.org/tern/ontologies/org/FundingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/tern/ontologies/org/Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+<https://w3id.org/tern/ontologies/org/OwnershipInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/OwnershipInfo> .
+<https://w3id.org/tern/ontologies/org/EducationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/EducationalOrganization> .
+<http://schema.org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Organization" .
+<https://w3id.org/tern/ontologies/org/InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "International organizations." .
+<https://w3id.org/tern/ontologies/org/RegionalGovernmentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Regional Government Organization" .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/name> "Terrestrial Ecosystem Research Network" .
+<http://schema.org/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "Consortium" .
+<https://w3id.org/tern/ontologies/org/orcID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/tern/ontologies/org/FundingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 

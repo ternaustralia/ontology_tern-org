@@ -199,9 +199,8 @@ tern-shapes:schema-Organization
         [
             a sh:PropertyShape ;
             sh:name "Sites" ;
-            sh:description "Provide at least one org:hasSite link to an org:Site or tern-org:Site." ;
-            sh:message "Add at least one org:hasSite value that is an org:Site or tern-org:Site." ;
-            sh:minCount 1 ;
+            sh:description "org:hasSite values must be org:Site or tern-org:Site. At least one is required, except for tern-org:Manufacturer." ;
+            sh:message "Link org:hasSite to an org:Site or tern-org:Site." ;
             sh:path org:hasSite ;
             sh:node [
                 sh:or (
@@ -217,10 +216,9 @@ tern-shapes:schema-Organization
         [
             a sh:PropertyShape ;
             sh:name "Primary site" ;
-            sh:description "Exactly one org:hasPrimarySite must be supplied and it must be an org:Site or tern-org:Site." ;
-            sh:message "Provide exactly one org:hasPrimarySite that is an org:Site or tern-org:Site." ;
+            sh:description "At most one org:hasPrimarySite, an org:Site or tern-org:Site. Exactly one is required, except for tern-org:Manufacturer." ;
+            sh:message "Provide at most one org:hasPrimarySite that is an org:Site or tern-org:Site." ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:path org:hasPrimarySite ;
             sh:node [
                 sh:or (
@@ -261,6 +259,31 @@ tern-shapes:schema-Organization
             """
         ] ;
     sh:targetClass schema:Organization ;
+.
+
+tern-shapes:schema-Organization-sites
+    a sh:NodeShape ;
+    rdfs:label "Organization sites shape" ;
+    sh:message "Add at least one org:hasSite and exactly one org:hasPrimarySite, unless the organization is a tern-org:Manufacturer." ;
+    sh:or (
+            [
+                sh:class tern-org:Manufacturer
+            ]
+            [
+                sh:property
+                    [
+                        sh:minCount 1 ;
+                        sh:path org:hasSite
+                    ] ,
+                    [
+                        sh:minCount 1 ;
+                        sh:path org:hasPrimarySite
+                    ]
+            ]
+        ) ;
+    sh:targetClass
+        schema:Organization ,
+        tern-org:Organization ;
 .
 
 tern-shapes:schema-Project
@@ -799,20 +822,18 @@ tern-shapes:tern-org-Organization
         [
             a sh:PropertyShape ;
             sh:name "Sites" ;
-            sh:description "Provide at least one org:hasSite link to a tern-org:Site." ;
-            sh:message "Add at least one org:hasSite value pointing to a tern-org:Site." ;
+            sh:description "org:hasSite values must be tern-org:Site. At least one is required, except for tern-org:Manufacturer." ;
+            sh:message "Link org:hasSite to a tern-org:Site." ;
             sh:class tern-org:Site ;
-            sh:minCount 1 ;
             sh:path org:hasSite
         ] ,
         [
             a sh:PropertyShape ;
             sh:name "Primary site" ;
-            sh:description "Exactly one org:hasPrimarySite must point to a tern-org:Site." ;
-            sh:message "Provide exactly one org:hasPrimarySite pointing to a tern-org:Site." ;
+            sh:description "At most one org:hasPrimarySite, a tern-org:Site. Exactly one is required, except for tern-org:Manufacturer." ;
+            sh:message "Provide at most one org:hasPrimarySite pointing to a tern-org:Site." ;
             sh:class tern-org:Site ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:path org:hasPrimarySite
         ] ,
         [

@@ -166,8 +166,8 @@ tern-org:
   owl:imports skos: ;
   owl:imports org: ;
   owl:imports prov: ;
-  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1.0> ;
-  owl:versionInfo "0.1.0" ;
+  owl:versionIRI <https://w3id.org/tern/ontologies/org/0.1.1> ;
+  owl:versionInfo "0.1.1" ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;

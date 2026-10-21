@@ -80,8 +80,8 @@ tern-org: a owl:Ontology ;
         skos:,
         org:,
         prov: ;
-    owl:versionIRI tern-org:0.1.0 ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionIRI tern-org:0.1.1 ;
+    owl:versionInfo "0.1.1" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-org> ] .

@@ -101,7 +101,7 @@ _:ub1bL150C15 <http://schema.org/name> "Edmond Chuc" .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A FundingScheme combines organizational, project and policy aspects of grant-based funding that sets guidelines, principles and mechanisms to support other kinds of projects and activities. Funding is typically organized via Grant funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - FundingAgencys such as ERC, REA, ..." .
 _:ub1bL170C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.1.0> .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/tern/ontologies/org/0.1.1> .
 <https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
 <http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "founding date" .
 <https://w3id.org/tern/ontologies/org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
@@ -223,7 +223,7 @@ _:ub1bL150C15 <http://schema.org/email> "e.chuc@uq.edu.au" .
 <https://w3id.org/tern/ontologies/org/GovernmentOrganization> <http://purl.org/dc/terms/isReplacedBy> <http://schema.org/GovernmentOrganization> .
 <https://w3id.org/tern/ontologies/org/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Site> .
 <https://w3id.org/tern/ontologies/org/AustralianGovernmentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<https://w3id.org/tern/ontologies/org/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
 <http://schema.org/NGO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/FundingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Scheme" .
 <http://schema.org/Cooperative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

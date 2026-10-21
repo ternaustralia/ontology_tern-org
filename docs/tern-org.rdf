@@ -101,9 +101,9 @@
   <rdf:Description rdf:about="https://w3id.org/tern/ontologies/org/">
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-24</dct:created>
     <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
-    <owl:versionIRI rdf:resource="https://w3id.org/tern/ontologies/org/0.1.0"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/tern/ontologies/org/0.1.1"/>
     <prov:wasGeneratedBy rdf:nodeID="ub1bL170C23"/>
-    <owl:versionInfo>0.1.0</owl:versionInfo>
+    <owl:versionInfo>0.1.1</owl:versionInfo>
     <dct:creator rdf:nodeID="ub1bL150C15"/>
     <vann:preferredNamespacePrefix>tern-org</vann:preferredNamespacePrefix>
     <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
